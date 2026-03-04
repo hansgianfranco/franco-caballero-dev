@@ -1,72 +1,199 @@
 {
-  "name": "Franco Caballero",
-  "title": "Web Developer",
-  "email": "hansgianfranco@gmail.com",
-  "phone": "(+51) 945122683",
-  "age": "Edad: 33",
-  "professional_profile_title": "Perfil Profesional",
-  "professional_profile_desc1": "Desarrollador Web Fullstack con más de 7 años de experiencia construyendo aplicaciones escalables y orientadas a negocio. Especializado en JavaScript moderno (React, Next.js, Node.js) y arquitecturas backend robustas.",
-  "professional_profile_desc2": "He trabajado en entornos corporativos y startups, desarrollando plataformas educativas, APIs, sistemas internos y soluciones e-commerce optimizadas para rendimiento y SEO.",
-  "focus_title": "Me enfoco en:",
-  "focus_item1": "Código limpio y mantenible",
-  "focus_item2": "Buenas prácticas (SOLID, Clean Code)",
-  "focus_item3": "Optimización de performance",
-  "focus_item4": "Experiencia de usuario (UX)",
-  "focus_item5": "Trabajo colaborativo bajo metodologías ágiles (Scrum)",
-  "goal": "Busco participar en proyectos desafiantes donde pueda aportar visión técnica, liderazgo y mejora continua.",
-  "experience_title": "Experiencia",
-  "education_title": "Educación",
-  "skills_title": "Conocimientos",
-  "certifications_title": "Certificaciones",
-  "social_title": "Redes Sociales",
-  "soc1_label": "Linkedin",
-  "soc2_label": "Instagram",
-  "soc3_label": "Facebook",
-  "job1_period": "Ene 2021 - ACTUALIDAD",
-  "job1_company": "Whiz a 10Peals Company, Surco, Lima",
-  "job1_position": "Fullstack  Web Developer",
-  "job1_desc": "Consultoría y desarrollo de aplicaciones web, servicios API, en Node y React a nivel Front-end / Back-end.",
-  "job2_period": "Nov 2018 - Dic 2020",
-  "job2_company": "Innova Schools, La Victoria, Lima",
-  "job2_position": "Fullstack  Web Developer",
-  "job2_desc": "Desarrollo y optimización de los sistemas web orientados al docente en Java Spring Boot.",
-  "job3_period": "Jul 2018 - Nov 2018",
-  "job3_company": "Whiz Agencia Digital, Surco, Lima",
-  "job3_position": "Frontend Web Developer",
-  "job3_desc": "Desarrollo de aplicaciones y sitios web en Laravel. Maquetación y optimización front-end. Mantenimiento del servidor web.",
-  "job4_period": "Set 2016 - May 2018",
-  "job4_company": "Circus Grey, Barranco, Lima",
-  "job4_position": "Fullstack Web Developer",
-  "job4_desc": "Desarrollo de aplicaciones y sitios web (Front-end y Back-end). Desarrollo de banners, mailings para las campañas y/o cuentas.",
-  "job5_period": "Dic 2015 - Set 2016",
-  "job5_company": "Cubix Soluciones, Lima",
-  "job5_position": "Frontend Web Developer",
-  "job5_desc": "Prestación de servicios en diversos proyectos, entre los destacados:",
-  "job5_list1": "Web Intradevco para Coronel Smith, Back-end.",
-  "job5_list2": "Web Interbank Benefit para Amable Perú e Interbank, Front-end.",
-  "job5_list3": "Web Los Portales para Staff Creativa, Front-end.",
-  "job5_list4": "Landing 100 años de Cemento Sol para Coronel Smith, Front-end.",
-  "job5_list5": "Asesoría de tecnologías de información.",
-  "job6_period": "Abr 2014 - Dic 2015",
-  "job6_company": "Instituto Científico del Pacifico, San Miguel, Lima",
-  "job6_position": "Analista Programador Web",
-  "job6_list1": "Análisis, diseño, desarrollo y optimización de páginas web a medida en CMS (Drupal, Wordpress, Moodle) y de sistemas internos a medida en PHP.",
-  "job6_list2": "Análisis y diseño de la base de datos interna de la empresa.",
-  "job6_list3": "Implementación de nuevas tecnologías para la mejora de la empresa.",
-  "job6_list4": "Instalación y optimización de servidores web.",
-  "frontend_skills": "Front-end",
-  "backend_skills": "Back-end",
-  "database_skills": "Base de datos",
-  "cms_tools": "CMS y Herramientas",
-  "general_skills": "General",
-  "university": "Universidad César Vallejo",
-  "degree": "Título: Ingeniería de Sistemas",
-  "faculty": "Facultad de Ingeniería",
-  "edu_period": "May 2009 - DIc 2015",
-  "cert1": "Google Analytics - 2018 (Google Partners)",
-  "cert2": "E-Commerce - 2015 (Google Actívate)",
-  "cert3": "Desarrollo Web - 2015 (Google Actívate / IAB Spain)",
-  "cert4": "Scrum Foundation Professional Certificate - 2022 (Certiprof)",
-  "footer": "© Franco Caballero - Web Developer",
-  "go_top": "Ir arriba"
+  "personal": {
+    "name": "Franco Caballero",
+    "title": "Desarrollador Fullstack Senior",
+    "specialization": "React • Next.js • Node.js",
+    "contact": {
+      "email": "hansgianfranco@gmail.com",
+      "phone": "+51 945122683",
+      "location": "Lima, Perú",
+      "remote": true,
+      "remote_label": "Trabajo Remoto"
+    }
+  },
+  
+  "sections": {
+    "profile": "Perfil Profesional",
+    "experience": "Experiencia Laboral",
+    "skills": "Habilidades Técnicas",
+    "education": "Educación",
+    "certifications": "Certificaciones",
+    "social": "Redes Sociales",
+    "strengths_title": "Fortalezas Clave"
+  },
+
+  "profile": {
+    "summary": [
+      "Desarrollador Fullstack Senior con más de 7 años de experiencia construyendo aplicaciones web escalables y orientadas a resultados de negocio.",
+      "Especializado en ecosistemas modernos de JavaScript (React, Next.js, Node.js) y arquitecturas backend de alto rendimiento.",
+      "Con experiencia en entornos corporativos y startups, entregando plataformas educativas, APIs, sistemas internos y soluciones de e-commerce."
+    ],
+    "core_strengths": [
+      "Arquitectura escalable y código limpio",
+      "Optimización de rendimiento y desarrollo orientado a SEO",
+      "Diseño de APIs RESTful y sistemas backend",
+      "Infraestructura en la nube (AWS)",
+      "Colaboración ágil y liderazgo técnico"
+    ],
+    "career_goal": "Abierto a oportunidades internacionales remotas donde pueda contribuir con liderazgo técnico, mejoras de escalabilidad y desarrollo de productos de alto impacto."
+  },
+
+  "experience": [
+    {
+      "company": "Whiz (10Peals Company)",
+      "location": "Lima, Perú",
+      "position": "Desarrollador Fullstack Senior",
+      "period": "Ene 2021 – Presente",
+      "responsibilities": [
+        "Lideré el desarrollo de aplicaciones escalables con React y Node.js.",
+        "Diseñé APIs RESTful y servicios backend.",
+        "Mejoré el rendimiento del sistema y los flujos de despliegue.",
+        "Trabajé en entornos Ágiles con equipos multifuncionales."
+      ]
+    },
+    {
+      "company": "Innova Schools",
+      "location": "Lima, Perú",
+      "position": "Desarrollador Fullstack",
+      "period": "Nov 2018 – Dic 2020",
+      "responsibilities": [
+        "Desarrollé plataformas educativas usando Spring Boot.",
+        "Mantuve sistemas backend utilizados por miles de usuarios.",
+        "Mejoré la eficiencia del sistema y el rendimiento de bases de datos."
+      ]
+    },
+    {
+      "company": "Whiz Digital Agency",
+      "location": "Lima, Perú",
+      "position": "Desarrollador Frontend",
+      "period": "Jul 2018 – Nov 2018",
+      "responsibilities": [
+        "Construí aplicaciones web responsivas usando Laravel y stacks frontend modernos.",
+        "Mejoré el rendimiento frontend.",
+        "Mantuve servidores de producción."
+      ]
+    },
+    {
+      "company": "Circus Grey",
+      "location": "Lima, Perú",
+      "position": "Desarrollador Fullstack",
+      "period": "Sep 2016 – May 2018",
+      "responsibilities": [
+        "Desarrollé plataformas web y sistemas para campañas digitales.",
+        "Entregué soluciones de alta calidad para clientes corporativos."
+      ]
+    },
+    {
+      "company": "Cubix Soluciones",
+      "location": "Lima, Perú",
+      "position": "Desarrollador Frontend",
+      "period": "Dic 2015 – Sep 2016",
+      "responsibilities": [
+        "Colaboré en sitios web corporativos y plataformas digitales.",
+        "Trabajé con marcas de banca, construcción y consumo masivo."
+      ]
+    },
+    {
+      "company": "Instituto Científico del Pacífico",
+      "location": "Lima, Perú",
+      "position": "Analista Programador Web",
+      "period": "Abr 2014 – Dic 2015",
+      "responsibilities": [
+        "Desarrollé plataformas basadas en CMS (Drupal, WordPress, Moodle).",
+        "Construí sistemas personalizados con PHP.",
+        "Gestioné diseño de bases de datos y optimización de servidores."
+      ]
+    }
+  ],
+
+  "skills": {
+    "titles": {
+      "frontend": "Desarrollo Frontend",
+      "backend": "Desarrollo Backend",
+      "databases": "Bases de Datos",
+      "cloud_devops": "Cloud & DevOps",
+      "cms_ecommerce": "CMS & E-commerce"
+    },
+    "frontend": [
+      "React",
+      "Next.js",
+      "Gatsby",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "Redux",
+      "TailwindCSS",
+      "Sass",
+      "Webpack"
+    ],
+    "backend": [
+      "Node.js",
+      "Express",
+      "NestJS",
+      "Spring Boot",
+      "Laravel",
+      "Django"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Firebase",
+      "GraphQL"
+    ],
+    "cloud_devops": [
+      "AWS (EC2, S3, Lambda)",
+      "CI/CD",
+      "Nginx",
+      "Git",
+      "Agile/Scrum"
+    ],
+    "cms_ecommerce": [
+      "WordPress",
+      "Shopify",
+      "VTEX",
+      "Drupal",
+      "Magento"
+    ]
+  },
+
+  "education": {
+    "university": "Universidad César Vallejo",
+    "degree": "Ingeniería de Sistemas",
+    "faculty": "Facultad de Ingeniería",
+    "period": "May 2009 – Dic 2015"
+  },
+
+  "certifications": [
+    {
+      "name": "Google Analytics",
+      "year": "2018",
+      "issuer": "Google Partners"
+    },
+    {
+      "name": "E-Commerce",
+      "year": "2015",
+      "issuer": "Google Actívate"
+    },
+    {
+      "name": "Desarrollo Web",
+      "year": "2015",
+      "issuer": "Google Actívate / IAB Spain"
+    },
+    {
+      "name": "Scrum Foundation Professional Certificate",
+      "year": "2022",
+      "issuer": "Certiprof"
+    }
+  ],
+
+  "social": {
+    "title": "Conecta Conmigo",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+
+  "meta": {
+    "footer": "© Franco Caballero - Desarrollador Fullstack Senior",
+    "scroll_top_label": "Volver arriba"
+  }
 }
