@@ -4,11 +4,15 @@
     "title": "Desarrollador Fullstack Senior",
     "specialization": "React • Next.js • Node.js",
     "contact": {
-      "email": "hansgianfranco@gmail.com",
+      "email": "aGFuc2dpYW5mcmFuY29AZ21haWwuY29t",
       "phone": "+51 945122683",
       "location": "Lima, Perú",
       "remote": true,
       "remote_label": "Trabajo Remoto"
+    },
+    "resume": {
+      "title": "Descargar CV",
+      "file": "/resources/franco_caballero_cv.pdf"
     }
   },
   
@@ -109,21 +113,21 @@
   "skills": {
     "titles": {
       "frontend": "Desarrollo Frontend",
-      "backend": "Desarrollo Backend",
+      "backend": "Backend y APIs",
       "databases": "Bases de Datos",
-      "cloud_devops": "Cloud & DevOps",
-      "cms_ecommerce": "CMS & E-commerce"
+      "cloud_infrastructure": "Cloud e Infraestructura",
+      "cms_ecommerce": "CMS y Comercio Electrónico",
+      "tools_methodologies": "Herramientas y Metodologías"
     },
     "frontend": [
       "React",
       "Next.js",
       "Gatsby",
       "TypeScript",
-      "JavaScript (ES6+)",
+      "JavaScript",
       "Redux",
       "TailwindCSS",
-      "Sass",
-      "Webpack"
+      "Sass"
     ],
     "backend": [
       "Node.js",
@@ -131,21 +135,18 @@
       "NestJS",
       "Spring Boot",
       "Laravel",
-      "Django"
+      "Django",
+      "GraphQL"
     ],
     "databases": [
       "PostgreSQL",
       "MySQL",
-      "MongoDB",
-      "Firebase",
-      "GraphQL"
+      "MongoDB"
     ],
-    "cloud_devops": [
-      "AWS (EC2, S3, Lambda)",
-      "CI/CD",
-      "Nginx",
-      "Git",
-      "Agile/Scrum"
+    "cloud_infrastructure": [
+      "AWS (Serverless & Infrastructure)",
+      "Firebase",
+      "Nginx"
     ],
     "cms_ecommerce": [
       "WordPress",
@@ -153,6 +154,11 @@
       "VTEX",
       "Drupal",
       "Magento"
+    ],
+    "tools_methodologies": [
+      "Git",
+      "CI/CD",
+      "Agile/Scrum"
     ]
   },
 
@@ -188,8 +194,18 @@
 
   "social": {
     "title": "Conecta Conmigo",
-    "linkedin": "LinkedIn",
-    "github": "GitHub"
+    "accounts": [
+      {
+        "id": "linkedin",
+        "title": "LinkedIn",
+        "url": "https://linkedin.com/in/francocaballero"
+      },
+      {
+        "id": "github",
+        "title": "Github",
+        "url": "https://github.com/hansgianfranco"
+      }
+    ]
   },
 
   "meta": {
