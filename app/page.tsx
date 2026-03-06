@@ -134,11 +134,11 @@ export default function Home() {
               {"\n"}  location: <span className="text-[#9ece6a]">"{t("personal.contact.location")}"</span>,
               {"\n"}  remote: <span className="text-[#f7768e]">{t("personal.contact.remote") ? "true" : "false"}</span>,
               {"\n"}  stack: [
-              {"\n"}    "Next.js",
-              {"\n"}    "React",
-              {"\n"}    "Node.js",
-              {"\n"}    "PostgreSQL",
-              {"\n"}    "AWS"
+              {"\n"}    &quot;Next.js&quot;,
+              {"\n"}    &quot;React&quot;,
+              {"\n"}    &quot;Node.js&quot;,
+              {"\n"}    &quot;PostgreSQL&quot;,
+              {"\n"}    &quot;AWS&quot;
               {"\n"}  ]
               {"\n"}{'}'}
               </code>
@@ -262,7 +262,7 @@ export default function Home() {
         <code>
         {"{"}
         {"\n"}  degree: <span className="text-[#9ece6a]">"{education.degree}"</span>,
-        {"\n"}  university: <span className="text-[#9ece6a]">"{education.university}"</span>,
+        {"\n"}  university: <span className="text-[#9ece6a]">"{education.institution}"</span>,
         {"\n"}  period: <span className="text-[#9ece6a]">"{education.period}"</span>
         {"\n"}{"}"}
         </code>
