@@ -65,7 +65,6 @@ export interface SkillsTitles {
 export interface Education {
   university: string;
   degree: string;
-  faculty: string;
   period: string;
 }
 
