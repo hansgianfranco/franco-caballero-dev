@@ -12,8 +12,15 @@
     },
     "resume": {
       "title": "Download Resume",
-      "file": "/resources/franco_caballero_resume.pdf"
+      "file": "/resources/FC_RESUME_EN.pdf"
     }
+  },
+
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "contact": "Contact"
   },
   
   "sections": {
@@ -29,7 +36,7 @@
   "profile": {
     "summary": [
       "Senior Fullstack Developer with 7+ years of experience building scalable, business-driven web applications.",
-      "Specialized in modern JavaScript ecosystems (React, Next.js, Node.js) and high-performance backend architectures.",
+      "Specialized in modern JavaScript ecosystems and high-performance backend architectures.",
       "Experienced in corporate environments and startups delivering educational platforms, APIs, internal systems, and e-commerce solutions."
     ],
     "core_strengths": [
@@ -164,8 +171,7 @@
 
   "education": {
     "university": "Universidad César Vallejo",
-    "degree": "BSc in Systems Engineering",
-    "faculty": "Faculty of Engineering",
+    "degree": "Systems Engineering",
     "period": "May 2009 – Dec 2015"
   },
 

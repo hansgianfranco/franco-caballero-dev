@@ -12,8 +12,15 @@
     },
     "resume": {
       "title": "Descargar CV",
-      "file": "/resources/franco_caballero_cv.pdf"
+      "file": "/resources/FC_CV_ES.pdf"
     }
+  },
+
+  "nav": {
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "skills": "Habilidades",
+    "contact": "Contacto"
   },
   
   "sections": {
@@ -29,7 +36,7 @@
   "profile": {
     "summary": [
       "Desarrollador Fullstack Senior con más de 7 años de experiencia construyendo aplicaciones web escalables y orientadas a resultados de negocio.",
-      "Especializado en ecosistemas modernos de JavaScript (React, Next.js, Node.js) y arquitecturas backend de alto rendimiento.",
+      "Especializado en ecosistemas modernos de JavaScript y arquitecturas backend de alto rendimiento.",
       "Con experiencia en entornos corporativos y startups, entregando plataformas educativas, APIs, sistemas internos y soluciones de e-commerce."
     ],
     "core_strengths": [
