@@ -1,12 +1,6 @@
-"use client";
+import type { Experience, Sections } from "@/types/resume";
 
-import { useExperience } from "@/hooks/useExperience";
-import { useSections } from "@/hooks/useSections";
-
-export default function Experience() {
-
-    const { data: sections } = useSections();
-    const { data: experience } = useExperience();
+export default function Experience({ experience, sections }: { experience: Experience[], sections: Sections}) {
 
     return (
         <section id="experience">

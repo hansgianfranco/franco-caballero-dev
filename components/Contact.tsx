@@ -1,13 +1,8 @@
-"use client";
-
-import { useSocial } from "@/hooks/useSocial";
-import { useSections } from "@/hooks/useSections";
 import ContactForm from "./ContactForm";
+import type { Sections, Social } from "@/types/resume";
 
-export default function Contact() {
-
-  const { data: sections } = useSections();
-  const { data: social } = useSocial();
+export default function Contact({ social, sections }: { social: Social, sections: Sections}) {
+  
   return (
     <section id="contact" className=" space-y-6">
       <p className="text-[#565f89]">&#47;&#47; {sections?.contact}</p>

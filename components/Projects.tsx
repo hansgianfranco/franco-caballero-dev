@@ -1,14 +1,6 @@
-"use client";
+import type { Project, Sections } from "@/types/resume";
 
-import { useProjects } from "@/hooks/useProjects";
-import { useSections } from "@/hooks/useSections";
-
-export default function Projects() {
-
-    const { data: sections } = useSections();
-    const { data: projects, loading } = useProjects();
-
-    if (loading) return null;
+export default function Projects({ projects, sections }: { projects: Project[], sections: Sections}) {
 
     return (
         <section id="projects">

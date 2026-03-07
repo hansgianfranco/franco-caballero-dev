@@ -1,16 +1,7 @@
-"use client";
-
-import { usePersonal } from "@/hooks/usePersonal";
-import { useProfile } from "@/hooks/useProfile";
-import { useSocial } from "@/hooks/useSocial";
-import { SocialAccount } from "@/types/resume";
+import type { Personal, Profile, Social, SocialAccount } from "@/types/resume";
 import { Github, Linkedin, Mail } from "lucide-react";
 
-export default function Hero() {
-
-    const { data: personal } = usePersonal();
-    const { data: profile } = useProfile();
-    const { data: social } = useSocial();
+export default function Hero({ personal, profile, social }: { personal: Personal, profile: Profile, social: Social }) {
 
     const email = personal?.contact?.email
         ? atob(personal.contact.email)
@@ -72,7 +63,7 @@ export default function Hero() {
                             download
                             className="px-6 py-3 bg-[#1f1f2e] border border-[#33467C] rounded-lg hover:bg-[#33467C]"
                         >
-                            {personal.resume.title}
+                            {personal.resume?.title}
                         </a>
                     )}
                 </div>
