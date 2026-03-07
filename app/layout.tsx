@@ -8,17 +8,19 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "600", "700"],
   variable: "--font-poppins",
+  display: "swap",
 });
 
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
   variable: "--font-roboto",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "Franco Caballero | Web Developer",
-  description: "Desarrollador web especializado en WordPress, Laravel y Next.js",
+  description: "Web developer specialized in WordPress, Laravel and Next.js",
 };
 
 export default function RootLayout({

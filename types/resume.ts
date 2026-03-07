@@ -77,7 +77,7 @@ export interface Nav {
 }
 
 export interface ResumeData {
-   personal: Personal;
+  personal: Personal;
   nav: Nav;
   sections: Sections;
   profile: Profile;

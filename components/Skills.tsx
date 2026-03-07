@@ -1,13 +1,7 @@
-"use client";
+import type { Sections } from "@/types/resume";
 
-import { useSections } from "@/hooks/useSections";
-import { useSkills } from "@/hooks/useSkills";
-
-export default function Skills() {
-
-  const { data: sections } = useSections();
-  const { data: skills } = useSkills();
-
+export default function Skills({ skills, sections }: { skills: string[], sections: Sections}) {
+  
   return (
     <section id="skills">
       <p className="text-[#565f89] mb-6">&#47;&#47; {sections?.skills}</p>

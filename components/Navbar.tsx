@@ -2,13 +2,12 @@
 
 import { useState } from "react";
 import { Menu } from "lucide-react";
-import { useNav } from "@/hooks/useNav";
 import LanguageSwitcher from "./LanguageSwitcher";
+import type { Nav } from "@/types/resume";
 
-export default function Navbar() {
+export default function Navbar({ nav }: {nav: Nav}) {
 
     const [open, setOpen] = useState(false);
-    const { data: nav } = useNav();
 
     return (
         <header className="sticky top-0 z-40 backdrop-blur bg-[#16161F]/70 border-b border-[#2a2a3a]">
