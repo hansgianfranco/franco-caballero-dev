@@ -1,7 +1,6 @@
 export interface Personal {
   name: string;
   title: string;
-  specialization: string;
   contact: Contact;
   resume: Resume;
 }
@@ -20,19 +19,15 @@ export interface Resume {
 }
 
 export interface Sections {
-  profile: string;
   experience: string;
+  projects: string;
   skills: string;
-  education: string;
-  certifications: string;
-  social: string;
-  strengths_title: string;
+  contact: string;
 }
 
 export interface Profile {
   summary: string[];
   core_strengths: string[];
-  career_goal: string;
 }
 
 export interface Experience {
@@ -43,29 +38,12 @@ export interface Experience {
   responsibilities: string[];
 }
 
-export interface Skills {
-  titles: SkillsTitles;
-  frontend: string[];
-  backend: string[];
-  databases: string[];
-  cloud_infrastructure: string[];
-  cms_ecommerce: string[];
-  tools_methodologies: string[];
-}
-
-export interface SkillsTitles {
-  frontend: string;
-  backend: string;
-  databases: string;
-  cloud_infrastructure: string;
-  cms_ecommerce: string;
-  tools_methodologies: string;
-}
-
-export interface Education {
-  university: string;
-  degree: string;
+export interface Project {
+  name: string;
+  url: string;
   period: string;
+  technologies: string[];
+  description: string;
 }
 
 export interface Certification {
@@ -90,14 +68,22 @@ export interface Meta {
   scroll_top_label: string;
 }
 
+export interface Nav {
+  about: string;
+  experience: string;
+  projects: string;
+  skills: string;
+  contact: string;
+}
+
 export interface ResumeData {
-  personal: Personal;
+   personal: Personal;
+  nav: Nav;
   sections: Sections;
   profile: Profile;
   experience: Experience[];
-  skills: Skills;
-  education: Education;
-  certifications: Certification[];
+  projects: Project[];
+  skills: string[];
   social: Social;
   meta: Meta;
 }

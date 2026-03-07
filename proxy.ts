@@ -3,7 +3,7 @@ import type { NextRequest } from "next/server";
 
 const allowedBots = ["Googlebot", "Bingbot"];
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
   const ua = req.headers.get("user-agent") || "";
 
   if (/bot|crawl|spider|scraper/i.test(ua) && !allowedBots.some(bot => ua.includes(bot))) {

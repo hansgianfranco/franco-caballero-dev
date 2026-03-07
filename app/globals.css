@@ -22,27 +22,54 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-poppins), "Poppins", sans-serif;
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Fade in */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(0); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
-.animate-fade-up {
-  animation: fadeUp 0.6s ease-out forwards;
+/* Fade in from bottom (fade up) */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
-@keyframes gradientMove {
-  0% {background-position: 0%}
-  100% {background-position: 100%}
+/* Slide in from right */
+@keyframes slideInRight {
+  0% { opacity: 0; transform: translateX(50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+.animate-slideInRight {
+  animation: slideInRight 0.8s ease-out forwards;
 }
 
-.bg-animated {
-  background-size: 200% 200%;
-  animation: gradientMove 10s linear infinite alternate;
+/* Slide in from left */
+@keyframes slideInLeft {
+  0% { opacity: 0; transform: translateX(-50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+.animate-slideInLeft {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+/* Stagger delay helper (ejemplo para Tailwind) */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* Scale in (hover anim) */
+@keyframes scaleIn {
+  0% { transform: scale(0.95); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.animate-scaleIn {
+  animation: scaleIn 0.4s ease-out forwards;
 }

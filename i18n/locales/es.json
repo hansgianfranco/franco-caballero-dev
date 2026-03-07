@@ -2,7 +2,6 @@
   "personal": {
     "name": "Franco Caballero",
     "title": "Desarrollador Fullstack Senior",
-    "specialization": "React • Next.js • Node.js",
     "contact": {
       "email": "aGFuc2dpYW5mcmFuY29AZ21haWwuY29t",
       "phone": "+51 945122683",
@@ -19,25 +18,23 @@
   "nav": {
     "about": "Sobre mí",
     "experience": "Experiencia",
+    "projects": "Proyectos",
     "skills": "Habilidades",
     "contact": "Contacto"
   },
   
   "sections": {
-    "profile": "Perfil Profesional",
     "experience": "Experiencia Laboral",
+    "projects": "Proyectos Destacados",
     "skills": "Habilidades Técnicas",
-    "education": "Educación",
-    "certifications": "Certificaciones",
-    "social": "Redes Sociales",
-    "strengths_title": "Fortalezas Clave"
+    "contact": "Contacto"
   },
 
   "profile": {
     "summary": [
-      "Desarrollador Fullstack Senior con más de 7 años de experiencia construyendo aplicaciones web escalables y orientadas a resultados de negocio.",
-      "Especializado en ecosistemas modernos de JavaScript y arquitecturas backend de alto rendimiento.",
-      "Con experiencia en entornos corporativos y startups, entregando plataformas educativas, APIs, sistemas internos y soluciones de e-commerce."
+      "Desarrollador Fullstack Senior con más de 10 años construyendo aplicaciones web escalables y orientadas a resultados.",
+      "Especializado en React, Next.js, Node.js y arquitecturas backend de alto rendimiento.",
+      "Experiencia entregando plataformas educativas, APIs, sistemas internos y soluciones de e-commerce."
     ],
     "core_strengths": [
       "Arquitectura escalable y código limpio",
@@ -45,21 +42,19 @@
       "Diseño de APIs RESTful y sistemas backend",
       "Infraestructura en la nube (AWS)",
       "Colaboración ágil y liderazgo técnico"
-    ],
-    "career_goal": "Abierto a oportunidades internacionales remotas donde pueda contribuir con liderazgo técnico, mejoras de escalabilidad y desarrollo de productos de alto impacto."
+    ]
   },
 
   "experience": [
     {
-      "company": "Whiz (10Peals Company)",
+      "company": "10Pearls",
       "location": "Lima, Perú",
       "position": "Desarrollador Fullstack Senior",
       "period": "Ene 2021 – Presente",
       "responsibilities": [
-        "Lideré el desarrollo de aplicaciones escalables con React y Node.js.",
-        "Diseñé APIs RESTful y servicios backend.",
-        "Mejoré el rendimiento del sistema y los flujos de despliegue.",
-        "Trabajé en entornos Ágiles con equipos multifuncionales."
+        "Lideré aplicaciones escalables con React y Node.js.",
+        "Diseñé APIs RESTful para miles de usuarios.",
+        "Optimicé despliegues y rendimiento del sistema."
       ]
     },
     {
@@ -68,149 +63,51 @@
       "position": "Desarrollador Fullstack",
       "period": "Nov 2018 – Dic 2020",
       "responsibilities": [
-        "Desarrollé plataformas educativas usando Spring Boot.",
-        "Mantuve sistemas backend utilizados por miles de usuarios.",
-        "Mejoré la eficiencia del sistema y el rendimiento de bases de datos."
-      ]
-    },
-    {
-      "company": "Whiz Digital Agency",
-      "location": "Lima, Perú",
-      "position": "Desarrollador Frontend",
-      "period": "Jul 2018 – Nov 2018",
-      "responsibilities": [
-        "Construí aplicaciones web responsivas usando Laravel y stacks frontend modernos.",
-        "Mejoré el rendimiento frontend.",
-        "Mantuve servidores de producción."
-      ]
-    },
-    {
-      "company": "Circus Grey",
-      "location": "Lima, Perú",
-      "position": "Desarrollador Fullstack",
-      "period": "Sep 2016 – May 2018",
-      "responsibilities": [
-        "Desarrollé plataformas web y sistemas para campañas digitales.",
-        "Entregué soluciones de alta calidad para clientes corporativos."
-      ]
-    },
-    {
-      "company": "Cubix Soluciones",
-      "location": "Lima, Perú",
-      "position": "Desarrollador Frontend",
-      "period": "Dic 2015 – Sep 2016",
-      "responsibilities": [
-        "Colaboré en sitios web corporativos y plataformas digitales.",
-        "Trabajé con marcas de banca, construcción y consumo masivo."
-      ]
-    },
-    {
-      "company": "Instituto Científico del Pacífico",
-      "location": "Lima, Perú",
-      "position": "Analista Programador Web",
-      "period": "Abr 2014 – Dic 2015",
-      "responsibilities": [
-        "Desarrollé plataformas basadas en CMS (Drupal, WordPress, Moodle).",
-        "Construí sistemas personalizados con PHP.",
-        "Gestioné diseño de bases de datos y optimización de servidores."
+        "Construí plataformas educativas para 10,000+ usuarios.",
+        "Mejoré eficiencia de bases de datos y rendimiento del sistema."
       ]
     }
   ],
 
-  "skills": {
-    "titles": {
-      "frontend": "Desarrollo Frontend",
-      "backend": "Backend y APIs",
-      "databases": "Bases de Datos",
-      "cloud_infrastructure": "Cloud e Infraestructura",
-      "cms_ecommerce": "CMS y Comercio Electrónico",
-      "tools_methodologies": "Herramientas y Metodologías"
-    },
-    "frontend": [
-      "React",
-      "Next.js",
-      "Gatsby",
-      "TypeScript",
-      "JavaScript",
-      "Redux",
-      "TailwindCSS",
-      "Sass"
-    ],
-    "backend": [
-      "Node.js",
-      "Express",
-      "NestJS",
-      "Spring Boot",
-      "Laravel",
-      "Django",
-      "GraphQL"
-    ],
-    "databases": [
-      "PostgreSQL",
-      "MySQL",
-      "MongoDB"
-    ],
-    "cloud_infrastructure": [
-      "AWS (Serverless & Infrastructure)",
-      "Firebase",
-      "Nginx"
-    ],
-    "cms_ecommerce": [
-      "WordPress",
-      "Shopify",
-      "VTEX",
-      "Drupal",
-      "Magento"
-    ],
-    "tools_methodologies": [
-      "Git",
-      "CI/CD",
-      "Agile/Scrum"
-    ]
-  },
-
-  "education": {
-    "university": "Universidad César Vallejo",
-    "degree": "Ingeniería de Sistemas",
-    "period": "May 2009 – Dic 2015"
-  },
-
-  "certifications": [
+  "projects": [
     {
-      "name": "Google Analytics",
-      "year": "2018",
-      "issuer": "Google Partners"
+      "name": "Plataforma Web & API Darshana",
+      "url": "https://darshana.ai",
+      "period": "Abr 2025 – Presente",
+      "technologies": ["Next.js", "NestJS", "TypeScript", "Sequelize", "AWS Cognito"],
+      "description": "Automatizó la verificación de estudios y emisión de credenciales digitales en 23+ países. Backend con IA y frontend responsivo."
     },
     {
-      "name": "E-Commerce",
-      "year": "2015",
-      "issuer": "Google Actívate"
+      "name": "Plataforma Web & API Mazatlán FC",
+      "url": "https://mazatlanfc.com",
+      "period": "Nov 2023 – Jul 2024",
+      "technologies": ["Next.js", "Express", "TypeScript", "AWS Lambda", "Serverless"],
+      "description": "Sitio web y panel administrativo con API serverless entregando datos de partidos y jugadores en tiempo real."
     },
     {
-      "name": "Desarrollo Web",
-      "year": "2015",
-      "issuer": "Google Actívate / IAB Spain"
-    },
-    {
-      "name": "Scrum Foundation Professional Certificate",
-      "year": "2022",
-      "issuer": "Certiprof"
+      "name": "Plataforma The Calling Move",
+      "url": "https://movetuvocacion.com",
+      "period": "Abr 2023 – Jun 2024",
+      "technologies": ["Express", "TypeScript", "Sequelize", "React", "Google Cloud"],
+      "description": "Plataforma web que guía a los usuarios en el descubrimiento de su carrera, con gamificación y seguimiento de progreso."
     }
+  ],
+
+  "skills": [
+        "TypeScript", "JavaScript", "PHP", "Java",
+        "React", "Next.js", "Gatsby", "Redux", "Tailwind", "Sass",
+        "Node.js", "Express", "NestJS", "Spring Boot", "Laravel", "Django", "GraphQL",
+        "MySQL", "PostgreSQL", "MongoDB", "Sequelize",
+        "AWS", "Google Cloud", "Firebase", "Nginx", "Apache", "Serverless", "CI/CD",
+        "WordPress", "Shopify", "VTEX", "Drupal", "Magento",
+        "Git", "Agile/Scrum"
   ],
 
   "social": {
     "title": "Conecta Conmigo",
     "accounts": [
-      {
-        "id": "linkedin",
-        "title": "LinkedIn",
-        "url": "https://linkedin.com/in/francocaballero"
-      },
-      {
-        "id": "github",
-        "title": "Github",
-        "url": "https://github.com/hansgianfranco"
-      }
+      {"id": "linkedin", "title": "LinkedIn", "url": "https://linkedin.com/in/francocaballero"},
+      {"id": "github", "title": "Github", "url": "https://github.com/hansgianfranco"}
     ]
   },
 
