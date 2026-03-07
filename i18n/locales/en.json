@@ -2,7 +2,6 @@
   "personal": {
     "name": "Franco Caballero",
     "title": "Senior Fullstack Developer",
-    "specialization": "React • Next.js • Node.js",
     "contact": {
       "email": "aGFuc2dpYW5mcmFuY29AZ21haWwuY29t",
       "phone": "+51 945122683",
@@ -19,25 +18,23 @@
   "nav": {
     "about": "About",
     "experience": "Experience",
+    "projects": "Projects",
     "skills": "Skills",
     "contact": "Contact"
   },
   
   "sections": {
-    "profile": "Professional Profile",
     "experience": "Work Experience",
+    "projects": "Featured Projects",
     "skills": "Technical Skills",
-    "education": "Education",
-    "certifications": "Certifications",
-    "social": "Social Media",
-    "strengths_title": "Core Strengths"
+    "contact": "Contact"
   },
 
   "profile": {
     "summary": [
-      "Senior Fullstack Developer with 7+ years of experience building scalable, business-driven web applications.",
-      "Specialized in modern JavaScript ecosystems and high-performance backend architectures.",
-      "Experienced in corporate environments and startups delivering educational platforms, APIs, internal systems, and e-commerce solutions."
+      "Senior Fullstack Developer with 10+ years building scalable, business-driven web applications.",
+      "Specialized in React, Next.js, Node.js, and high-performance backend architectures.",
+      "Experienced delivering educational platforms, APIs, internal systems, and e-commerce solutions."
     ],
     "core_strengths": [
       "Scalable architecture & clean code",
@@ -45,21 +42,19 @@
       "RESTful API design & backend systems",
       "Cloud infrastructure (AWS)",
       "Agile collaboration & technical leadership"
-    ],
-    "career_goal": "Open to remote international opportunities where I can contribute technical leadership, scalability improvements, and high-impact product development."
+    ]
   },
 
   "experience": [
     {
-      "company": "Whiz (10Peals Company)",
+      "company": "10Pearls",
       "location": "Lima, Peru",
       "position": "Senior Fullstack Developer",
       "period": "Jan 2021 – Present",
       "responsibilities": [
-        "Led development of scalable React and Node.js applications.",
-        "Designed RESTful APIs and backend services.",
-        "Improved system performance and deployment workflows.",
-        "Worked in Agile environments with cross-functional teams."
+        "Led scalable React & Node.js applications.",
+        "Designed RESTful APIs serving thousands of users.",
+        "Optimized deployment workflows & system performance."
       ]
     },
     {
@@ -68,149 +63,51 @@
       "position": "Fullstack Developer",
       "period": "Nov 2018 – Dec 2020",
       "responsibilities": [
-        "Developed educational platforms using Spring Boot.",
-        "Maintained backend systems used by thousands of users.",
-        "Improved system efficiency and database performance."
-      ]
-    },
-    {
-      "company": "Whiz Digital Agency",
-      "location": "Lima, Peru",
-      "position": "Frontend Developer",
-      "period": "Jul 2018 – Nov 2018",
-      "responsibilities": [
-        "Built responsive web applications using Laravel and modern frontend stacks.",
-        "Improved front-end performance.",
-        "Maintained production servers."
-      ]
-    },
-    {
-      "company": "Circus Grey",
-      "location": "Lima, Peru",
-      "position": "Fullstack Developer",
-      "period": "Sep 2016 – May 2018",
-      "responsibilities": [
-        "Developed web platforms and digital campaign systems.",
-        "Delivered high-quality solutions for corporate clients."
-      ]
-    },
-    {
-      "company": "Cubix Soluciones",
-      "location": "Lima, Peru",
-      "position": "Frontend Developer",
-      "period": "Dec 2015 – Sep 2016",
-      "responsibilities": [
-        "Collaborated on corporate websites and digital platforms.",
-        "Worked with banking, construction, and consumer brands."
-      ]
-    },
-    {
-      "company": "Instituto Científico del Pacífico",
-      "location": "Lima, Peru",
-      "position": "Web Programmer Analyst",
-      "period": "Apr 2014 – Dec 2015",
-      "responsibilities": [
-        "Developed CMS-based platforms (Drupal, WordPress, Moodle).",
-        "Built custom PHP systems.",
-        "Managed database design and server optimization."
+        "Built educational platforms for 10,000+ users.",
+        "Improved database efficiency & system performance."
       ]
     }
   ],
 
-  "skills": {
-    "titles": {
-      "frontend": "Frontend Development", 
-      "backend": "Backend & APIs", 
-      "databases": "Databases", 
-      "cloud_infrastructure": "Cloud & Infrastructure", 
-      "cms_ecommerce": "CMS & E-commerce", 
-      "tools_methodologies": "Tools & Methodologies"
-    },
-    "frontend": [
-      "React",
-      "Next.js",
-      "Gatsby",
-      "TypeScript",
-      "JavaScript",
-      "Redux",
-      "TailwindCSS",
-      "Sass"
-    ],
-    "backend": [
-      "Node.js",
-      "Express",
-      "NestJS",
-      "Spring Boot",
-      "Laravel",
-      "Django",
-      "GraphQL"
-    ],
-    "databases": [
-      "PostgreSQL",
-      "MySQL",
-      "MongoDB"
-    ],
-    "cloud_infrastructure": [
-      "AWS (Serverless & Infrastructure)",
-      "Firebase",
-      "Nginx"
-    ],
-    "cms_ecommerce": [
-      "WordPress",
-      "Shopify",
-      "VTEX",
-      "Drupal",
-      "Magento"
-    ],
-    "tools_methodologies": [
-      "Git",
-      "CI/CD",
-      "Agile/Scrum"
-    ]
-  },
-
-  "education": {
-    "university": "Universidad César Vallejo",
-    "degree": "Systems Engineering",
-    "period": "May 2009 – Dec 2015"
-  },
-
-  "certifications": [
+  "projects": [
     {
-      "name": "Google Analytics",
-      "year": "2018",
-      "issuer": "Google Partners"
+      "name": "Darshana Web & API Platform",
+      "url": "https://darshana.ai",
+      "period": "Apr 2025 – Present",
+      "technologies": ["Next.js", "NestJS", "TypeScript", "Sequelize", "AWS Cognito"],
+      "description": "Automated career verification and digital credential issuance across 23+ countries. Built AI-driven backend and responsive frontend."
     },
     {
-      "name": "E-Commerce",
-      "year": "2015",
-      "issuer": "Google Actívate"
+      "name": "Mazatlán FC Web & API Platform",
+      "url": "https://mazatlanfc.com",
+      "period": "Nov 2023 – Jul 2024",
+      "technologies": ["Next.js", "Express", "TypeScript", "AWS Lambda", "Serverless"],
+      "description": "Built website and admin panel with serverless API delivering real-time match and player data."
     },
     {
-      "name": "Web Development",
-      "year": "2015",
-      "issuer": "Google Actívate / IAB Spain"
-    },
-    {
-      "name": "Scrum Foundation Professional Certificate",
-      "year": "2022",
-      "issuer": "Certiprof"
+      "name": "The Calling Move Platform",
+      "url": "https://movetuvocacion.com",
+      "period": "Apr 2023 – Jun 2024",
+      "technologies": ["Express", "TypeScript", "Sequelize", "React", "Google Cloud"],
+      "description": "Developed web platform guiding users in career discovery with gamification and progress tracking."
     }
+  ],
+
+  "skills": [
+        "TypeScript", "JavaScript", "PHP", "Java",
+        "React", "Next.js", "Gatsby", "Redux", "Tailwind", "Sass",
+        "Node.js", "Express", "NestJS", "Spring Boot", "Laravel", "Django", "GraphQL",
+        "MySQL", "PostgreSQL", "MongoDB", "Sequelize",
+        "AWS", "Google Cloud", "Firebase", "Nginx", "Apache", "Serverless", "CI/CD",
+        "WordPress", "Shopify", "VTEX", "Drupal", "Magento",
+        "Git", "Agile/Scrum"
   ],
 
   "social": {
     "title": "Connect with me",
     "accounts": [
-      {
-        "id": "linkedin",
-        "title": "LinkedIn",
-        "url": "https://linkedin.com/in/francocaballero"
-      },
-      {
-        "id": "github",
-        "title": "Github",
-        "url": "https://github.com/hansgianfranco"
-      }
+      {"id": "linkedin", "title": "LinkedIn", "url": "https://linkedin.com/in/francocaballero"},
+      {"id": "github", "title": "Github", "url": "https://github.com/hansgianfranco"}
     ]
   },
 
