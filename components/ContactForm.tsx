@@ -2,9 +2,28 @@
 
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function ContactForm() {
-  
+
+  const container = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.12
+      }
+    }
+  };
+
+  const field = {
+    hidden: { opacity: 0, y: 20 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.35 }
+    }
+  };
+
   const { language } = useLanguage();
 
   const [form, setForm] = useState({
@@ -12,13 +31,16 @@ export default function ContactForm() {
     email: "",
     message: ""
   });
+
   const [status, setStatus] = useState("");
+
   const text = {
     es: {
       name: "Nombre",
       email: "Correo",
       message: "Mensaje",
       send: "Enviar mensaje",
+      sending: "Enviando...",
       success: "Mensaje enviado correctamente.",
       error: "Ocurrió un error al enviar."
     },
@@ -27,6 +49,7 @@ export default function ContactForm() {
       email: "Email",
       message: "Message",
       send: "Send message",
+      sending: "Sending...",
       success: "Message sent successfully.",
       error: "Something went wrong."
     }
@@ -45,8 +68,10 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     try {
       setStatus("loading");
+
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -54,53 +79,74 @@ export default function ContactForm() {
         },
         body: JSON.stringify(form)
       });
+
       if (!res.ok) throw new Error();
+
       setStatus("success");
+
       setForm({
         name: "",
         email: "",
         message: ""
       });
+
     } catch {
       setStatus("error");
     }
   };
 
   return (
-    <form
+    <motion.form
       onSubmit={handleSubmit}
-      className="mt-8 space-y-6 max-w-xl"
+      className="mt-8 space-y-6"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
     >
-      <div>
-        <label className="block text-sm text-[#C0CAF5] mb-2">
-          {t.name}
-        </label>
-        <input
-          type="text"
-          name="name"
-          required
-          value={form.name}
-          onChange={handleChange}
-          className="w-full bg-[#1f1f2e] border border-[#33467C] rounded-lg px-4 py-3 text-[#C0CAF5] focus:outline-none focus:border-[#9e68ff] transition-colors"
-        />
-      </div>
-      <div>
-        <label className="block text-sm text-[#C0CAF5] mb-2">
-          {t.email}
-        </label>
-        <input
-          type="email"
-          name="email"
-          required
-          value={form.email}
-          onChange={handleChange}
-          className="w-full bg-[#1f1f2e] border border-[#33467C] rounded-lg px-4 py-3 text-[#C0CAF5] focus:outline-none focus:border-[#9e68ff] transition-colors"
-        />
-      </div>
-      <div>
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 gap-4"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
+        <motion.div variants={field}>
+          <label className="block text-sm text-[#C0CAF5] mb-2">
+            {t.name}
+          </label>
+
+          <input
+            type="text"
+            name="name"
+            required
+            value={form.name}
+            onChange={handleChange}
+            className="w-full bg-[#1f1f2e] border border-[#33467C] rounded-lg px-4 py-3 text-[#C0CAF5] focus:outline-none focus:border-[#9e68ff] transition-colors"
+          />
+        </motion.div>
+
+        <motion.div variants={field}>
+          <label className="block text-sm text-[#C0CAF5] mb-2">
+            {t.email}
+          </label>
+
+          <input
+            type="email"
+            name="email"
+            required
+            value={form.email}
+            onChange={handleChange}
+            className="w-full bg-[#1f1f2e] border border-[#33467C] rounded-lg px-4 py-3 text-[#C0CAF5] focus:outline-none focus:border-[#9e68ff] transition-colors"
+          />
+        </motion.div>
+      </motion.div>
+
+      <motion.div variants={field}>
         <label className="block text-sm text-[#C0CAF5] mb-2">
           {t.message}
         </label>
+
         <textarea
           name="message"
           required
@@ -109,23 +155,59 @@ export default function ContactForm() {
           onChange={handleChange}
           className="w-full bg-[#1f1f2e] border border-[#33467C] rounded-lg px-4 py-3 text-[#C0CAF5] focus:outline-none focus:border-[#9e68ff] transition-colors resize-none"
         />
-      </div>
-      <button
+      </motion.div>
+
+      <motion.button
         type="submit"
         disabled={status === "loading"}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
         className="bg-[#1f1f2e] border border-[#33467C] hover:bg-[#33467C] text-[#C0CAF5] px-6 py-3 rounded-lg transition-all duration-300"
       >
         {t.send}
-      </button>
-      {status === "loading" && (
-        <p className="text-[#7aa2f7] text-sm">Sending...</p>
-      )}
-      {status === "success" && (
-        <p className="text-[#9ece6a] text-sm">{t.success}</p>
-      )}
-      {status === "error" && (
-        <p className="text-[#f7768e] text-sm">{t.error}</p>
-      )}
-    </form>
+      </motion.button>
+
+      <AnimatePresence mode="wait">
+        {status === "loading" && (
+          <motion.p
+            key="loading"
+            initial={{ opacity: 0, y: 5 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -5 }}
+            transition={{ duration: 0.2 }}
+            className="text-[#7aa2f7] text-sm"
+          >
+            {t.sending}
+          </motion.p>
+        )}
+
+        {status === "success" && (
+          <motion.p
+            key="success"
+            initial={{ opacity: 0, y: 5 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -5 }}
+            transition={{ duration: 0.2 }}
+            className="text-[#9ece6a] text-sm"
+          >
+            {t.success}
+          </motion.p>
+        )}
+
+        {status === "error" && (
+          <motion.p
+            key="error"
+            initial={{ opacity: 0, y: 5 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -5 }}
+            transition={{ duration: 0.2 }}
+            className="text-[#f7768e] text-sm"
+          >
+            {t.error}
+          </motion.p>
+        )}
+      </AnimatePresence>
+
+    </motion.form>
   );
 }

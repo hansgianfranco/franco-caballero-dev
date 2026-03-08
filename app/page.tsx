@@ -9,6 +9,7 @@ import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const { language } = useLanguage();
@@ -27,7 +28,8 @@ export default function Home() {
   if (!resume) return null;
 
   return (
-    <main className="min-h-screen bg-[#16161F] text-[#C0CAF5] font-mono">
+    <main className="min-h-screen relative text-[#C0CAF5] font-mono">
+      <div className="stars-layer"></div>
       <Navbar nav={resume.nav}/>
 
       <div className="max-w-6xl mx-auto px-6 py-20 space-y-20">
@@ -37,6 +39,7 @@ export default function Home() {
         <Skills skills={resume.skills} sections={resume.sections}/>
         <Contact social={resume.social} sections={resume.sections}/>
       </div>
+      <Footer meta={resume.meta}/>
     </main>
   );
 }
