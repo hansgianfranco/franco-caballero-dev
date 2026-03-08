@@ -80,27 +80,27 @@ export default function Hero({ personal, profile, social }: { personal: Personal
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.7 }}
             >
-                <div className="bg-[#1f1f2e] border border-[#33467C] rounded-lg p-6 overflow-x-auto">
-                    <pre>
+                <div className="bg-[#1f1f2e] border border-[#33467C] rounded-lg p-6">
+                    <pre className="whitespace-pre-wrap break-words text-sm sm:text-base">
                         <code>
-                            <span className="text-[#7aa2f7]">export const</span> developer = {"{"}
-                            {"\n"}  name: <span className="text-[#9ece6a]">&quot;{personal?.name}&quot;</span>,
-                            {"\n"}  role: <span className="text-[#9ece6a]">&quot;{personal?.title}&quot;</span>,
-                            {"\n"}  location: <span className="text-[#9ece6a]">&quot;{personal?.contact?.location}&quot;</span>,
-                            {"\n"}  remote: <span className="text-[#f7768e]">
-                                {personal?.contact?.remote ? "true" : "false"}
-                            </span>,
-                            {"\n"}  stack: [
-                            {"\n"}    &quot;Next.js&quot;,
-                            {"\n"}    &quot;React&quot;,
-                            {"\n"}    &quot;Node.js&quot;,
-                            {"\n"}    &quot;PostgreSQL&quot;,
-                            {"\n"}    &quot;AWS&quot;
-                            {"\n"}  ]
-                            {"\n"}{"}"}
+                        <span className="text-[#7aa2f7]">export const</span> developer = {"{"}
+                        {"\n"}  name: <span className="text-[#9ece6a]">&quot;{personal?.name}&quot;</span>,
+                        {"\n"}  role: <span className="text-[#9ece6a]">&quot;{personal?.title}&quot;</span>,
+                        {"\n"}  location: <span className="text-[#9ece6a]">&quot;{personal?.contact?.location}&quot;</span>,
+                        {"\n"}  remote: <span className="text-[#f7768e]">
+                            {personal?.contact?.remote ? "true" : "false"}
+                        </span>,
+                        {"\n"}  stack: [
+                        {"\n"}    &quot;Next.js&quot;,
+                        {"\n"}    &quot;React&quot;,
+                        {"\n"}    &quot;Node.js&quot;,
+                        {"\n"}    &quot;PostgreSQL&quot;,
+                        {"\n"}    &quot;AWS&quot;
+                        {"\n"}  ]
+                        {"\n"}{"}"}
                         </code>
                     </pre>
-                </div>
+                    </div>
             </motion.div>
         </section>
     );
