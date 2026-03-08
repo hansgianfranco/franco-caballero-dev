@@ -1,4 +1,5 @@
 import type { Personal, Profile, Social, SocialAccount } from "@/types/resume";
+import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Hero({ personal, profile, social }: { personal: Personal, profile: Profile, social: Social }) {
@@ -11,7 +12,12 @@ export default function Hero({ personal, profile, social }: { personal: Personal
 
     return (
         <section id="about" className="flex flex-col md:flex-row items-start gap-10">
-            <div className="flex-1 space-y-6 animate-fadeIn">
+            <motion.div
+                className="flex-1 space-y-6"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+            >
                 <h1 className="text-5xl font-bold text-[#9e68ff]">
                     {personal?.name}
                 </h1>
@@ -67,8 +73,13 @@ export default function Hero({ personal, profile, social }: { personal: Personal
                         </a>
                     )}
                 </div>
-            </div>
-            <div className="w-full md:w-1/2 shrink-0 animate-slideInRight">
+            </motion.div>
+            <motion.div
+                className="w-full md:w-1/2 shrink-0"
+                initial={{ opacity: 0, x: 60 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.7 }}
+            >
                 <div className="bg-[#1f1f2e] border border-[#33467C] rounded-lg p-6 overflow-x-auto">
                     <pre>
                         <code>
@@ -90,7 +101,7 @@ export default function Hero({ personal, profile, social }: { personal: Personal
                         </code>
                     </pre>
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }

@@ -9,6 +9,7 @@ import { getSkills } from "@/services/skills.service";
 import { getSocial } from "@/services/social.service";
 import { getNav } from "@/services/nav.service";
 import { getSections } from "@/services/sections.service";
+import { getMeta } from "@/services/meta.service";
 
 export async function GET(req: NextRequest) {
 
@@ -25,7 +26,8 @@ export async function GET(req: NextRequest) {
     skills: getSkills(),
     social: getSocial(lang),
     nav: getNav(lang),
-    sections: getSections(lang)
+    sections: getSections(lang),
+    meta: getMeta(lang)
   };
 
   return NextResponse.json(data);

@@ -1,13 +1,15 @@
 import { Meta } from "@/types/resume";
 
+const year = new Date().getFullYear();
+
 export const metaData: Record<string, Meta> = {
   es: {
-    footer: "© Franco Caballero - Desarrollador Fullstack Senior",
+    footer: `© ${year} Franco Caballero - Desarrollador Fullstack Senior`,
     scroll_top_label: "Volver arriba"
   },
 
   en: {
-    footer: "© Franco Caballero - Senior Fullstack Developer",
+    footer: `© ${year} Franco Caballero - Senior Fullstack Developer`,
     scroll_top_label: "Go to top"
   }
 };

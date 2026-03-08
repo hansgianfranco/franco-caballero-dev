@@ -1,28 +1,78 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background:#000;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-roboto), "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-poppins), "Poppins", sans-serif;
 }
 
-/* Fade in */
+body {
+  background-color:#000;
+}
+
+.stars-layer {
+  position:fixed;
+  top:50%;
+  left:50%;
+  height:1px;
+  width:1px;
+  background-color:#fff;
+  border-radius:50%;
+  pointer-events:none;
+  z-index:-1;
+
+  box-shadow:
+  -42vw -4vh 0px 0px #fff,
+  25vw -41vh 0px 0px #fff,
+  -20vw 49vh 0px 1px #fff,
+  5vw 40vh 1px 1px #fff,
+  29vw 19vh 1px 0px #fff,
+  -44vw -13vh 0px 0px #fff,
+  46vw 41vh 0px 1px #fff,
+  -3vw -45vh 0px 1px #fff,
+  47vw 35vh 1px 0px #fff,
+  12vw -8vh 1px 0px #fff,
+  -34vw 48vh 1px 1px #fff,
+  32vw 26vh 1px 1px #fff,
+  32vw -41vh 1px 1px #fff,
+  0vw 37vh 1px 1px #fff,
+  34vw -26vh 1px 0px #fff,
+  -14vw -49vh 1px 0px #fff,
+  -12vw 45vh 0px 1px #fff,
+  -44vw -33vh 0px 1px #fff,
+
+  24vw 9vh 1px 0px #fff,
+  12vw -24vh 0px 1px #fff,
+  -45vw -22vh 0px 0px #fff,
+  -37vw -40vh 0px 1px #fff,
+  29vw 19vh 0px 1px #fff,
+  4vw -8vh 0px 1px #fff,
+  -5vw 21vh 1px 1px #fff,
+  -27vw 26vh 1px 1px #fff,
+  -47vw -3vh 1px 1px #fff,
+  -28vw -30vh 0px 1px #fff;
+
+  animation:zoom 16s alternate infinite;
+}
+
+@keyframes zoom{
+  0%{
+    transform:scale(1);
+  }
+  100%{
+    transform:scale(1.5);
+  }
+}
+
 @keyframes fadeIn {
   0% { opacity: 0; transform: translateY(0); }
   100% { opacity: 1; transform: translateY(0); }
@@ -31,7 +81,6 @@ h1, h2, h3, h4, h5, h6 {
   animation: fadeIn 0.8s ease-out forwards;
 }
 
-/* Fade in from bottom (fade up) */
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(20px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -40,7 +89,6 @@ h1, h2, h3, h4, h5, h6 {
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* Slide in from right */
 @keyframes slideInRight {
   0% { opacity: 0; transform: translateX(50px); }
   100% { opacity: 1; transform: translateX(0); }
@@ -49,7 +97,6 @@ h1, h2, h3, h4, h5, h6 {
   animation: slideInRight 0.8s ease-out forwards;
 }
 
-/* Slide in from left */
 @keyframes slideInLeft {
   0% { opacity: 0; transform: translateX(-50px); }
   100% { opacity: 1; transform: translateX(0); }
@@ -58,14 +105,7 @@ h1, h2, h3, h4, h5, h6 {
   animation: slideInLeft 0.8s ease-out forwards;
 }
 
-/* Stagger delay helper (ejemplo para Tailwind) */
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; }
-.delay-500 { animation-delay: 0.5s; }
 
-/* Scale in (hover anim) */
 @keyframes scaleIn {
   0% { transform: scale(0.95); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
@@ -73,3 +113,9 @@ h1, h2, h3, h4, h5, h6 {
 .animate-scaleIn {
   animation: scaleIn 0.4s ease-out forwards;
 }
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
