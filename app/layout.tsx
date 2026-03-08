@@ -3,6 +3,7 @@ import { Poppins, Roboto } from "next/font/google";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
+import Script from "next/script";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -19,8 +20,46 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Franco Caballero | Web Developer",
-  description: "Web developer specialized in WordPress, Laravel and Next.js",
+  title: "Franco Caballero | Senior Fullstack Developer",
+  description:
+    "Senior Fullstack Developer specialized in Next.js, Laravel, WordPress and cloud solutions. Building scalable web applications.",
+  keywords: [
+    "Franco Caballero",
+    "Fullstack Developer",
+    "Next.js Developer",
+    "Laravel Developer",
+    "WordPress Developer",
+    "Web Developer Portfolio"
+  ],
+  authors: [{ name: "Franco Caballero" }],
+  creator: "Franco Caballero",
+  metadataBase: new URL("https://francocaballero.dev"),
+  openGraph: {
+    title: "Franco Caballero | Senior Fullstack Developer",
+    description: "Web developer specialized in WordPress, Laravel and Next.js",
+    url: "https://francocaballero.dev",
+    siteName: "Franco Caballero Portfolio",
+    images: [
+      {
+        url: "/web-app-manifest-192x192.png",
+        width: 192,
+        height: 192,
+        alt: "Franco Caballero Portfolio"
+      }
+    ],
+    type: "website"
+  },
+  twitter: {
+    card: "summary",
+    images: ["/web-app-manifest-192x192.png"]
+  },
+  robots: {
+    index: true,
+    follow: true
+  },
+  alternates: {
+    canonical: "https://francocaballero.dev"
+  },
 };
 
 export default function RootLayout({
@@ -35,6 +74,23 @@ export default function RootLayout({
           {children}
         </LanguageProvider>
         <SpeedInsights/>
+        <Script
+          id="structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Franco Caballero",
+              jobTitle: "Senior Fullstack Developer",
+              url: "https://francocaballero.dev",
+              sameAs: [
+                "https://github.com/hansgianfranco",
+                "https://linkedin.com/in/francocaballero"
+              ]
+            })
+          }}
+        />
       </body>
     </html>
   );
