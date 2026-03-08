@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Roboto } from "next/font/google";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { GoogleAnalytics } from "@next/third-parties/google"
 import "./globals.css";
 import Script from "next/script";
 
@@ -74,6 +75,7 @@ export default function RootLayout({
           {children}
         </LanguageProvider>
         <SpeedInsights/>
+        <GoogleAnalytics gaId={process.env.GA_ID!} />
         <Script
           id="structured-data"
           type="application/ld+json"
