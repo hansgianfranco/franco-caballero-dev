@@ -12,23 +12,42 @@ import { getSections } from "@/services/sections.service";
 import { getMeta } from "@/services/meta.service";
 
 export async function GET(req: NextRequest) {
-
   const url = new URL(req.url);
   const langParam = url.searchParams.get("lang");
 
   const lang = langParam || detectLang(req);
 
-  const data = {
-    personal: getPersonal(lang),
-    profile: getProfile(lang),
-    experience: getExperience(lang),
-    projects: getProjects(lang),
-    skills: getSkills(),
-    social: getSocial(lang),
-    nav: getNav(lang),
-    sections: getSections(lang),
-    meta: getMeta(lang)
-  };
+  const [
+    personal,
+    profile,
+    experience,
+    projects,
+    skills,
+    social,
+    nav,
+    sections,
+    meta
+  ] = await Promise.all([
+    getPersonal(lang),
+    getProfile(lang),
+    getExperience(lang),
+    getProjects(lang),
+    getSkills(),
+    getSocial(lang),
+    getNav(lang),
+    getSections(lang),
+    getMeta(lang)
+  ]);
 
-  return NextResponse.json(data);
+  return NextResponse.json({
+    personal,
+    profile,
+    experience,
+    projects,
+    skills,
+    social,
+    nav,
+    sections,
+    meta
+  });
 }

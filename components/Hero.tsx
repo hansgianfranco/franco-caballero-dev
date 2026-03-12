@@ -90,7 +90,7 @@ export default function Hero({ personal, profile, social }: { personal: Personal
                 transition={{ duration: 0.7 }}
             >
                 <div className="bg-[#1f1f2e] border border-[#33467C] rounded-lg p-6">
-                    <pre className="whitespace-pre-wrap break-words text-sm sm:text-base">
+                    <pre className="whitespace-pre-wrap wrap-break-words text-sm sm:text-base">
                         <code>
                         <span className="text-[#7aa2f7]">export const</span> developer = {"{"}
                         {"\n"}  name: <span className="text-[#9ece6a]">&quot;{personal?.name}&quot;</span>,
