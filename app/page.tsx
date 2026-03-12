@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <Navbar nav={resume.nav}/>
-      <main id="main" className="min-h-screen relative text-[#C0CAF5] font-mono max-w-6xl mx-auto px-6 py-20 space-y-20" role="main">
+      <main id="main" className="min-h-screen relative text-foreground font-mono max-w-6xl mx-auto px-6 py-20 space-y-20" role="main">
           <Hero personal={resume.personal} profile={resume.profile} social={resume.social}/>
           <Projects projects={resume.projects} sections={resume.sections}/>
           <Experience experience={resume.experience} sections={resume.sections} />

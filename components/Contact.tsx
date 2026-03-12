@@ -14,7 +14,7 @@ export default function Contact({ sections }: { sections: Sections}) {
       viewport={{ once: true }}
       aria-labelledby="contact-title"
     >
-      <h2 id="contact-title" className="mb-6 text-[#565f89] font-mono before:content-['//_'] before:text-[#565f89]">
+      <h2 id="contact-title" className="mb-6 text-muted font-mono before:content-['//_'] before:text-muted">
         {sections?.contact}
       </h2>
       <ContactForm />

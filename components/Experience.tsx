@@ -8,10 +8,10 @@ export default function Experience({ experience, sections }: { experience: Exper
 
     return (
         <section id="experience" aria-labelledby="experience-title">
-            <h2 id="experience-title" className="mb-6 text-[#565f89] font-mono before:content-['//_'] before:text-[#565f89]">
+            <h2 id="experience-title" className="mb-6 text-muted font-mono before:content-['//_'] before:text-muted">
                 {sections?.experience}
             </h2>
-            <div className="relative border-l border-[#33467C] pl-8 space-y-10">
+            <div className="relative border-l border-outline pl-8 space-y-10">
                 {experience?.map((job, i) => (
                     <motion.article
                         key={i}
@@ -21,11 +21,11 @@ export default function Experience({ experience, sections }: { experience: Exper
                         viewport={{ once: true }}
                         className="relative group"
                     >
-                        <span className="absolute -left-10 top-1 w-4 h-4 bg-[#9e68ff] rounded-full transition-transform transform group-hover:scale-150 duration-300"></span>
-                        <h3 className="text-[#9e68ff] text-lg">
+                        <span className="absolute -left-10 top-1 w-4 h-4 bg-primary rounded-full transition-transform transform group-hover:scale-150 duration-300"></span>
+                        <h3 className="text-primary text-lg">
                             {job.position}
                         </h3>
-                        <p className="text-sm capitalize text-[#9ece6a]">
+                        <p className="text-sm capitalize text-secondary">
                             <span>{job.company}</span>
                             {" • "}
                             <time
@@ -44,7 +44,7 @@ export default function Experience({ experience, sections }: { experience: Exper
                                 language === "es" ? "Presente" : "Present"
                             )}
                         </p>
-                        <ul className="mt-3 space-y-1 text-[#C0CAF5]">
+                        <ul className="mt-3 space-y-1 text-foreground">
                             {job.responsibilities.map((r, index) => (
                                 <li key={index}>
                                     - {r}

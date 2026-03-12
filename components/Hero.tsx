@@ -19,16 +19,16 @@ export default function Hero({ personal, profile, social }: { personal: Personal
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
             >
-                <h1 className="text-5xl font-bold text-[#9e68ff]">
+                <h1 className="text-5xl font-bold text-primary">
                     {personal?.name}
                 </h1>
-                <h2 className="text-2xl text-[#9ece6a]">
+                <h2 className="text-2xl text-secondary">
                     {personal?.title}
                 </h2>
                 <address className="flex justify-start gap-6">
                     <a
                         href={`mailto:${email}`}
-                        className="flex items-center gap-2 hover:text-[#9e68ff]"
+                        className="flex items-center gap-2 hover:text-primary"
                     >
                         <Mail size={18} /> Email
                     </a>
@@ -40,7 +40,7 @@ export default function Hero({ personal, profile, social }: { personal: Personal
                                     href={account.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 hover:text-[#9e68ff]"
+                                    className="flex items-center gap-2 hover:text-primary"
                                 >
                                     <Github size={18} /> Github
                                 </a>
@@ -52,7 +52,7 @@ export default function Hero({ personal, profile, social }: { personal: Personal
                                     href={account.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 hover:text-[#9e68ff]"
+                                    className="flex items-center gap-2 hover:text-primary"
                                 >
                                     <Linkedin size={18} /> LinkedIn
                                 </a>
@@ -60,7 +60,7 @@ export default function Hero({ personal, profile, social }: { personal: Personal
                         return null;
                     })}
                 </address>
-                <div className="mt-6 max-w-3xl space-y-3 text-[#C0CAF5]">
+                <div className="mt-6 max-w-3xl space-y-3 text-foreground">
                     {summary.slice(0, 3).map((paragraph: string, i: number) => (
                         <p key={i}>{paragraph}</p>
                     ))}
@@ -70,7 +70,7 @@ export default function Hero({ personal, profile, social }: { personal: Personal
                         <a
                             href={personal.resume.file}
                             download
-                            className="px-6 py-3 bg-[#1f1f2e] border border-[#33467C] rounded-lg hover:bg-[#33467C]"
+                            className="px-6 py-3 bg-card border border-outline rounded-lg hover:bg-outline"
                         >
                             {personal.resume?.title}
                         </a>
@@ -83,14 +83,14 @@ export default function Hero({ personal, profile, social }: { personal: Personal
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.7 }}
             >
-                <div className="bg-[#1f1f2e] border border-[#33467C] rounded-lg p-6">
+                <div className="bg-card border border-outline rounded-lg p-6">
                     <pre className="whitespace-pre-wrap wrap-break-words text-sm sm:text-base">
                         <code>
-                        <span className="text-[#7aa2f7]">export const</span> developer = {"{"}
-                        {"\n"}  name: <span className="text-[#9ece6a]">&quot;{personal?.name}&quot;</span>,
-                        {"\n"}  role: <span className="text-[#9ece6a]">&quot;{personal?.title}&quot;</span>,
-                        {"\n"}  location: <span className="text-[#9ece6a]">&quot;{personal?.contact?.location}&quot;</span>,
-                        {"\n"}  remote: <span className="text-[#f7768e]">
+                        <span className="text-accent">export const</span> developer = {"{"}
+                        {"\n"}  name: <span className="text-secondary">&quot;{personal?.name}&quot;</span>,
+                        {"\n"}  role: <span className="text-secondary">&quot;{personal?.title}&quot;</span>,
+                        {"\n"}  location: <span className="text-secondary">&quot;{personal?.contact?.location}&quot;</span>,
+                        {"\n"}  remote: <span className="text-danger">
                             {personal?.contact?.remote ? "true" : "false"}
                         </span>,
                         {"\n"}  stack: [
