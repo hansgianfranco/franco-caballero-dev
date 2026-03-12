@@ -3,6 +3,7 @@ import { detectLang } from "@/utils/detectLang";
 
 import { getPersonal } from "@/services/personal.service";
 import { getProfile } from "@/services/profile.service";
+import { getEducation } from "@/services/education.service";
 import { getExperience } from "@/services/experience.service";
 import { getProjects } from "@/services/projects.service";
 import { getSkills } from "@/services/skills.service";
@@ -20,6 +21,7 @@ export async function GET(req: NextRequest) {
   const [
     personal,
     profile,
+    education,
     experience,
     projects,
     skills,
@@ -30,6 +32,7 @@ export async function GET(req: NextRequest) {
   ] = await Promise.all([
     getPersonal(lang),
     getProfile(lang),
+    getEducation(lang),
     getExperience(lang),
     getProjects(lang),
     getSkills(),
@@ -42,6 +45,7 @@ export async function GET(req: NextRequest) {
   return NextResponse.json({
     personal,
     profile,
+    education,
     experience,
     projects,
     skills,

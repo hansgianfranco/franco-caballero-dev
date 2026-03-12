@@ -3,6 +3,7 @@ import { ResumeData } from "@/types/resume";
 export function generateSchema({
   personal,
   profile,
+  education,
   skills,
   social,
   projects,
@@ -13,18 +14,30 @@ export function generateSchema({
     ? atob(personal.contact.email)
     : "";
 
-  return {
+  const schema = {
     "@context": "https://schema.org",
     "@type": "Person",
 
     name: personal?.name,
     jobTitle: personal?.title,
     description: profile?.summary?.join(" "),
-    email: email,
+    email,
     url: personal?.website,
-    address: personal?.contact?.location,
+
+    knowsLanguage: ["Spanish", "English"],
+    
+    address: personal?.contact?.location
+      ? {
+          "@type": "PostalAddress",
+          addressLocality: personal.contact.location,
+          addressCountry: "PE"
+        }
+      : undefined,
+
     sameAs: social?.accounts?.map(a => a.url),
+
     knowsAbout: skills,
+
     subjectOf: projects?.map(project => ({
       "@type": "SoftwareSourceCode",
       name: project.name,
@@ -40,10 +53,27 @@ export function generateSchema({
       roleName: job.position,
       startDate: job.start_date,
       endDate: job.end_date || undefined,
-      worksFor: {
+      memberOf: {
         "@type": "Organization",
         name: job.company
       }
+    })),
+
+    alumniOf: education?.map(ed => ({
+      "@type": "CollegeOrUniversity",
+      name: ed.institution,
+      sameAs: ed.url,
+      location: {
+        "@type": "Place",
+        name: ed.location
+      },
+
+      department: {
+        "@type": "EducationalOrganization",
+        name: ed.degree
+      }
     }))
   };
+
+  return schema;
 }
