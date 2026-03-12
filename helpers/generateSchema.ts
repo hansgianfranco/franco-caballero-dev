@@ -7,7 +7,8 @@ export function generateSchema({
   skills,
   social,
   projects,
-  experience
+  experience,
+  certification,
 }: ResumeData) {
 
   const email = personal?.contact?.email
@@ -72,6 +73,18 @@ export function generateSchema({
         "@type": "EducationalOrganization",
         name: ed.degree
       }
+    })),
+
+    hasCredential: certification?.map(cert => ({
+      "@type": "EducationalOccupationalCredential",
+      name: cert.name,
+      credentialCategory: "Professional Certification",
+      recognizedBy: {
+        "@type": "Organization",
+        name: cert.issuer
+      },
+      dateCreated: cert.date,
+      url: cert.url
     }))
   };
 

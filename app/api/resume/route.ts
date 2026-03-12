@@ -11,6 +11,7 @@ import { getSocial } from "@/services/social.service";
 import { getNav } from "@/services/nav.service";
 import { getSections } from "@/services/sections.service";
 import { getMeta } from "@/services/meta.service";
+import { getCertification } from "@/services/certification.service";
 
 export async function GET(req: NextRequest) {
   const url = new URL(req.url);
@@ -25,6 +26,7 @@ export async function GET(req: NextRequest) {
     experience,
     projects,
     skills,
+    certification,
     social,
     nav,
     sections,
@@ -36,6 +38,7 @@ export async function GET(req: NextRequest) {
     getExperience(lang),
     getProjects(lang),
     getSkills(),
+    getCertification(lang),
     getSocial(lang),
     getNav(lang),
     getSections(lang),
@@ -49,6 +52,7 @@ export async function GET(req: NextRequest) {
     experience,
     projects,
     skills,
+    certification,
     social,
     nav,
     sections,

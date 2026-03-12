@@ -62,8 +62,9 @@ export interface Project {
 
 export interface Certification {
   name: string;
-  year: string;
+  date: string;
   issuer: string;
+  url: string | null;
 }
 
 export interface Social {
@@ -97,6 +98,7 @@ export interface ResumeData {
   sections: Sections;
   profile: Profile;
   experience: Experience[];
+  certification: Certification[];
   projects: Project[];
   skills: string[];
   social: Social;
