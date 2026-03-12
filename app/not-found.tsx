@@ -14,7 +14,7 @@ export default function NotFound() {
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-6xl font-bold text-[#9e68ff] mb-4"
+          className="text-6xl font-bold text-primary mb-4"
         >
           404
         </motion.h1>
@@ -48,7 +48,7 @@ export default function NotFound() {
           >
             <Link
               href="/"
-              className="px-6 py-3 bg-[#1f1f2e] border border-[#33467C] rounded-lg hover:bg-[#33467C] transition"
+              className="px-6 py-3 bg-card border border-outline rounded-lg hover:bg-outline transition"
             >
               Go back home
             </Link>

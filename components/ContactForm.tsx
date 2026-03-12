@@ -112,7 +112,7 @@ export default function ContactForm() {
         viewport={{ once: true }}
       >
         <motion.div variants={field}>
-          <label htmlFor="name" className="block text-sm text-[#C0CAF5] mb-2">
+          <label htmlFor="name" className="block text-sm text-foreground mb-2">
             {t.name}
           </label>
 
@@ -123,12 +123,12 @@ export default function ContactForm() {
             required
             value={form.name}
             onChange={handleChange}
-            className="w-full bg-[#1f1f2e] border border-[#33467C] rounded-lg px-4 py-3 text-[#C0CAF5] focus:outline-none focus:border-[#9e68ff] transition-colors"
+            className="w-full bg-card border border-outline rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-primary transition-colors"
           />
         </motion.div>
 
         <motion.div variants={field}>
-          <label htmlFor="email" className="block text-sm text-[#C0CAF5] mb-2">
+          <label htmlFor="email" className="block text-sm text-foreground mb-2">
             {t.email}
           </label>
 
@@ -139,13 +139,13 @@ export default function ContactForm() {
             required
             value={form.email}
             onChange={handleChange}
-            className="w-full bg-[#1f1f2e] border border-[#33467C] rounded-lg px-4 py-3 text-[#C0CAF5] focus:outline-none focus:border-[#9e68ff] transition-colors"
+            className="w-full bg-card border border-outline rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-primary transition-colors"
           />
         </motion.div>
       </motion.div>
 
       <motion.div variants={field}>
-        <label htmlFor="message" className="block text-sm text-[#C0CAF5] mb-2">
+        <label htmlFor="message" className="block text-sm text-foreground mb-2">
           {t.message}
         </label>
 
@@ -156,7 +156,7 @@ export default function ContactForm() {
           rows={5}
           value={form.message}
           onChange={handleChange}
-          className="w-full bg-[#1f1f2e] border border-[#33467C] rounded-lg px-4 py-3 text-[#C0CAF5] focus:outline-none focus:border-[#9e68ff] transition-colors resize-none"
+          className="w-full bg-card border border-outline rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-primary transition-colors resize-none"
         />
       </motion.div>
 
@@ -165,7 +165,7 @@ export default function ContactForm() {
         disabled={status === "loading"}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="bg-[#1f1f2e] border border-[#33467C] hover:bg-[#33467C] text-[#C0CAF5] px-6 py-3 rounded-lg transition-all duration-300"
+        className="bg-card border border-outline hover:bg-outline text-foreground px-6 py-3 rounded-lg transition-all duration-300"
       >
         {t.send}
       </motion.button>
@@ -178,7 +178,7 @@ export default function ContactForm() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -5 }}
             transition={{ duration: 0.2 }}
-            className="text-[#7aa2f7] text-sm"
+            className="text-accent text-sm"
           >
             {t.sending}
           </motion.p>
@@ -191,7 +191,7 @@ export default function ContactForm() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -5 }}
             transition={{ duration: 0.2 }}
-            className="text-[#9ece6a] text-sm"
+            className="text-secondary text-sm"
           >
             {t.success}
           </motion.p>
@@ -204,7 +204,7 @@ export default function ContactForm() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -5 }}
             transition={{ duration: 0.2 }}
-            className="text-[#f7768e] text-sm"
+            className="text-danger text-sm"
           >
             {t.error}
           </motion.p>

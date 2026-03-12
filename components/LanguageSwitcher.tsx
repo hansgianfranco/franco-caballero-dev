@@ -9,13 +9,13 @@ export default function LanguageSwitcher() {
     "px-3 py-1 text-xs rounded-md transition-colors border";
 
   return (
-    <div className="flex items-center gap-2 bg-[#1f1f2e] font-mono border border-[#33467C] rounded-lg p-1">
+    <div className="flex items-center gap-2 bg-card font-mono border border-outline rounded-lg p-1">
       <button
         onClick={() => setLanguage("es")}
         className={`${buttonBase} ${
           language === "es"
-            ? "bg-[#33467C] text-[#C0CAF5] border-[#33467C]"
-            : "text-[#9aa5ce] border-transparent hover:text-[#C0CAF5]"
+            ? "bg-outline text-foreground border-outline"
+            : "text-[#9aa5ce] border-transparent hover:text-foreground"
         }`}
       >
         ES
@@ -24,8 +24,8 @@ export default function LanguageSwitcher() {
         onClick={() => setLanguage("en")}
         className={`${buttonBase} ${
           language === "en"
-            ? "bg-[#33467C] text-[#C0CAF5] border-[#33467C]"
-            : "text-[#9aa5ce] border-transparent hover:text-[#C0CAF5]"
+            ? "bg-outline text-foreground border-outline"
+            : "text-[#9aa5ce] border-transparent hover:text-foreground"
         }`}
       >
         EN

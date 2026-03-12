@@ -5,7 +5,7 @@ export default function Skills({ skills, sections }: { skills: string[], section
   
   return (
     <section id="skills" aria-labelledby="skills-title">
-      <h2 id="skills-title" className="mb-6 text-[#565f89] font-mono before:content-['//_'] before:text-[#565f89]">
+      <h2 id="skills-title" className="mb-6 text-muted font-mono before:content-['//_'] before:text-muted">
         {sections?.skills}
       </h2>
 
@@ -17,8 +17,8 @@ export default function Skills({ skills, sections }: { skills: string[], section
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.25, delay: i * 0.04 }}
             viewport={{ once: true }}
-            className="px-3 py-1 text-sm rounded-full border border-[#33467C] bg-[#16161F] text-[#9ece6a]
-            hover:bg-[#9e68ff] hover:text-[#16161F] transition-colors duration-300"
+            className="px-3 py-1 text-sm rounded-full border border-outline bg-surface text-secondary
+            hover:bg-primary hover:text-surface transition-colors duration-300"
           >
             <span>{skill}</span>
           </motion.li>

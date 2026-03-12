@@ -22,7 +22,7 @@ export default function Projects({ projects, sections }: { projects: Project[], 
 
     return (
         <section id="projects" aria-labelledby="projects-title">
-            <h2 id="projects-title" className="mb-6 text-[#565f89] font-mono before:content-['//_'] before:text-[#565f89]">
+            <h2 id="projects-title" className="mb-6 text-muted font-mono before:content-['//_'] before:text-muted">
                 {sections?.projects}
             </h2>
             <motion.div
@@ -38,9 +38,9 @@ export default function Projects({ projects, sections }: { projects: Project[], 
                         variants={card}
                         whileHover={{ y: -6 }}
                         transition={{ duration: 0.3 }}
-                        className="bg-[#1f1f2e] border border-[#33467C] p-6 rounded-lg hover:border-[#9e68ff]"
+                        className="bg-card border border-outline p-6 rounded-lg hover:border-primary"
                     >
-                        <h3 className="text-[#9e68ff] text-lg font-semibold">
+                        <h3 className="text-primary text-lg font-semibold">
                             {project.name}
                         </h3>
                         <p className="text-sm capitalize text-gray-400">
@@ -56,14 +56,14 @@ export default function Projects({ projects, sections }: { projects: Project[], 
                                 language === "es" ? "Presente" : "Present"
                             )}
                         </p>
-                        <p className="text-sm mt-2 text-[#C0CAF5]">
+                        <p className="text-sm mt-2 text-foreground">
                             {project.description}
                         </p>
                         <div className="flex flex-wrap gap-2 mt-4">
                             {project.technologies.map((tech: string, id: number) => (
                                 <span
                                     key={id}
-                                    className="text-xs px-3 py-1 bg-[#16161F] border border-[#33467C] rounded-full text-[#9ece6a]"
+                                    className="text-xs px-3 py-1 bg-surface border border-outline rounded-full text-secondary"
                                 >
                                     {tech}
                                 </span>
@@ -74,7 +74,7 @@ export default function Projects({ projects, sections }: { projects: Project[], 
                                 href={project.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="mt-4 inline-block text-sm hover:text-[#9e68ff]"
+                                className="mt-4 inline-block text-sm hover:text-primary"
                             >
                                 View Project
                             </a>

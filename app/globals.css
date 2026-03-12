@@ -1,121 +1,194 @@
 @import "tailwindcss";
 
-:root {
-  --background:#000;
+@theme {
+  /* base */
+  --color-background: #0b0b0f;
+  --color-surface: #12121a;
+  --color-card: #181824;
+
+  /* text */
+  --color-foreground: #e6e9ff;
+  --color-muted: #8b8fa7;
+
+  /* brand */
+  --color-primary: #7c5cff;
+  --color-secondary: #00e5a8;
+  --color-accent: #4cc9f0;
+  --color-danger: #ff5c7c;
+
+  /* ui */
+  --color-outline: #2a2f45;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-background);
+  color: var(--color-foreground);
   font-family: var(--font-roboto), "Roboto", sans-serif;
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-poppins), "Poppins", sans-serif;
 }
 
-body {
-  background-color:#000;
-}
-
 .stars-layer {
-  position:fixed;
-  top:50%;
-  left:50%;
-  height:1px;
-  width:1px;
-  background-color:#fff;
-  border-radius:50%;
-  pointer-events:none;
-  z-index:-1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  width: 1px;
+  height: 1px;
+
+  background: #fff;
+  border-radius: 50%;
+
+  pointer-events: none;
+  z-index: -1;
 
   box-shadow:
-  -42vw -4vh 0px 0px #fff,
-  25vw -41vh 0px 0px #fff,
-  -20vw 49vh 0px 1px #fff,
+  -42vw -4vh 0 0 #fff,
+  25vw -41vh 0 0 #fff,
+  -20vw 49vh 0 1px #fff,
   5vw 40vh 1px 1px #fff,
-  29vw 19vh 1px 0px #fff,
-  -44vw -13vh 0px 0px #fff,
-  46vw 41vh 0px 1px #fff,
-  -3vw -45vh 0px 1px #fff,
-  47vw 35vh 1px 0px #fff,
-  12vw -8vh 1px 0px #fff,
+  29vw 19vh 1px 0 #fff,
+  -44vw -13vh 0 0 #fff,
+  46vw 41vh 0 1px #fff,
+  -3vw -45vh 0 1px #fff,
+  47vw 35vh 1px 0 #fff,
+  12vw -8vh 1px 0 #fff,
   -34vw 48vh 1px 1px #fff,
   32vw 26vh 1px 1px #fff,
   32vw -41vh 1px 1px #fff,
   0vw 37vh 1px 1px #fff,
-  34vw -26vh 1px 0px #fff,
-  -14vw -49vh 1px 0px #fff,
-  -12vw 45vh 0px 1px #fff,
-  -44vw -33vh 0px 1px #fff,
-
-  24vw 9vh 1px 0px #fff,
-  12vw -24vh 0px 1px #fff,
-  -45vw -22vh 0px 0px #fff,
-  -37vw -40vh 0px 1px #fff,
-  29vw 19vh 0px 1px #fff,
-  4vw -8vh 0px 1px #fff,
+  34vw -26vh 1px 0 #fff,
+  -14vw -49vh 1px 0 #fff,
+  -12vw 45vh 0 1px #fff,
+  -44vw -33vh 0 1px #fff,
+  24vw 9vh 1px 0 #fff,
+  12vw -24vh 0 1px #fff,
+  -45vw -22vh 0 0 #fff,
+  -37vw -40vh 0 1px #fff,
+  29vw 19vh 0 1px #fff,
+  4vw -8vh 0 1px #fff,
   -5vw 21vh 1px 1px #fff,
   -27vw 26vh 1px 1px #fff,
   -47vw -3vh 1px 1px #fff,
-  -28vw -30vh 0px 1px #fff;
+  -28vw -30vh 0 1px #fff;
 
-  animation:zoom 16s alternate infinite;
+  animation: zoom 16s alternate infinite;
 }
 
-@keyframes zoom{
-  0%{
-    transform:scale(1);
-  }
-  100%{
-    transform:scale(1.5);
-  }
+@keyframes zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.5); }
 }
+
+/* fade in */
 
 @keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(0); }
-  100% { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
+
 .animate-fadeIn {
   animation: fadeIn 0.8s ease-out forwards;
 }
 
+/* fade up */
+
 @keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 .animate-fadeInUp {
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
+/* slide right */
+
 @keyframes slideInRight {
-  0% { opacity: 0; transform: translateX(50px); }
-  100% { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
+
 .animate-slideInRight {
   animation: slideInRight 0.8s ease-out forwards;
 }
 
+/* slide left */
+
 @keyframes slideInLeft {
-  0% { opacity: 0; transform: translateX(-50px); }
-  100% { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
+
 .animate-slideInLeft {
   animation: slideInLeft 0.8s ease-out forwards;
 }
 
+/* scale */
 
 @keyframes scaleIn {
-  0% { transform: scale(0.95); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
+
 .animate-scaleIn {
   animation: scaleIn 0.4s ease-out forwards;
 }
 
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; }
-.delay-500 { animation-delay: 0.5s; }
+/* delays */
+
+.delay-100 { 
+  animation-delay: .1s 
+}
+
+.delay-200 { 
+  animation-delay: .2s 
+}
+
+.delay-300 { 
+  animation-delay: .3s 
+}
+
+.delay-400 { 
+  animation-delay: .4s 
+}
+
+.delay-500 { 
+  animation-delay: .5s 
+}
