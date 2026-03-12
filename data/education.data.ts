@@ -3,7 +3,7 @@ import { Education } from "@/types/resume";
 export const educationData: Record<string, Education[]> = {
   es: [
     {
-      institution: "Universidad César Vallejo (UCV)",
+      institution: "Universidad César Vallejo",
       location: "Lima, Perú",
       degree: "Ingeniería de Sistemas",
       thesis: "Sistema Web para el Proceso de Evaluación de Simulacros",
@@ -21,7 +21,7 @@ export const educationData: Record<string, Education[]> = {
 
   en: [
     {
-      institution: "César Vallejo University (UCV)",
+      institution: "César Vallejo University",
       location: "Lima, Peru",
       degree: "B.S. in Systems Engineering",
       thesis: "Web System for the Evaluation Process of Mock Exams",

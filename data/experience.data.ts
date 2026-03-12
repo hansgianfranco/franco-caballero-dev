@@ -24,6 +24,28 @@ export const experienceData: Record<string, Experience[]> = {
         "Construí plataformas educativas para 10,000+ usuarios.",
         "Mejoré eficiencia de bases de datos y rendimiento del sistema."
       ]
+    },
+    {
+      company: "Whiz Digital Agency",
+      location: "Lima, Perú",
+      position: "Frontend Developer",
+      start_date: "2018-07",
+      end_date: "2018-11",
+      responsibilities: [
+        "Construí aplicaciones web responsivas y optimicé frontend.",
+        "Manteniendo servidores de producción con alta disponibilidad."
+      ]
+    },
+    {
+      company: "Circus Grey",
+      location: "Lima, Perú",
+      position: "Fullstack Developer",
+      start_date: "2016-09",
+      end_date: "2018-05",
+      responsibilities: [
+        "Desarrollé plataformas web y sistemas de campañas digitales.",
+        "Mejoré escalabilidad y optimicé bases de datos."
+      ]
     }
   ],
 
@@ -49,6 +71,28 @@ export const experienceData: Record<string, Experience[]> = {
       responsibilities: [
         "Built educational platforms for 10,000+ users.",
         "Improved database efficiency & system performance."
+      ]
+    },
+    {
+      company: "Whiz Digital Agency",
+      location: "Lima, Peru",
+      position: "Frontend Developer",
+      start_date: "2018-07",
+      end_date: "2018-11",
+      responsibilities: [
+        "Built responsive web apps and optimized frontend.",
+        "Maintained production servers with high uptime."
+      ]
+    },
+    {
+      company: "Circus Grey",
+      location: "Lima, Peru",
+      position: "Fullstack Developer",
+      start_date: "2016-09",
+      end_date: "2018-05",
+      responsibilities: [
+        "Developed web platforms & digital campaign systems.",
+        "Improved scalability and optimized databases."
       ]
     }
   ]

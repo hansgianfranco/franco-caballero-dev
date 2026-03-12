@@ -14,10 +14,12 @@ export default function StructuredData() {
   const schema = generateSchema({
     personal: resume.personal,
     profile: resume.profile,
+    education: resume.education,
     skills: resume.skills,
     social: resume.social,
     projects: resume.projects,
-    experience: resume.experience
+    experience: resume.experience,
+    certification: resume.certification
   } as ResumeData);
 
   return (

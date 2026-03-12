@@ -1,36 +1,160 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📄 Next.js Resume / CV
 
-## Getting Started
+Aplicación web moderna para mostrar mi **currículum profesional**
+utilizando **Next.js**, optimizada para **SEO semántico**, rendimiento y
+accesibilidad.
 
-First, run the development server:
+El proyecto presenta información profesional como experiencia,
+habilidades, proyectos y certificaciones de forma estructurada y
+optimizada para buscadores mediante **Schema.org**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+------------------------------------------------------------------------
+
+## 🚀 Características
+
+-   ⚡ **Next.js** para renderizado rápido y optimizado
+-   🌍 **Traducción dinámica (i18n)** para múltiples idiomas
+-   🧠 **SEO avanzado** usando datos estructurados `schema.org`
+-   📱 **Responsive design**
+-   🧩 Arquitectura modular basada en servicios
+-   📂 Contenido estructurado (perfil, experiencia, proyectos, skills)
+-   🔗 Integración con redes profesionales
+-   🎯 Optimizado para **portfolios profesionales**
+
+------------------------------------------------------------------------
+
+## 🛠️ Tecnologías
+
+-   **Next.js**
+-   **React**
+-   **TypeScript**
+-   **Schema.org Structured Data**
+-   **Tailwind CSS**
+-   **Vercel / Hosting compatible**
+
+------------------------------------------------------------------------
+
+## 📂 Estructura del proyecto
+
+    .
+    ├── app/                # Rutas de Next.js
+    ├── components/         # Componentes reutilizables
+    ├── services/           # Servicios para obtener datos
+    ├── types/              # Tipos TypeScript
+    ├── utils/              # Utilidades (ej: detectLang)
+    ├── public/             # Assets estáticos
+    └── styles/             # Estilos globales
+
+Ejemplo de servicios:
+
+    services/
+     ├── personal.service.ts
+     ├── profile.service.ts
+     ├── experience.service.ts
+     ├── projects.service.ts
+     └── skills.service.ts
+
+------------------------------------------------------------------------
+
+## 📊 SEO Semántico
+
+El proyecto genera **datos estructurados automáticamente** usando
+`schema.org`:
+
+-   `Person`
+-   `WorkExperience`
+-   `Project`
+-   `Skills`
+
+Esto ayuda a:
+
+-   mejorar visibilidad en buscadores
+-   facilitar indexación
+-   estructurar información profesional
+
+Ejemplo:
+
+``` json
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Your Name",
+  "jobTitle": "Software Developer",
+  "sameAs": [
+    "https://github.com/username",
+    "https://linkedin.com/in/username"
+  ]
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+------------------------------------------------------------------------
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌍 Internacionalización
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+El proyecto soporta **múltiples idiomas** mediante detección automática:
 
-## Learn More
+    /en
+    /es
 
-To learn more about Next.js, take a look at the following resources:
+Utiliza una utilidad personalizada:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    utils/detectLang.ts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+------------------------------------------------------------------------
 
-## Deploy on Vercel
+## 🧪 Desarrollo
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Instalar dependencias:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+``` bash
+npm install
+```
+
+Ejecutar servidor de desarrollo:
+
+``` bash
+npm run dev
+```
+
+Abrir en navegador:
+
+    http://localhost:3000
+
+------------------------------------------------------------------------
+
+## 🏗️ Build
+
+Para generar la versión de producción:
+
+``` bash
+npm run build
+npm start
+```
+
+------------------------------------------------------------------------
+
+## 📦 Deployment
+
+El proyecto puede desplegarse en:
+
+-   Vercel
+-   AWS
+-   VPS
+-   Plesk
+-   Docker
+
+------------------------------------------------------------------------
+
+## 👨‍💻 Autor
+
+**Franco Caballero**
+
+-   GitHub
+-   LinkedIn
+-   Portfolio
+
+------------------------------------------------------------------------
+
+## 📄 Licencia
+
+Este proyecto es de uso personal como **currículum profesional online**.
