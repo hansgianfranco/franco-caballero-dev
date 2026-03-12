@@ -1,8 +1,11 @@
-import type { Personal, Profile, Social, SocialAccount } from "@/types/resume";
+import type { Personal } from "@/types/personal";
+import type { Profile } from "@/types/resume";
+import type { SocialAccount } from "@/types/shared";
+import type { Meta } from "@/types/ui";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 
-export default function Hero({ personal, profile, social }: { personal: Personal, profile: Profile, social: Social }) {
+export default function Hero({ personal, profile, meta }: { personal: Personal, profile: Profile, meta: Meta }) {
 
     const email = personal?.contact?.email
         ? atob(personal.contact.email)
@@ -32,7 +35,7 @@ export default function Hero({ personal, profile, social }: { personal: Personal
                     >
                         <Mail size={18} /> Email
                     </a>
-                    {social?.accounts?.map((account: SocialAccount, i: number) => {
+                    {meta?.contact?.accounts?.map((account: SocialAccount, i: number) => {
                         if (account.id === "github")
                             return (
                                 <a
@@ -70,7 +73,10 @@ export default function Hero({ personal, profile, social }: { personal: Personal
                         <a
                             href={personal.resume.file}
                             download
-                            className="px-6 py-3 bg-card border border-outline rounded-lg hover:bg-outline"
+                            className="relative px-6 py-3 rounded-lg bg-primary text-white font-medium
+                            hover:scale-[1.03] transition
+                            shadow-[0_0_0px_rgba(0,0,0,0)]
+                            hover:shadow-[0_0_20px_rgba(158,104,255,0.6)]"
                         >
                             {personal.resume?.title}
                         </a>

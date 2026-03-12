@@ -1,14 +1,14 @@
-import { ResumeData } from "@/types/resume";
+import type { ResumeData } from "@/types/resume";
 
 export function generateSchema({
   personal,
   profile,
   education,
   skills,
-  social,
   projects,
   experience,
   certification,
+  meta
 }: ResumeData) {
 
   const email = personal?.contact?.email
@@ -35,7 +35,7 @@ export function generateSchema({
         }
       : undefined,
 
-    sameAs: social?.accounts?.map(a => a.url),
+    sameAs: meta?.contact?.accounts?.map(a => a.url),
 
     knowsAbout: skills,
 

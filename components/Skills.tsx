@@ -1,4 +1,4 @@
-import type { Sections } from "@/types/resume";
+import type { Sections } from "@/types/ui";
 import { motion } from "framer-motion";
 
 export default function Skills({ skills, sections }: { skills: string[], sections: Sections}) {

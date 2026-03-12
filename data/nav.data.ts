@@ -1,4 +1,4 @@
-import { Nav } from "@/types/resume";
+import type { Nav } from "@/types/ui";
 
 export const nav: Record<string, Nav> = {
   en: {

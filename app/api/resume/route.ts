@@ -7,7 +7,6 @@ import { getEducation } from "@/services/education.service";
 import { getExperience } from "@/services/experience.service";
 import { getProjects } from "@/services/projects.service";
 import { getSkills } from "@/services/skills.service";
-import { getSocial } from "@/services/social.service";
 import { getNav } from "@/services/nav.service";
 import { getSections } from "@/services/sections.service";
 import { getMeta } from "@/services/meta.service";
@@ -27,7 +26,6 @@ export async function GET(req: NextRequest) {
     projects,
     skills,
     certification,
-    social,
     nav,
     sections,
     meta
@@ -39,7 +37,6 @@ export async function GET(req: NextRequest) {
     getProjects(lang),
     getSkills(),
     getCertification(lang),
-    getSocial(lang),
     getNav(lang),
     getSections(lang),
     getMeta(lang)
@@ -53,7 +50,6 @@ export async function GET(req: NextRequest) {
     projects,
     skills,
     certification,
-    social,
     nav,
     sections,
     meta

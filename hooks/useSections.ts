@@ -1,7 +1,7 @@
 "use client";
 
+import type { Sections } from "@/types/ui";
 import { useFetch } from "./useFetch";
-import { Sections } from "@/types/resume";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export function useSections() {

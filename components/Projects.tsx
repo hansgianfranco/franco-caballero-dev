@@ -1,6 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { formatDate } from "@/helpers/formatDate";
-import type { Project, Sections } from "@/types/resume";
+import type { Project } from "@/types/projects";
+import type { Sections } from "@/types/ui";
 import { motion } from "framer-motion";
 
 export default function Projects({ projects, sections }: { projects: Project[], sections: Sections }) {
@@ -74,7 +75,7 @@ export default function Projects({ projects, sections }: { projects: Project[], 
                                 href={project.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="mt-4 inline-block text-sm hover:text-primary"
+                                className="mt-4 inline-block text-sm underline hover:text-primary"
                             >
                                 View Project
                             </a>

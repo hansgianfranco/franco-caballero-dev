@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Menu } from "lucide-react";
 import LanguageSwitcher from "./LanguageSwitcher";
-import type { Nav } from "@/types/resume";
+import type { Nav } from "@/types/ui";
 
 export default function Navbar({ nav }: { nav: Nav }) {
 

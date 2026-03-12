@@ -1,7 +1,7 @@
 "use client";
 
+import type { Profile } from "@/types/resume";
 import { useFetch } from "./useFetch";
-import { Profile } from "@/types/resume";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export function useProfile() {

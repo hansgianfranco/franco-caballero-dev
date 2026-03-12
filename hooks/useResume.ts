@@ -1,7 +1,7 @@
 "use client";
 
+import type { ResumeData } from "@/types/resume";
 import { useFetch } from "./useFetch";
-import { ResumeData } from "@/types/resume";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export function useResume() {

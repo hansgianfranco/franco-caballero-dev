@@ -1,7 +1,7 @@
 "use client";
 
+import type { Nav } from "@/types/ui";
 import { useFetch } from "./useFetch";
-import { Nav } from "@/types/resume";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export function useNav() {

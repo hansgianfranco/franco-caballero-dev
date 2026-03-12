@@ -1,4 +1,4 @@
-import { Experience } from "@/types/resume";
+import type { Experience } from "@/types/career";
 
 export const experienceData: Record<string, Experience[]> = {
   es: [
