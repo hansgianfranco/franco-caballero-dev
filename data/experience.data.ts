@@ -6,7 +6,8 @@ export const experienceData: Record<string, Experience[]> = {
       company: "10Pearls",
       location: "Lima, Perú",
       position: "Desarrollador Fullstack Senior",
-      period: "Ene 2021 – Presente",
+      start_date: "2021-01",
+      end_date: null,
       responsibilities: [
         "Lideré aplicaciones escalables con React y Node.js.",
         "Diseñé APIs RESTful para miles de usuarios.",
@@ -17,7 +18,8 @@ export const experienceData: Record<string, Experience[]> = {
       company: "Innova Schools",
       location: "Lima, Perú",
       position: "Desarrollador Fullstack",
-      period: "Nov 2018 – Dic 2020",
+      start_date: "2018-11",
+      end_date: "2020-12",
       responsibilities: [
         "Construí plataformas educativas para 10,000+ usuarios.",
         "Mejoré eficiencia de bases de datos y rendimiento del sistema."
@@ -30,7 +32,8 @@ export const experienceData: Record<string, Experience[]> = {
       company: "10Pearls",
       location: "Lima, Peru",
       position: "Senior Fullstack Developer",
-      period: "Jan 2021 – Present",
+      start_date: "2021-01",
+      end_date: null,
       responsibilities: [
         "Led scalable React & Node.js applications.",
         "Designed RESTful APIs serving thousands of users.",
@@ -41,7 +44,8 @@ export const experienceData: Record<string, Experience[]> = {
       company: "Innova Schools",
       location: "Lima, Peru",
       position: "Fullstack Developer",
-      period: "Nov 2018 – Dec 2020",
+      start_date: "2018-11",
+      end_date: "2020-12",
       responsibilities: [
         "Built educational platforms for 10,000+ users.",
         "Improved database efficiency & system performance."

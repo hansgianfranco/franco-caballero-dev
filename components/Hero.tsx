@@ -11,7 +11,8 @@ export default function Hero({ personal, profile, social }: { personal: Personal
     const summary = profile?.summary || [];
 
     return (
-        <section id="about" className="flex flex-col md:flex-row items-start gap-10">
+        <section id="about" className="flex flex-col md:flex-row items-start gap-10" aria-labelledby="about-title">
+            <h2 id="about-title" className="sr-only">About</h2>
             <motion.div
                 className="flex-1 space-y-6"
                 initial={{ opacity: 0, y: 30 }}
@@ -24,10 +25,16 @@ export default function Hero({ personal, profile, social }: { personal: Personal
                 <h2 className="text-2xl text-[#9ece6a]">
                     {personal?.title}
                 </h2>
-                <div className="flex justify-start gap-6">
+                <address 
+                    className="flex justify-start gap-6"
+                    itemProp="contactPoint" 
+                    itemScope 
+                    itemType="https://schema.org/ContactPoint"
+                >
                     <a
                         href={`mailto:${email}`}
                         className="flex items-center gap-2 hover:text-[#9e68ff]"
+                        itemProp="email"
                     >
                         <Mail size={18} /> Email
                     </a>
@@ -38,6 +45,7 @@ export default function Hero({ personal, profile, social }: { personal: Personal
                                     key={i}
                                     href={account.url}
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                     className="flex items-center gap-2 hover:text-[#9e68ff]"
                                 >
                                     <Github size={18} /> Github
@@ -49,6 +57,7 @@ export default function Hero({ personal, profile, social }: { personal: Personal
                                     key={i}
                                     href={account.url}
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                     className="flex items-center gap-2 hover:text-[#9e68ff]"
                                 >
                                     <Linkedin size={18} /> LinkedIn
@@ -56,7 +65,7 @@ export default function Hero({ personal, profile, social }: { personal: Personal
                             );
                         return null;
                     })}
-                </div>
+                </address>
                 <div className="mt-6 max-w-3xl space-y-3 text-[#C0CAF5]">
                     {summary.slice(0, 3).map((paragraph: string, i: number) => (
                         <p key={i}>{paragraph}</p>
@@ -81,7 +90,7 @@ export default function Hero({ personal, profile, social }: { personal: Personal
                 transition={{ duration: 0.7 }}
             >
                 <div className="bg-[#1f1f2e] border border-[#33467C] rounded-lg p-6">
-                    <pre className="whitespace-pre-wrap break-words text-sm sm:text-base">
+                    <pre className="whitespace-pre-wrap wrap-break-words text-sm sm:text-base">
                         <code>
                         <span className="text-[#7aa2f7]">export const</span> developer = {"{"}
                         {"\n"}  name: <span className="text-[#9ece6a]">&quot;{personal?.name}&quot;</span>,

@@ -5,7 +5,8 @@ export const projectsData: Record<string, Project[]> = {
     {
       name: "Plataforma Web & API Darshana",
       url: "https://darshana.ai",
-      period: "Abr 2025 – Presente",
+      start_date: "2025-04",
+      end_date: null,
       technologies: ["Next.js", "NestJS", "TypeScript", "Sequelize", "AWS Cognito"],
       description:
         "Automatizó la verificación de estudios y emisión de credenciales digitales en 23+ países."
@@ -13,7 +14,8 @@ export const projectsData: Record<string, Project[]> = {
     {
       name: "The List – Social Discovery Platform",
       url: "https://listsocialapp.com",
-      period: "Jul 2024 – Feb 2025",
+      start_date: "2024-07",
+      end_date: "2025-02",
       technologies: ["Express", "TypeScript", "Sequelize", "MySQL", "Socket.io"],
       description:
         "Plataforma de descubrimiento social con mensajería y actualizaciones de ubicación en tiempo real."
@@ -21,7 +23,8 @@ export const projectsData: Record<string, Project[]> = {
     {
       name: "Plataforma Web & API Mazatlán FC",
       url: "https://mazatlanfc.com",
-      period: "Nov 2023 – Jul 2024",
+      start_date: "2023-11",
+      end_date: "2024-07",
       technologies: ["Next.js", "Express", "TypeScript", "AWS Lambda", "Serverless"],
       description:
         "Sitio web y panel administrativo con API serverless entregando datos de partidos en tiempo real."
@@ -29,7 +32,8 @@ export const projectsData: Record<string, Project[]> = {
     {
       name: "Plataforma Web & API The Calling Move",
       url: "https://movetuvocacion.com",
-      period: "Abr 2023 – Jun 2024",
+      start_date: "2023-04",
+      end_date: "2024-06",
       technologies: ["React", "Express", "TypeScript", "Sequelize", "MySQL", "GCP"],
       description:
         "Plataforma de orientación vocacional con pasos gamificados y seguimiento de progreso de usuarios."
@@ -40,7 +44,8 @@ export const projectsData: Record<string, Project[]> = {
     {
       name: "Darshana Web & API Platform",
       url: "https://darshana.ai",
-      period: "Apr 2025 – Present",
+      start_date: "2025-04",
+      end_date: null,
       technologies: ["Next.js", "NestJS", "TypeScript", "Sequelize", "AWS Cognito"],
       description:
         "Automated career verification and digital credential issuance across 23+ countries."
@@ -48,7 +53,8 @@ export const projectsData: Record<string, Project[]> = {
     {
       name: "The List – Social Discovery Platform",
       url: "https://listsocialapp.com",
-      period: "Jul 2024 – Feb 2025",
+      start_date: "2024-07",
+      end_date: "2025-02",
       technologies: ["Express", "TypeScript", "Sequelize", "MySQL", "Socket.io"],
       description:
         "Social discovery platform with real-time messaging and location updates using Socket.io."
@@ -56,7 +62,8 @@ export const projectsData: Record<string, Project[]> = {
     {
       name: "Mazatlán FC Web & API Platform",
       url: "https://mazatlanfc.com",
-      period: "Nov 2023 – Jul 2024",
+      start_date: "2023-11",
+      end_date: "2024-07",
       technologies: ["Next.js", "Express", "TypeScript", "AWS Lambda", "Serverless"],
       description:
         "Built website and admin panel with serverless API delivering real-time match data."
@@ -64,7 +71,8 @@ export const projectsData: Record<string, Project[]> = {
     {
       name: "The Calling Move Web & API Platform",
       url: "https://movetuvocacion.com",
-      period: "Apr 2023 – Jun 2024",
+      start_date: "2023-04",
+      end_date: "2024-06",
       technologies: ["React", "Express", "TypeScript", "Sequelize", "MySQL", "GCP"],
       description:
         "Career discovery platform with gamified steps and user progress tracking."

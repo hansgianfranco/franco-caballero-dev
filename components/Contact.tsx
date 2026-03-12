@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import ContactForm from "./ContactForm";
-import type { Sections, Social } from "@/types/resume";
+import type { Sections } from "@/types/resume";
 
-export default function Contact({ social, sections }: { social: Social, sections: Sections}) {
+export default function Contact({ sections }: { sections: Sections}) {
   
   return (
     <motion.section
@@ -12,10 +12,10 @@ export default function Contact({ social, sections }: { social: Social, sections
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
+      aria-labelledby="contact-title"
     >
-      <p className="text-[#565f89]">&#47;&#47; {sections?.contact}</p>
-      <h2 className="text-2xl text-[#9e68ff]">
-        {social?.title}
+      <h2 id="contact-title" className="mb-6 text-[#565f89] font-mono before:content-['//_'] before:text-[#565f89]">
+        {sections?.contact}
       </h2>
       <ContactForm />
     </motion.section>
