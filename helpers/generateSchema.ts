@@ -54,7 +54,7 @@ export function generateSchema({
       roleName: job.position,
       startDate: job.start_date,
       endDate: job.end_date || undefined,
-      memberOf: {
+      worksFor: {
         "@type": "Organization",
         name: job.company
       }
@@ -68,7 +68,6 @@ export function generateSchema({
         "@type": "Place",
         name: ed.location
       },
-
       department: {
         "@type": "EducationalOrganization",
         name: ed.degree
