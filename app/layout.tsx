@@ -4,7 +4,7 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { GoogleAnalytics } from "@next/third-parties/google"
 import "./globals.css";
-import Script from "next/script";
+import StructuredData from "@/components/StructuredData";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -73,26 +73,10 @@ export default function RootLayout({
       <body className={`${poppins.variable} ${roboto.variable} antialiased`}>
         <LanguageProvider>
           {children}
+          <StructuredData />
         </LanguageProvider>
         <SpeedInsights/>
         <GoogleAnalytics gaId={process.env.GA_ID!} />
-        <Script
-          id="structured-data"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Franco Caballero",
-              jobTitle: "Senior Fullstack Developer",
-              url: "https://francocaballero.dev",
-              sameAs: [
-                "https://github.com/hansgianfranco",
-                "https://linkedin.com/in/francocaballero"
-              ]
-            })
-          }}
-        />
       </body>
     </html>
   );

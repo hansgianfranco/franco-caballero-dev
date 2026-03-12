@@ -14,7 +14,8 @@ export const personalData: Record<string, Personal> = {
     resume: {
       title: "Descargar CV",
       file: "/resources/FC_CV_ES.pdf"
-    }
+    },
+    website: 'https://francocaballero.dev',
   },
 
   en: {
@@ -30,6 +31,7 @@ export const personalData: Record<string, Personal> = {
     resume: {
       title: "Download Resume",
       file: "/resources/FC_RESUME_EN.pdf"
-    }
+    },
+    website: 'https://francocaballero.dev',
   }
 };

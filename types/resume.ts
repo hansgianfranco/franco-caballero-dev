@@ -3,6 +3,7 @@ export interface Personal {
   title: string;
   contact: Contact;
   resume: Resume;
+  website: string;
 }
 
 export interface Contact {

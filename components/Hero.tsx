@@ -25,16 +25,10 @@ export default function Hero({ personal, profile, social }: { personal: Personal
                 <h2 className="text-2xl text-[#9ece6a]">
                     {personal?.title}
                 </h2>
-                <address 
-                    className="flex justify-start gap-6"
-                    itemProp="contactPoint" 
-                    itemScope 
-                    itemType="https://schema.org/ContactPoint"
-                >
+                <address className="flex justify-start gap-6">
                     <a
                         href={`mailto:${email}`}
                         className="flex items-center gap-2 hover:text-[#9e68ff]"
-                        itemProp="email"
                     >
                         <Mail size={18} /> Email
                     </a>
