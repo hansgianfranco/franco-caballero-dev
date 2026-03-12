@@ -2,7 +2,8 @@
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import { formatDate } from "@/helpers/formatDate";
-import type { Experience, Sections } from "@/types/resume";
+import type { Sections } from "@/types/ui";
+import type { Experience } from "@/types/career";
 import { motion } from "framer-motion";
 
 export default function Experience({

@@ -1,7 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { formatDate } from "@/helpers/formatDate";
-import { Project } from "@/types/projects";
-import { Sections } from "@/types/ui";
+import type { Project } from "@/types/projects";
+import type { Sections } from "@/types/ui";
 import { motion } from "framer-motion";
 
 export default function Projects({ projects, sections }: { projects: Project[], sections: Sections }) {

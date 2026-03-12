@@ -1,4 +1,4 @@
-import { Project } from "@/types/resume";
+import type { Project } from "@/types/projects";
 
 export const projectsData: Record<string, Project[]> = {
   es: [

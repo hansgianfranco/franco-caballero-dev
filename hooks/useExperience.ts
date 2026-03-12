@@ -1,6 +1,6 @@
 "use client";
 
-import { Experience } from "@/types/career";
+import type { Experience } from "@/types/career";
 import { useFetch } from "./useFetch";
 import { useLanguage } from "@/contexts/LanguageContext";
 

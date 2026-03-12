@@ -1,6 +1,6 @@
 "use client";
 
-import { Project } from "@/types/projects";
+import type { Project } from "@/types/projects";
 import { useFetch } from "./useFetch";
 import { useLanguage } from "@/contexts/LanguageContext";
 

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import ContactForm from "./ContactForm";
-import { Meta, Sections } from "@/types/ui";
+import type { Meta, Sections } from "@/types/ui";
 
 export default function Contact({ meta, sections }: { meta: Meta; sections: Sections; }) {
   return (

@@ -1,4 +1,4 @@
-import { ResumeData } from "@/types/resume";
+import type { ResumeData } from "@/types/resume";
 
 export function generateSchema({
   personal,

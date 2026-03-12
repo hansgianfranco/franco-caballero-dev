@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Meta } from "@/types/ui";
+import type { Meta } from "@/types/ui";
 
 export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
 

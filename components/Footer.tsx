@@ -1,4 +1,4 @@
-import { Meta } from "@/types/ui";
+import type { Meta } from "@/types/ui";
 
 export default function Footer({ meta}: {meta: Meta}) {
 

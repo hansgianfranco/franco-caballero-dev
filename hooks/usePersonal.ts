@@ -1,6 +1,6 @@
 "use client";
 
-import { Personal } from "@/types/personal";
+import type { Personal } from "@/types/personal";
 import { useFetch } from "./useFetch";
 import { useLanguage } from "@/contexts/LanguageContext";
 

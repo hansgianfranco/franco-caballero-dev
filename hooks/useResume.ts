@@ -1,6 +1,6 @@
 "use client";
 
-import { ResumeData } from "@/types/resume";
+import type { ResumeData } from "@/types/resume";
 import { useFetch } from "./useFetch";
 import { useLanguage } from "@/contexts/LanguageContext";
 

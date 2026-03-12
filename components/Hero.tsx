@@ -1,7 +1,7 @@
-import { Personal } from "@/types/personal";
-import { Profile } from "@/types/resume";
-import { SocialAccount } from "@/types/shared";
-import { Meta } from "@/types/ui";
+import type { Personal } from "@/types/personal";
+import type { Profile } from "@/types/resume";
+import type { SocialAccount } from "@/types/shared";
+import type { Meta } from "@/types/ui";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 

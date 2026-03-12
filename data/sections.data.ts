@@ -1,4 +1,4 @@
-import { Sections } from "@/types/resume";
+import type { Sections } from "@/types/ui";
 
 export const sectionsData: Record<string, Sections> = {
   en: {

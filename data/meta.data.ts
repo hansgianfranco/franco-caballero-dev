@@ -1,4 +1,4 @@
-import { Meta } from "@/types/ui";
+import type { Meta } from "@/types/ui";
 
 const year = new Date().getFullYear();
 

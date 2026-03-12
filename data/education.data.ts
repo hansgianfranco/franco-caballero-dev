@@ -1,4 +1,4 @@
-import { Education } from "@/types/resume";
+import type { Education } from "@/types/career";
 
 export const educationData: Record<string, Education[]> = {
   es: [

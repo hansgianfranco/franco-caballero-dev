@@ -1,4 +1,4 @@
-import { Profile } from "@/types/resume";
+import type { Profile } from "@/types/resume";
 
 export const profileData: Record<string, Profile> = {
   es: {

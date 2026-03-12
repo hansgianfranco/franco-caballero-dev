@@ -3,7 +3,7 @@
 import Script from "next/script";
 import { generateSchema } from "@/helpers/generateSchema";
 import { useResume } from "@/hooks/useResume";
-import { ResumeData } from "@/types/resume";
+import type { ResumeData } from "@/types/resume";
 
 export default function StructuredData() {
 

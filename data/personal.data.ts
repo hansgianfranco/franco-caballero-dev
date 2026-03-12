@@ -1,4 +1,4 @@
-import { Personal } from "@/types/personal";
+import type { Personal } from "@/types/personal";
 
 export const personalData: Record<string, Personal> = {
   es: {

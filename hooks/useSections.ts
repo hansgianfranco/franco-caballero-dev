@@ -1,6 +1,6 @@
 "use client";
 
-import { Sections } from "@/types/ui";
+import type { Sections } from "@/types/ui";
 import { useFetch } from "./useFetch";
 import { useLanguage } from "@/contexts/LanguageContext";
 

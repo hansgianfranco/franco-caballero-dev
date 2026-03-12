@@ -1,6 +1,6 @@
 "use client";
 
-import { Nav } from "@/types/ui";
+import type { Nav } from "@/types/ui";
 import { useFetch } from "./useFetch";
 import { useLanguage } from "@/contexts/LanguageContext";
 
