@@ -28,18 +28,17 @@ export default function Home() {
   if (!resume) return null;
 
   return (
-    <main className="min-h-screen relative text-[#C0CAF5] font-mono">
-      <div className="stars-layer"></div>
+    <>
       <Navbar nav={resume.nav}/>
-
-      <div className="max-w-6xl mx-auto px-6 py-20 space-y-20">
-        <Hero personal={resume.personal} profile={resume.profile} social={resume.social}/>
-        <Projects projects={resume.projects} sections={resume.sections}/>
-        <Experience experience={resume.experience} sections={resume.sections} />
-        <Skills skills={resume.skills} sections={resume.sections}/>
-        <Contact social={resume.social} sections={resume.sections}/>
-      </div>
+      <main id="main" className="min-h-screen relative text-[#C0CAF5] font-mono max-w-6xl mx-auto px-6 py-20 space-y-20" role="main">
+          <Hero personal={resume.personal} profile={resume.profile} social={resume.social}/>
+          <Projects projects={resume.projects} sections={resume.sections}/>
+          <Experience experience={resume.experience} sections={resume.sections} />
+          <Skills skills={resume.skills} sections={resume.sections}/>
+          <Contact sections={resume.sections}/>
+      </main>
       <Footer meta={resume.meta}/>
-    </main>
+      <div className="stars-layer" aria-hidden="true"></div>
+    </>
   );
 }

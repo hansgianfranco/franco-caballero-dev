@@ -5,34 +5,49 @@ import { Menu } from "lucide-react";
 import LanguageSwitcher from "./LanguageSwitcher";
 import type { Nav } from "@/types/resume";
 
-export default function Navbar({ nav }: {nav: Nav}) {
+export default function Navbar({ nav }: { nav: Nav }) {
 
     const [open, setOpen] = useState(false);
 
     return (
         <header className="sticky top-0 z-40 backdrop-blur bg-[#16161F]/70 border-b border-[#2a2a3a]">
-            <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-                <nav className="hidden md:flex gap-6 text-sm">
-                    <a href="#about" className="text-[#7aa2f7] hover:text-[#9e68ff]">
-                        {nav?.about}
-                    </a>
-                    <a href="#experience" className="text-[#7aa2f7] hover:text-[#9e68ff]">
-                        {nav?.experience}
-                    </a>
-                    <a href="#projects" className="text-[#7aa2f7] hover:text-[#9e68ff]">
-                        {nav?.projects}
-                    </a>
-                    <a href="#skills" className="text-[#7aa2f7] hover:text-[#9e68ff]">
-                        {nav?.skills}
-                    </a>
-                    <a href="#contact" className="text-[#7aa2f7] hover:text-[#9e68ff]">
-                        {nav?.contact}
-                    </a>
+            <div className="max-w-6xl mx-auto px-6 py-4 flex font-mono justify-between items-center">
+                <nav aria-label="Main navigation">
+                    <ul className="hidden md:flex gap-6 text-sm">
+                        <li>
+                            <a href="#about" className="text-[#7aa2f7] hover:text-[#9e68ff]">
+                                {nav?.about}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#experience" className="text-[#7aa2f7] hover:text-[#9e68ff]">
+                                {nav?.experience}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#projects" className="text-[#7aa2f7] hover:text-[#9e68ff]">
+                                {nav?.projects}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#skills" className="text-[#7aa2f7] hover:text-[#9e68ff]">
+                                {nav?.skills}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" className="text-[#7aa2f7] hover:text-[#9e68ff]">
+                                {nav?.contact}
+                            </a>
+                        </li>
+                    </ul>
                 </nav>
                 <div className="flex items-center justify-between w-full md:w-auto gap-4">
                     <button
                         onClick={() => setOpen(!open)}
                         className="md:hidden text-white"
+                        aria-label="Open menu"
+                        aria-expanded="false"
+                        aria-controls="mobile-menu"
                     >
                         <Menu />
                     </button>
@@ -42,22 +57,34 @@ export default function Navbar({ nav }: {nav: Nav}) {
 
             {open && (
                 <div className="md:hidden border-t border-[#2a2a3a] bg-[#16161F]">
-                    <nav className="flex flex-col gap-4 px-6 py-4 text-sm">
-                        <a href="#about" className="text-[#7aa2f7]" onClick={() => setOpen(false)}>
-                            {nav?.about}
-                        </a>
-                        <a href="#experience" className="text-[#7aa2f7]" onClick={() => setOpen(false)}>
-                            {nav?.experience}
-                        </a>
-                        <a href="#projects" className="text-[#7aa2f7]" onClick={() => setOpen(false)}>
-                            {nav?.projects}
-                        </a>
-                        <a href="#skills" className="text-[#7aa2f7]" onClick={() => setOpen(false)}>
-                            {nav?.skills}
-                        </a>
-                        <a href="#contact" className="text-[#7aa2f7]" onClick={() => setOpen(false)}>
-                            {nav?.contact}
-                        </a>
+                    <nav aria-label="Mobile navigation">
+                        <ul className="flex flex-col gap-4 px-6 py-4 text-sm">
+                            <li>
+                                <a href="#about" className="text-[#7aa2f7]" onClick={() => setOpen(false)}>
+                                    {nav?.about}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#experience" className="text-[#7aa2f7]" onClick={() => setOpen(false)}>
+                                    {nav?.experience}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#projects" className="text-[#7aa2f7]" onClick={() => setOpen(false)}>
+                                    {nav?.projects}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#skills" className="text-[#7aa2f7]" onClick={() => setOpen(false)}>
+                                    {nav?.skills}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contact" className="text-[#7aa2f7]" onClick={() => setOpen(false)}>
+                                    {nav?.contact}
+                                </a>
+                            </li>
+                        </ul>
                     </nav>
                 </div>
             )}

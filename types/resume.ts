@@ -34,14 +34,16 @@ export interface Experience {
   company: string;
   location: string;
   position: string;
-  period: string;
+  start_date: string;
+  end_date: string | null;
   responsibilities: string[];
 }
 
 export interface Project {
   name: string;
   url: string;
-  period: string;
+  start_date: string;
+  end_date: string | null;
   technologies: string[];
   description: string;
 }

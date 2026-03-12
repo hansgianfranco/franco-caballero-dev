@@ -112,11 +112,12 @@ export default function ContactForm() {
         viewport={{ once: true }}
       >
         <motion.div variants={field}>
-          <label className="block text-sm text-[#C0CAF5] mb-2">
+          <label htmlFor="name" className="block text-sm text-[#C0CAF5] mb-2">
             {t.name}
           </label>
 
           <input
+            id="name"
             type="text"
             name="name"
             required
@@ -127,11 +128,12 @@ export default function ContactForm() {
         </motion.div>
 
         <motion.div variants={field}>
-          <label className="block text-sm text-[#C0CAF5] mb-2">
+          <label htmlFor="email" className="block text-sm text-[#C0CAF5] mb-2">
             {t.email}
           </label>
 
           <input
+            id="email"
             type="email"
             name="email"
             required
@@ -143,11 +145,12 @@ export default function ContactForm() {
       </motion.div>
 
       <motion.div variants={field}>
-        <label className="block text-sm text-[#C0CAF5] mb-2">
+        <label htmlFor="message" className="block text-sm text-[#C0CAF5] mb-2">
           {t.message}
         </label>
 
         <textarea
+          id="message"
           name="message"
           required
           rows={5}

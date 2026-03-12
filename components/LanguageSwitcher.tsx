@@ -9,8 +9,7 @@ export default function LanguageSwitcher() {
     "px-3 py-1 text-xs rounded-md transition-colors border";
 
   return (
-    <div className="flex items-center gap-2 bg-[#1f1f2e] border border-[#33467C] rounded-lg p-1">
-
+    <div className="flex items-center gap-2 bg-[#1f1f2e] font-mono border border-[#33467C] rounded-lg p-1">
       <button
         onClick={() => setLanguage("es")}
         className={`${buttonBase} ${
@@ -21,7 +20,6 @@ export default function LanguageSwitcher() {
       >
         ES
       </button>
-
       <button
         onClick={() => setLanguage("en")}
         className={`${buttonBase} ${
