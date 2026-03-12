@@ -53,11 +53,7 @@ export function generateSchema({
       "@type": "Role",
       roleName: job.position,
       startDate: job.start_date,
-      endDate: job.end_date || undefined,
-      worksFor: {
-        "@type": "Organization",
-        name: job.company
-      }
+      endDate: job.end_date || undefined
     })),
 
     alumniOf: education?.map(ed => ({
