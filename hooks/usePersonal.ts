@@ -1,7 +1,7 @@
 "use client";
 
+import { Personal } from "@/types/personal";
 import { useFetch } from "./useFetch";
-import { Personal } from "@/types/resume";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export function usePersonal() {

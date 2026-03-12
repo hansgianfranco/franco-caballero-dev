@@ -1,7 +1,7 @@
 "use client";
 
+import { Project } from "@/types/projects";
 import { useFetch } from "./useFetch";
-import { Project } from "@/types/resume";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export function useProjects() {

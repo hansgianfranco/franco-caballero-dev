@@ -18,11 +18,11 @@ export default function Home() {
     <>
       <Navbar nav={resume.nav}/>
       <main id="main" className="min-h-screen relative text-foreground font-mono max-w-6xl mx-auto px-6 py-20 space-y-20" role="main">
-          <Hero personal={resume.personal} profile={resume.profile} social={resume.social}/>
-          <Projects projects={resume.projects} sections={resume.sections}/>
+          <Hero personal={resume.personal} profile={resume.profile} meta={resume.meta} />
+          <Projects projects={resume.projects} sections={resume.sections} />
           <Experience experience={resume.experience} sections={resume.sections} />
-          <Skills skills={resume.skills} sections={resume.sections}/>
-          <Contact sections={resume.sections}/>
+          <Skills skills={resume.skills} sections={resume.sections} />
+          <Contact meta={resume.meta} sections={resume.sections} />
       </main>
       <Footer meta={resume.meta}/>
       <div className="stars-layer" aria-hidden="true"></div>

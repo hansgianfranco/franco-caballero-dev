@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { useLanguage } from "@/contexts/LanguageContext";
 import { AnimatePresence, motion } from "framer-motion";
+import { Meta } from "@/types/ui";
 
-export default function ContactForm() {
+export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
 
   const container = {
     hidden: {},
@@ -24,38 +24,15 @@ export default function ContactForm() {
     }
   };
 
-  const { language } = useLanguage();
-
   const [form, setForm] = useState({
     name: "",
     email: "",
     message: ""
   });
 
-  const [status, setStatus] = useState("");
-
-  const text = {
-    es: {
-      name: "Nombre",
-      email: "Correo",
-      message: "Mensaje",
-      send: "Enviar mensaje",
-      sending: "Enviando...",
-      success: "Mensaje enviado correctamente.",
-      error: "Ocurrió un error al enviar."
-    },
-    en: {
-      name: "Name",
-      email: "Email",
-      message: "Message",
-      send: "Send message",
-      sending: "Sending...",
-      success: "Message sent successfully.",
-      error: "Something went wrong."
-    }
-  };
-
-  const t = text[language];
+  const [status, setStatus] = useState<
+    "" | "loading" | "success" | "error"
+  >("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -98,22 +75,36 @@ export default function ContactForm() {
   return (
     <motion.form
       onSubmit={handleSubmit}
-      className="mt-8 space-y-6"
+      className="mt-10 space-y-8 bg-card border border-outline rounded-xl p-8 shadow-sm"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
     >
+
+      {/* Header */}
+      <div className="space-y-2">
+        <p className="text-sm text-foreground">
+          {contact.subtitle}
+        </p>
+      </div>
+
+      {/* Inputs */}
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-4"
+        className="grid grid-cols-1 md:grid-cols-2 gap-6"
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
       >
+
+        {/* Name */}
         <motion.div variants={field}>
-          <label htmlFor="name" className="block text-sm text-foreground mb-2">
-            {t.name}
+          <label
+            htmlFor="name"
+            className="block text-sm font-medium text-muted mb-2"
+          >
+            {contact.fields.name}
           </label>
 
           <input
@@ -123,13 +114,17 @@ export default function ContactForm() {
             required
             value={form.name}
             onChange={handleChange}
-            className="w-full bg-card border border-outline rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-primary transition-colors"
+            className="w-full bg-surface border border-outline rounded-lg px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition"
           />
         </motion.div>
 
+        {/* Email */}
         <motion.div variants={field}>
-          <label htmlFor="email" className="block text-sm text-foreground mb-2">
-            {t.email}
+          <label
+            htmlFor="email"
+            className="block text-sm font-medium text-muted mb-2"
+          >
+            {contact.fields.email}
           </label>
 
           <input
@@ -139,14 +134,19 @@ export default function ContactForm() {
             required
             value={form.email}
             onChange={handleChange}
-            className="w-full bg-card border border-outline rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-primary transition-colors"
+            className="w-full bg-surface border border-outline rounded-lg px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition"
           />
         </motion.div>
+
       </motion.div>
 
+      {/* Message */}
       <motion.div variants={field}>
-        <label htmlFor="message" className="block text-sm text-foreground mb-2">
-          {t.message}
+        <label
+          htmlFor="message"
+          className="block text-sm font-medium text-muted mb-2"
+        >
+          {contact.fields.message}
         </label>
 
         <textarea
@@ -156,33 +156,25 @@ export default function ContactForm() {
           rows={5}
           value={form.message}
           onChange={handleChange}
-          className="w-full bg-card border border-outline rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-primary transition-colors resize-none"
+          className="w-full bg-surface border border-outline rounded-lg px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary resize-none transition"
         />
       </motion.div>
 
+      {/* Button */}
       <motion.button
         type="submit"
         disabled={status === "loading"}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="bg-card border border-outline hover:bg-outline text-foreground px-6 py-3 rounded-lg transition-all duration-300"
+        whileHover={{ scale: 1.04 }}
+        whileTap={{ scale: 0.96 }}
+        className="w-full sm:w-auto px-7 py-3 rounded-lg font-medium bg-primary text-white flex items-center justify-center gap-2 transition hover:shadow-[0_0_20px_rgba(158,104,255,0.5)] disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {t.send}
+        {status === "loading"
+          ? contact.actions.sending
+          : contact.actions.send}
       </motion.button>
 
+      {/* Status messages */}
       <AnimatePresence mode="wait">
-        {status === "loading" && (
-          <motion.p
-            key="loading"
-            initial={{ opacity: 0, y: 5 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -5 }}
-            transition={{ duration: 0.2 }}
-            className="text-accent text-sm"
-          >
-            {t.sending}
-          </motion.p>
-        )}
 
         {status === "success" && (
           <motion.p
@@ -190,10 +182,9 @@ export default function ContactForm() {
             initial={{ opacity: 0, y: 5 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -5 }}
-            transition={{ duration: 0.2 }}
-            className="text-secondary text-sm"
+            className="text-sm px-3 py-2 rounded-md bg-surface border border-secondary text-secondary"
           >
-            {t.success}
+            {contact.status.success}
           </motion.p>
         )}
 
@@ -203,12 +194,12 @@ export default function ContactForm() {
             initial={{ opacity: 0, y: 5 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -5 }}
-            transition={{ duration: 0.2 }}
-            className="text-danger text-sm"
+            className="text-sm px-3 py-2 rounded-md bg-surface border border-danger text-danger"
           >
-            {t.error}
+            {contact.status.error}
           </motion.p>
         )}
+
       </AnimatePresence>
 
     </motion.form>

@@ -1,7 +1,7 @@
 "use client";
 
+import { Experience } from "@/types/career";
 import { useFetch } from "./useFetch";
-import { Experience } from "@/types/resume";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export function useExperience() {
