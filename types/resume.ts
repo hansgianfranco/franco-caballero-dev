@@ -6,6 +6,17 @@ export interface Personal {
   website: string;
 }
 
+export interface Education {
+  institution: string;
+  location: string;
+  degree: string;
+  thesis?: string;
+  start_date: string;
+  end_date: string | null;
+  url?: string;
+  details: string[];
+}
+
 export interface Contact {
   email: string;
   phone: string;
@@ -82,6 +93,7 @@ export interface Nav {
 export interface ResumeData {
   personal: Personal;
   nav: Nav;
+  education: Education[];
   sections: Sections;
   profile: Profile;
   experience: Experience[];
