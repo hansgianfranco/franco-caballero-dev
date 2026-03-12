@@ -8,10 +8,7 @@ export default function Experience({ experience, sections }: { experience: Exper
 
     return (
         <section id="experience" aria-labelledby="experience-title">
-            <h2
-                id="experience-title"
-                className="mb-6 text-[#565f89] font-mono before:content-['//_'] before:text-[#565f89]"
-            >
+            <h2 id="experience-title" className="mb-6 text-[#565f89] font-mono before:content-['//_'] before:text-[#565f89]">
                 {sections?.experience}
             </h2>
             <div className="relative border-l border-[#33467C] pl-8 space-y-10">
@@ -23,27 +20,15 @@ export default function Experience({ experience, sections }: { experience: Exper
                         transition={{ duration: 0.5, delay: i * 0.1 }}
                         viewport={{ once: true }}
                         className="relative group"
-                        itemScope
-                        itemType="https://schema.org/Role"
                     >
                         <span className="absolute -left-10 top-1 w-4 h-4 bg-[#9e68ff] rounded-full transition-transform transform group-hover:scale-150 duration-300"></span>
-                        <h3
-                            className="text-[#9e68ff] text-lg"
-                            itemProp="roleName"
-                        >
+                        <h3 className="text-[#9e68ff] text-lg">
                             {job.position}
                         </h3>
                         <p className="text-sm capitalize text-[#9ece6a]">
-                            <span
-                                itemProp="worksFor"
-                                itemScope
-                                itemType="https://schema.org/Organization"
-                            >
-                                <span itemProp="name">{job.company}</span>
-                            </span>
+                            <span>{job.company}</span>
                             {" • "}
                             <time
-                                itemProp="startDate"
                                 dateTime={job.start_date}
                             >
                                 {formatDate(job.start_date, language)}
@@ -51,7 +36,6 @@ export default function Experience({ experience, sections }: { experience: Exper
                             {" – "}
                             {job.end_date ? (
                                 <time
-                                    itemProp="endDate"
                                     dateTime={job.end_date}
                                 >
                                     {formatDate(job.end_date, language)}

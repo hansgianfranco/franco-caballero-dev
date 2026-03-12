@@ -4,17 +4,8 @@ import { motion } from "framer-motion";
 export default function Skills({ skills, sections }: { skills: string[], sections: Sections}) {
   
   return (
-    <section
-      id="skills"
-      aria-labelledby="skills-title"
-      itemScope
-      itemType="https://schema.org/ItemList"
-    >
-      <h2
-        id="skills-title"
-        className="mb-6 text-[#565f89] font-mono before:content-['//_'] before:text-[#565f89]"
-        itemProp="name"
-      >
+    <section id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title" className="mb-6 text-[#565f89] font-mono before:content-['//_'] before:text-[#565f89]">
         {sections?.skills}
       </h2>
 
@@ -28,12 +19,8 @@ export default function Skills({ skills, sections }: { skills: string[], section
             viewport={{ once: true }}
             className="px-3 py-1 text-sm rounded-full border border-[#33467C] bg-[#16161F] text-[#9ece6a]
             hover:bg-[#9e68ff] hover:text-[#16161F] transition-colors duration-300"
-            itemProp="itemListElement"
-            itemScope
-            itemType="https://schema.org/DefinedTerm"
           >
-            <span itemProp="name">{skill}</span>
-            <meta itemProp="position" content={String(i + 1)} />
+            <span>{skill}</span>
           </motion.li>
         ))}
       </ul>

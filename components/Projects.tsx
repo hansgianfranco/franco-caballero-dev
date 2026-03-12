@@ -21,17 +21,10 @@ export default function Projects({ projects, sections }: { projects: Project[], 
     };
 
     return (
-        <section
-            id="projects"
-            aria-labelledby="projects-title"
-        >
-            <h2
-                id="projects-title"
-                className="mb-6 text-[#565f89] font-mono before:content-['//_'] before:text-[#565f89]"
-            >
+        <section id="projects" aria-labelledby="projects-title">
+            <h2 id="projects-title" className="mb-6 text-[#565f89] font-mono before:content-['//_'] before:text-[#565f89]">
                 {sections?.projects}
             </h2>
-
             <motion.div
                 variants={container}
                 initial="hidden"
@@ -46,45 +39,27 @@ export default function Projects({ projects, sections }: { projects: Project[], 
                         whileHover={{ y: -6 }}
                         transition={{ duration: 0.3 }}
                         className="bg-[#1f1f2e] border border-[#33467C] p-6 rounded-lg hover:border-[#9e68ff]"
-                        itemScope
-                        itemType="https://schema.org/SoftwareSourceCode"
                     >
-                        <meta itemProp="author" content="Tu Nombre" />
-                        <h3
-                            className="text-[#9e68ff] text-lg font-semibold"
-                            itemProp="name"
-                        >
+                        <h3 className="text-[#9e68ff] text-lg font-semibold">
                             {project.name}
                         </h3>
                         <p className="text-sm capitalize text-gray-400">
-                            <time
-                                itemProp="dateCreated"
-                                dateTime={project.start_date}
-                            >
+                            <time dateTime={project.start_date}>
                                 {formatDate(project.start_date, language)}
                             </time>
                             {" – "}
                             {project.end_date ? (
-                                <time
-                                    itemProp="dateModified"
-                                    dateTime={project.end_date}
-                                >
+                                <time dateTime={project.end_date}>
                                     {formatDate(project.end_date, language)}
                                 </time>
                             ) : (
                                 language === "es" ? "Presente" : "Present"
                             )}
                         </p>
-                        <p
-                            itemProp="description"
-                            className="text-sm mt-2 text-[#C0CAF5]"
-                        >
+                        <p className="text-sm mt-2 text-[#C0CAF5]">
                             {project.description}
                         </p>
-                        <div
-                            className="flex flex-wrap gap-2 mt-4"
-                            itemProp="keywords"
-                        >
+                        <div className="flex flex-wrap gap-2 mt-4">
                             {project.technologies.map((tech: string, id: number) => (
                                 <span
                                     key={id}
@@ -97,7 +72,6 @@ export default function Projects({ projects, sections }: { projects: Project[], 
                         {project.url && (
                             <a
                                 href={project.url}
-                                itemProp="url"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="mt-4 inline-block text-sm hover:text-[#9e68ff]"
@@ -105,10 +79,6 @@ export default function Projects({ projects, sections }: { projects: Project[], 
                                 View Project
                             </a>
                         )}
-                        <meta
-                            itemProp="runtimePlatform"
-                            content="Web Browser"
-                        />
                     </motion.article>
                 ))}
             </motion.div>
