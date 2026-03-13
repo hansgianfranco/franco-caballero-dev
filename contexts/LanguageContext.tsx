@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState } from "react";
 
-export type Language = "es" | "en";
+type Language = "es" | "en";
 
 interface LanguageContextType {
   language: Language;
@@ -13,8 +13,15 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
   undefined
 );
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>("es");
+export function LanguageProvider({
+  children,
+  lang,
+}: {
+  children: React.ReactNode;
+  lang: Language;
+}) {
+
+  const [language, setLanguage] = useState<Language>(lang);
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
@@ -27,7 +34,7 @@ export function useLanguage() {
   const context = useContext(LanguageContext);
 
   if (!context) {
-    throw new Error("useLanguage must be used within a LanguageProvider");
+    throw new Error("useLanguage must be used within LanguageProvider");
   }
 
   return context;
