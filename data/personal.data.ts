@@ -13,7 +13,7 @@ export const personalData: Record<string, Personal> = {
     },
     resume: {
       title: "Descargar CV",
-      file: "/resources/FC_CV_ES.pdf"
+      file: "/resources/Franco_Caballero_CV.pdf"
     },
     website: 'https://francocaballero.dev',
   },
@@ -30,7 +30,7 @@ export const personalData: Record<string, Personal> = {
     },
     resume: {
       title: "Download Resume",
-      file: "/resources/FC_RESUME_EN.pdf"
+      file: "/resources/Franco_Caballero_Resume.pdf"
     },
     website: 'https://francocaballero.dev',
   }
