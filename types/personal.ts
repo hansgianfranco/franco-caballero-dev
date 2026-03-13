@@ -18,9 +18,8 @@ export interface Personal {
   name: string;
   title: string;
   website: string;
-
   contact: Contact;
   resume: Resume;
-
-  social?: SocialAccount[];
+  summary: string[];
+  accounts?: SocialAccount[];
 }

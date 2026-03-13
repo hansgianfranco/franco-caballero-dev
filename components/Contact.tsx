@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import ContactForm from "./ContactForm";
-import type { Meta, Sections } from "@/types/ui";
+import type { Meta } from "@/types/ui";
 
-export default function Contact({ meta, sections }: { meta: Meta; sections: Sections; }) {
+export default function Contact({ meta, title }: { meta: Meta; title: string; }) {
   return (
     <motion.section
       id="contact"
@@ -16,7 +16,7 @@ export default function Contact({ meta, sections }: { meta: Meta; sections: Sect
       aria-labelledby="contact-title"
     >
       <h2 id="contact-title" className="mb-6 text-muted font-mono before:content-['//_'] before:text-muted">
-        {sections?.contact}
+        {title}
       </h2>
 
       <ContactForm contact={meta?.contact} />

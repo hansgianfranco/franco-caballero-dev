@@ -2,7 +2,6 @@ import type { ResumeData } from "@/types/resume";
 
 export function generateSchema({
   personal,
-  profile,
   education,
   skills,
   projects,
@@ -21,7 +20,7 @@ export function generateSchema({
 
     name: personal?.name,
     jobTitle: personal?.title,
-    description: profile?.summary?.join(" "),
+    description: personal?.summary?.join(" "),
     email,
     url: personal?.website,
 
@@ -35,7 +34,7 @@ export function generateSchema({
       }
       : undefined,
 
-    sameAs: meta?.contact?.accounts?.map(a => a.url),
+    sameAs: personal?.accounts?.map(a => a.url),
 
     knowsAbout: skills,
 

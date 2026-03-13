@@ -1,5 +1,3 @@
-import { SocialAccount } from "./shared";
-
 export interface Sections {
   experience: string;
   projects: string;
@@ -38,7 +36,5 @@ export interface Meta {
       success: string;
       error: string;
     };
-
-    accounts: SocialAccount[];
   };
 }

@@ -3,10 +3,9 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { formatDate } from "@/helpers/formatDate";
 import type { Project } from "@/types/projects";
-import type { Sections } from "@/types/ui";
 import { motion } from "framer-motion";
 
-export default function Projects({ projects, sections }: { projects: Project[], sections: Sections }) {
+export default function Projects({ projects, title }: { projects: Project[], title: string }) {
   const { language } = useLanguage();
 
   const container = {
@@ -26,7 +25,7 @@ export default function Projects({ projects, sections }: { projects: Project[], 
   return (
     <section id="projects" aria-labelledby="projects-title">
       <h2 id="projects-title" className="mb-6 text-muted font-mono before:content-['//_'] before:text-muted">
-        {sections?.projects}
+        {title}
       </h2>
       <motion.div
         variants={container}
@@ -77,7 +76,7 @@ export default function Projects({ projects, sections }: { projects: Project[], 
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-block text-sm underline hover:text-primary"
+                className="mt-4 inline-block text-sm text-accent hover:text-primary"
               >
                 View Project
               </a>

@@ -1,13 +1,11 @@
 'use client'
 
 import type { Personal } from "@/types/personal";
-import type { Profile } from "@/types/resume";
 import type { SocialAccount } from "@/types/shared";
-import type { Meta } from "@/types/ui";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 
-export default function Hero({ personal, profile, meta }: { personal: Personal, profile: Profile, meta: Meta }) {
+export default function Hero({ personal }: { personal: Personal }) {
 
   const email = personal?.contact?.email
     ? atob(personal.contact.email)
@@ -21,8 +19,6 @@ export default function Hero({ personal, profile, meta }: { personal: Personal, 
     language: ["es", "en"],
     stack: ["Next.js", "React", "Node.js", "PostgreSQL", "AWS"]
   };
-
-  const summary = profile?.summary || [];
 
   return (
     <section id="about" className="flex flex-col md:flex-row items-start gap-10" aria-labelledby="about-title">
@@ -42,11 +38,11 @@ export default function Hero({ personal, profile, meta }: { personal: Personal, 
         <address className="flex justify-start gap-6">
           <a
             href={`mailto:${email}`}
-            className="flex items-center gap-2 hover:text-primary"
+            className="flex items-center gap-2 text-accent hover:text-primary"
           >
             <Mail size={18} /> Email
           </a>
-          {meta?.contact?.accounts?.map((account: SocialAccount, i: number) => {
+          {personal?.accounts?.map((account: SocialAccount, i: number) => {
             if (account.id === "github")
               return (
                 <a
@@ -54,7 +50,7 @@ export default function Hero({ personal, profile, meta }: { personal: Personal, 
                   href={account.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:text-primary"
+                  className="flex items-center gap-2 text-accent hover:text-primary"
                 >
                   <Github size={18} /> Github
                 </a>
@@ -66,7 +62,7 @@ export default function Hero({ personal, profile, meta }: { personal: Personal, 
                   href={account.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:text-primary"
+                  className="flex items-center gap-2 text-accent hover:text-primary"
                 >
                   <Linkedin size={18} /> LinkedIn
                 </a>
@@ -75,8 +71,8 @@ export default function Hero({ personal, profile, meta }: { personal: Personal, 
           })}
         </address>
         <div className="mt-6 max-w-3xl space-y-3 text-foreground">
-          {summary.slice(0, 3).map((paragraph: string, i: number) => (
-            <p key={i}>{paragraph}</p>
+          {personal.summary.slice(0, 3).map((paragraph: string, i: number) => (
+            <p key={i} dangerouslySetInnerHTML={{ __html: paragraph }} />
           ))}
         </div>
         <div className="flex gap-4 pt-4">
