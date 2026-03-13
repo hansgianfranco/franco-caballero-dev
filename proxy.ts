@@ -7,12 +7,12 @@ export function proxy(req: NextRequest) {
   const ua = req.headers.get("user-agent") || "";
   const { pathname } = req.nextUrl;
 
-  // Bloquear bots no permitidos
+  // Block bots
   if (/bot|crawl|spider|scraper/i.test(ua) && !allowedBots.some(bot => ua.includes(bot))) {
     return new NextResponse("Access denied", { status: 403 });
   }
 
-  // Redirigir la raíz según el idioma del navegador
+  // Redirect lang
   if (pathname === "/") {
     const acceptLanguage = req.headers.get("accept-language") || "en";
     const lang = acceptLanguage.startsWith("es") ? "es" : "en";
@@ -23,7 +23,7 @@ export function proxy(req: NextRequest) {
       url.searchParams.set(key, value);
     });
 
-    return NextResponse.redirect(url, 308); // redirección permanente
+    return NextResponse.redirect(url, 308); // Permanent redirect
   }
 
   return NextResponse.next();
