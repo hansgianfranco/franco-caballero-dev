@@ -6,7 +6,7 @@ export const metaData: Record<string, Meta> = {
   es: {
     footer: `© ${year} Franco Caballero - Desarrollador Fullstack Senior`,
     scroll_top_label: "Volver arriba",
-
+    
     contact: {
       title: "Contacto",
       subtitle: "Si deseas trabajar conmigo, no dudes en enviarme un mensaje.",
@@ -26,19 +26,6 @@ export const metaData: Record<string, Meta> = {
         success: "Mensaje enviado correctamente.",
         error: "Ocurrió un error al enviar."
       },
-
-      accounts: [
-        {
-          id: "linkedin",
-          title: "LinkedIn",
-          url: "https://linkedin.com/in/francocaballero"
-        },
-        {
-          id: "github",
-          title: "Github",
-          url: "https://github.com/hansgianfranco"
-        }
-      ]
     }
   },
 
@@ -65,19 +52,6 @@ export const metaData: Record<string, Meta> = {
         success: "Message sent successfully.",
         error: "Something went wrong."
       },
-
-      accounts: [
-        {
-          id: "linkedin",
-          title: "LinkedIn",
-          url: "https://linkedin.com/in/francocaballero"
-        },
-        {
-          id: "github",
-          title: "Github",
-          url: "https://github.com/hansgianfranco"
-        }
-      ]
     }
   }
 };
