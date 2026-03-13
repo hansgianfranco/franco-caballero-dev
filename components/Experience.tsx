@@ -105,7 +105,7 @@ export default function Experience({
                     key={index}
                     className="flex gap-2"
                   >
-                    <span className="text-primary mt-[3px]">•</span>
+                    <span className="text-primary">•</span>
                     <span>{r}</span>
                   </li>
                 ))}
