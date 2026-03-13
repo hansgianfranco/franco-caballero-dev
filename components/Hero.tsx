@@ -13,6 +13,15 @@ export default function Hero({ personal, profile, meta }: { personal: Personal, 
     ? atob(personal.contact.email)
     : "";
 
+  const developer = {
+    name: personal?.name,
+    role: personal?.title,
+    location: personal?.contact?.location,
+    remote: personal?.contact?.remote ?? false,
+    language: ["es", "en"],
+    stack: ["Next.js", "React", "Node.js", "PostgreSQL", "AWS"]
+  };
+
   const summary = profile?.summary || [];
 
   return (
@@ -94,21 +103,32 @@ export default function Hero({ personal, profile, meta }: { personal: Personal, 
         <div className="bg-card border border-outline rounded-lg p-6">
           <pre className="whitespace-pre-wrap wrap-break-words text-sm sm:text-base">
             <code>
-              <span className="text-accent">export const</span> developer = {"{"}
-              {"\n"}  name: <span className="text-secondary">&quot;{personal?.name}&quot;</span>,
-              {"\n"}  role: <span className="text-secondary">&quot;{personal?.title}&quot;</span>,
-              {"\n"}  location: <span className="text-secondary">&quot;{personal?.contact?.location}&quot;</span>,
-              {"\n"}  remote: <span className="text-danger">
-                {personal?.contact?.remote ? "true" : "false"}
-              </span>,
-              {"\n"}  stack: [
-              {"\n"}    &quot;Next.js&quot;,
-              {"\n"}    &quot;React&quot;,
-              {"\n"}    &quot;Node.js&quot;,
-              {"\n"}    &quot;PostgreSQL&quot;,
-              {"\n"}    &quot;AWS&quot;
-              {"\n"}  ]
-              {"\n"}{"}"}
+              <span className="text-accent">export const</span> developer = &#123;{"\n"}
+              &nbsp;&nbsp;name: <span className="text-secondary">&quot;{developer.name}&quot;</span>,{"\n"}
+              &nbsp;&nbsp;role: <span className="text-secondary">&quot;{developer.role}&quot;</span>,{"\n"}
+              &nbsp;&nbsp;location: <span className="text-secondary">&quot;{developer.location}&quot;</span>,{"\n"}
+              &nbsp;&nbsp;remote: <span className={developer.remote ? "text-danger" : "text-muted"}>
+                {developer.remote ? "true" : "false"}
+              </span>,{"\n"}
+              &nbsp;&nbsp;languages: [ {"\n"}
+              {developer.language.map((lang, i) => (
+                <span key={i}>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-secondary">&quot;{lang}&quot;</span>
+                  {i < developer.language.length - 1 ? "," : ""}
+                  {"\n"}
+                </span>
+              ))}
+              &nbsp;&nbsp;],{"\n"}
+              &nbsp;&nbsp;stack: [ {"\n"}
+              {developer.stack.map((tech, i) => (
+                <span key={i}>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span className="text-secondary">&quot;{tech}&quot;</span>
+                  {i < developer.stack.length - 1 ? "," : ""}
+                  {"\n"}
+                </span>
+              ))}
+              &nbsp;&nbsp;]{"\n"}
+              &#125;
             </code>
           </pre>
         </div>
