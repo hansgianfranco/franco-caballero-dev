@@ -67,17 +67,17 @@ export const metaData: Record<string, Meta> = {
       },
 
       accounts: [
-          {
-            id: "linkedin",
-            title: "LinkedIn",
-            url: "https://linkedin.com/in/francocaballero"
-          },
-          {
-            id: "github",
-            title: "Github",
-            url: "https://github.com/hansgianfranco"
-          }
-        ]
+        {
+          id: "linkedin",
+          title: "LinkedIn",
+          url: "https://linkedin.com/in/francocaballero"
+        },
+        {
+          id: "github",
+          title: "Github",
+          url: "https://github.com/hansgianfranco"
+        }
+      ]
     }
   }
 };

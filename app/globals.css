@@ -51,48 +51,58 @@ h6 {
   z-index: -1;
 
   box-shadow:
-  -42vw -4vh 0 0 #fff,
-  25vw -41vh 0 0 #fff,
-  -20vw 49vh 0 1px #fff,
-  5vw 40vh 1px 1px #fff,
-  29vw 19vh 1px 0 #fff,
-  -44vw -13vh 0 0 #fff,
-  46vw 41vh 0 1px #fff,
-  -3vw -45vh 0 1px #fff,
-  47vw 35vh 1px 0 #fff,
-  12vw -8vh 1px 0 #fff,
-  -34vw 48vh 1px 1px #fff,
-  32vw 26vh 1px 1px #fff,
-  32vw -41vh 1px 1px #fff,
-  0vw 37vh 1px 1px #fff,
-  34vw -26vh 1px 0 #fff,
-  -14vw -49vh 1px 0 #fff,
-  -12vw 45vh 0 1px #fff,
-  -44vw -33vh 0 1px #fff,
-  24vw 9vh 1px 0 #fff,
-  12vw -24vh 0 1px #fff,
-  -45vw -22vh 0 0 #fff,
-  -37vw -40vh 0 1px #fff,
-  29vw 19vh 0 1px #fff,
-  4vw -8vh 0 1px #fff,
-  -5vw 21vh 1px 1px #fff,
-  -27vw 26vh 1px 1px #fff,
-  -47vw -3vh 1px 1px #fff,
-  -28vw -30vh 0 1px #fff;
+    -42vw -4vh 0 0 #fff,
+    25vw -41vh 0 0 #fff,
+    -20vw 49vh 0 1px #fff,
+    5vw 40vh 1px 1px #fff,
+    29vw 19vh 1px 0 #fff,
+    -44vw -13vh 0 0 #fff,
+    46vw 41vh 0 1px #fff,
+    -3vw -45vh 0 1px #fff,
+    47vw 35vh 1px 0 #fff,
+    12vw -8vh 1px 0 #fff,
+    -34vw 48vh 1px 1px #fff,
+    32vw 26vh 1px 1px #fff,
+    32vw -41vh 1px 1px #fff,
+    0vw 37vh 1px 1px #fff,
+    34vw -26vh 1px 0 #fff,
+    -14vw -49vh 1px 0 #fff,
+    -12vw 45vh 0 1px #fff,
+    -44vw -33vh 0 1px #fff,
+    24vw 9vh 1px 0 #fff,
+    12vw -24vh 0 1px #fff,
+    -45vw -22vh 0 0 #fff,
+    -37vw -40vh 0 1px #fff,
+    29vw 19vh 0 1px #fff,
+    4vw -8vh 0 1px #fff,
+    -5vw 21vh 1px 1px #fff,
+    -27vw 26vh 1px 1px #fff,
+    -47vw -3vh 1px 1px #fff,
+    -28vw -30vh 0 1px #fff;
 
   animation: zoom 16s alternate infinite;
 }
 
 @keyframes zoom {
-  from { transform: scale(1); }
-  to { transform: scale(1.5); }
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.5);
+  }
 }
 
 /* fade in */
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .animate-fadeIn {
@@ -173,22 +183,22 @@ h6 {
 
 /* delays */
 
-.delay-100 { 
-  animation-delay: .1s 
+.delay-100 {
+  animation-delay: .1s
 }
 
-.delay-200 { 
-  animation-delay: .2s 
+.delay-200 {
+  animation-delay: .2s
 }
 
-.delay-300 { 
-  animation-delay: .3s 
+.delay-300 {
+  animation-delay: .3s
 }
 
-.delay-400 { 
-  animation-delay: .4s 
+.delay-400 {
+  animation-delay: .4s
 }
 
-.delay-500 { 
-  animation-delay: .5s 
+.delay-500 {
+  animation-delay: .5s
 }

@@ -24,8 +24,8 @@ export default function LanguageSwitcher() {
         onClick={() => changeLang("es")}
         aria-pressed={currentLang === "es"}
         className={`${buttonBase} ${currentLang === "es"
-            ? "bg-outline text-foreground border-outline"
-            : "text-[#9aa5ce] border-transparent hover:text-foreground"
+          ? "bg-outline text-foreground border-outline"
+          : "text-[#9aa5ce] border-transparent hover:text-foreground"
           }`}
       >
         ES
@@ -35,8 +35,8 @@ export default function LanguageSwitcher() {
         onClick={() => changeLang("en")}
         aria-pressed={currentLang === "en"}
         className={`${buttonBase} ${currentLang === "en"
-            ? "bg-outline text-foreground border-outline"
-            : "text-[#9aa5ce] border-transparent hover:text-foreground"
+          ? "bg-outline text-foreground border-outline"
+          : "text-[#9aa5ce] border-transparent hover:text-foreground"
           }`}
       >
         EN
