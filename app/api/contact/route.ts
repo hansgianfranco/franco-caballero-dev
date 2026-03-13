@@ -3,32 +3,32 @@ import { NextResponse } from "next/server";
 import { contactEmailTemplate } from "@/lib/email/contactTemplate";
 
 export async function POST(req: Request) {
-    try {
-        const { name, email, message } = await req.json();
+  try {
+    const { name, email, message } = await req.json();
 
-        const transporter = nodemailer.createTransport({
-            service: "gmail",
-            auth: {
-                user: process.env.SMTP_EMAIL,
-                pass: process.env.SMTP_PASSWORD
-            }
-        });
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.SMTP_EMAIL,
+        pass: process.env.SMTP_PASSWORD
+      }
+    });
 
-        await transporter.sendMail({
-            from: `"francocaballero.dev" <${process.env.SMTP_EMAIL}>`,
-            to: process.env.SMTP_EMAIL,
-            subject: `New message from ${name} - francocaballero.dev`,
-            // replyTo: email,
-            html: contactEmailTemplate(name, email, message)
-        });
+    await transporter.sendMail({
+      from: `"francocaballero.dev" <${process.env.SMTP_EMAIL}>`,
+      to: process.env.SMTP_EMAIL,
+      subject: `New message from ${name} - francocaballero.dev`,
+      // replyTo: email,
+      html: contactEmailTemplate(name, email, message)
+    });
 
-        return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true });
 
-    } catch (error) {
-        console.error(error);
-        return NextResponse.json(
-            { success: false },
-            { status: 500 }
-        );
-    }
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json(
+      { success: false },
+      { status: 500 }
+    );
+  }
 }

@@ -26,13 +26,13 @@ export function generateSchema({
     url: personal?.website,
 
     knowsLanguage: ["Spanish", "English"],
-    
+
     address: personal?.contact?.location
       ? {
-          "@type": "PostalAddress",
-          addressLocality: personal.contact.location,
-          addressCountry: "PE"
-        }
+        "@type": "PostalAddress",
+        addressLocality: personal.contact.location,
+        addressCountry: "PE"
+      }
       : undefined,
 
     sameAs: meta?.contact?.accounts?.map(a => a.url),
