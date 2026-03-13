@@ -1,49 +1,59 @@
 # 📄 Next.js Resume / CV
 
 Aplicación web moderna para mostrar mi **currículum profesional**
-utilizando **Next.js**, optimizada para **SEO semántico**, rendimiento y
-accesibilidad.
+construida con **Next.js** y optimizada para **SEO, rendimiento y
+accesibilidad**.
 
 El proyecto presenta información profesional como experiencia,
 habilidades, proyectos y certificaciones de forma estructurada y
-optimizada para buscadores mediante **Schema.org**.
+optimizada para buscadores mediante **Schema.org structured data**.
 
 ------------------------------------------------------------------------
 
-## 🚀 Características
+# 🚀 Características
 
--   ⚡ **Next.js** para renderizado rápido y optimizado
--   🌍 **Traducción dinámica (i18n)** para múltiples idiomas
--   🧠 **SEO avanzado** usando datos estructurados `schema.org`
+-   ⚡ **Next.js App Router** para renderizado optimizado
+-   🌍 **Internacionalización basada en rutas** (`/es`, `/en`)
+-   🔀 **Redirección automática por idioma** usando middleware
+-   🧠 **SEO avanzado** con metadata dinámica
+-   📊 **Datos estructurados schema.org**
 -   📱 **Responsive design**
 -   🧩 Arquitectura modular basada en servicios
 -   📂 Contenido estructurado (perfil, experiencia, proyectos, skills)
--   🔗 Integración con redes profesionales
 -   🎯 Optimizado para **portfolios profesionales**
+-   ⚡ Optimizado para **Lighthouse performance**
 
 ------------------------------------------------------------------------
 
-## 🛠️ Tecnologías
+# 🛠️ Tecnologías
 
--   **Next.js**
--   **React**
--   **TypeScript**
--   **Schema.org Structured Data**
--   **Tailwind CSS**
--   **Vercel / Hosting compatible**
+-   Next.js
+-   React
+-   TypeScript
+-   Tailwind CSS
+-   Schema.org Structured Data
+-   Vercel (deployment opcional)
 
 ------------------------------------------------------------------------
 
-## 📂 Estructura del proyecto
+# 📂 Estructura del proyecto
 
     .
-    ├── app/                # Rutas de Next.js
-    ├── components/         # Componentes reutilizables
-    ├── services/           # Servicios para obtener datos
-    ├── types/              # Tipos TypeScript
-    ├── utils/              # Utilidades (ej: detectLang)
-    ├── public/             # Assets estáticos
-    └── styles/             # Estilos globales
+    ├── app/
+    │   ├── layout.tsx         # Root layout
+    │   └── [lang]/            # Rutas internacionalizadas
+    │       ├── layout.tsx
+    │       └── page.tsx
+    │
+    ├── components/            # Componentes reutilizables
+    ├── services/              # Servicios para obtener datos
+    ├── contexts/              # Contextos React
+    ├── data/                  # Datos
+    ├── lib/                   # Librerias
+    ├── utils/                 # Utilidades
+    ├── types/                 # Tipos TypeScript
+    ├── public/                # Assets estáticos
+    └── globals.css
 
 Ejemplo de servicios:
 
@@ -54,17 +64,45 @@ Ejemplo de servicios:
      ├── projects.service.ts
      └── skills.service.ts
 
+Los servicios permiten **separar lógica de datos del renderizado UI**.
+
 ------------------------------------------------------------------------
 
-## 📊 SEO Semántico
+# 🌍 Internacionalización (i18n)
+
+El proyecto utiliza **routing basado en idioma**:
+
+    /es
+    /en
+
+El idioma se determina mediante:
+
+-   prefijo en la URL
+-   middleware que detecta `Accept-Language`
+
+Ejemplo:
+
+    / → redirige a /es o /en
+
+Esto permite:
+
+-   mejor SEO internacional
+-   URLs claras para buscadores
+-   metadata específica por idioma
+
+------------------------------------------------------------------------
+
+# 📊 SEO Semántico
 
 El proyecto genera **datos estructurados automáticamente** usando
-`schema.org`:
+**schema.org**.
 
--   `Person`
--   `WorkExperience`
--   `Project`
--   `Skills`
+Tipos utilizados:
+
+-   Person
+-   WorkExperience
+-   Project
+-   Skills
 
 Esto ayuda a:
 
@@ -78,8 +116,8 @@ Ejemplo:
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Your Name",
-  "jobTitle": "Software Developer",
+  "name": "Franco Caballero",
+  "jobTitle": "Fullstack Developer",
   "sameAs": [
     "https://github.com/username",
     "https://linkedin.com/in/username"
@@ -89,32 +127,15 @@ Ejemplo:
 
 ------------------------------------------------------------------------
 
-## 🌍 Internacionalización
-
-El proyecto soporta **múltiples idiomas** mediante detección automática:
-
-    /en
-    /es
-
-Utiliza una utilidad personalizada:
-
-    utils/detectLang.ts
-
-------------------------------------------------------------------------
-
-## 🧪 Desarrollo
+# 🧪 Desarrollo
 
 Instalar dependencias:
 
-``` bash
-npm install
-```
+    npm install
 
 Ejecutar servidor de desarrollo:
 
-``` bash
-npm run dev
-```
+    npm run dev
 
 Abrir en navegador:
 
@@ -122,30 +143,28 @@ Abrir en navegador:
 
 ------------------------------------------------------------------------
 
-## 🏗️ Build
+# 🏗️ Build
 
-Para generar la versión de producción:
+Generar versión de producción:
 
-``` bash
-npm run build
-npm start
-```
+    npm run build
+    npm start
 
 ------------------------------------------------------------------------
 
-## 📦 Deployment
+# 📦 Deployment
 
 El proyecto puede desplegarse en:
 
 -   Vercel
 -   AWS
 -   VPS
--   Plesk
 -   Docker
+-   Plesk
 
 ------------------------------------------------------------------------
 
-## 👨‍💻 Autor
+# 👨‍💻 Autor
 
 **Franco Caballero**
 
@@ -155,6 +174,6 @@ El proyecto puede desplegarse en:
 
 ------------------------------------------------------------------------
 
-## 📄 Licencia
+# 📄 Licencia
 
 Este proyecto es de uso personal como **currículum profesional online**.

@@ -1,3 +1,5 @@
+'use client'
+
 import type { Personal } from "@/types/personal";
 import type { Profile } from "@/types/resume";
 import type { SocialAccount } from "@/types/shared";

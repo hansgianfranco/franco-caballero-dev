@@ -1,3 +1,5 @@
+'use client'
+
 import { useLanguage } from "@/contexts/LanguageContext";
 import { formatDate } from "@/helpers/formatDate";
 import type { Project } from "@/types/projects";

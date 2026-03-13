@@ -1,3 +1,5 @@
+'use client'
+
 import type { Sections } from "@/types/ui";
 import { motion } from "framer-motion";
 
