@@ -15,7 +15,8 @@ export default function Experience({ experience, title }: { experience: Experien
       </h2>
 
       <div className="relative">
-        <div className="absolute left-0 md:left-1/2 top-0 h-full w-px bg-outline translate-x-0 md:-translate-x-1/2"></div>
+        <div className="absolute left-0 md:left-1/2 top-0 h-full w-px bg-outline md:-translate-x-1/2"></div>
+
         <div className="space-y-12">
 
           {experience?.map((job, i) => {
@@ -24,63 +25,74 @@ export default function Experience({ experience, title }: { experience: Experien
             const marginTopClass = i === 0 ? "md:mt-0" : "md:-mt-25";
 
             return (
-              <motion.a
+              <div
                 key={i}
-                href={job.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, x: left ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.45, delay: i * 0.08 }}
-                viewport={{ once: true }}
-                className={`block relative group ${marginTopClass}`}
+                className={`grid md:grid-cols-[1fr_auto_1fr] items-start ${marginTopClass}`}
               >
-                <span className="absolute -left-2 md:left-1/2 translate-x-0 md:-translate-x-1/2 
-                  top-4 w-4 h-4 bg-secondary rounded-full border-4 border-outline group-hover:border-primary group-hover:scale-150 transition-all ease-in" 
-                />
-                <motion.article
+                <motion.a
+                  href={job.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, x: left ? -30 : 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.45, delay: i * 0.08 }}
+                  viewport={{ once: true }}
                   className={`
-                bg-card relative border border-outline rounded-lg p-6 group-hover:border-primary transition-colors ease-in
-                  ml-10 md:ml-0 md:w-[45%] after:w-px after:absolute after:h-[16px] after:bg-card after:top-[17px] after:z-10
-                  ${left
-                      ? "md:mr-auto md:text-right after:-right-px"
-                      : "md:ml-auto md:text-left after:-left-px"
-                    }
-                  `}
-                  whileHover={{ y: -6 }}
-                  transition={{ duration: 0.3 }}
+                  group relative
+                  ${left ? "md:col-start-1" : "md:col-start-3"}
+                `}
                 >
-                  <svg
+                  <span className={`absolute top-4 w-4 h-4 bg-secondary rounded-full 
+                    border-4 border-outline transition-all ease-in 
+                  group-hover:border-primary group-hover:scale-150 md:top-6 -left-2
+                    ${left ? "md:-right-2 md:left-auto" : ""}`}
+                  />
+                  <motion.article
                     className={`
-                      absolute -top-[1px]
+                      bg-card relative border border-outline rounded-lg p-6 
+                      group-hover:border-primary transition-colors ease-in
+                      after:w-px after:absolute after:h-[16px] after:bg-card mt-2 ml-10  
+                      after:top-[17px] after:z-10 after:-left-px
                       ${left
-                        ? "-left-[27px] -rotate-90 md:-right-[27px] md:left-auto md:scale-x-[-1] md:rotate-90"
-                        : "-left-[27px] -rotate-90"
+                        ? "md:text-right md:after:-right-px md:mr-10"
+                        : "md:text-left"
                       }
                     `}
-                    width="50"
-                    height="20"
-                    viewBox="0 0 50 20"
+                    whileHover={{ y: -6 }}
+                    transition={{ duration: 0.3 }}
                   >
-                    <path
-                      d="M0 12 L9 0 L18 12"
-                      fill="var(--color-card)"
-                      stroke="var(--color-outline)"
-                      strokeWidth="1"
-                      className="transition-colors ease-in group-hover:stroke-primary"
-                    />
-                  </svg>
-                  <h3 className="text-primary text-lg font-semibold inline-block">{job.position}</h3>
-                  <p className="text-sm text-gray-400">
-                    <span className="font-medium">{job.company}</span>
-                    <span className="mx-2">•</span>
-                    <time dateTime={job.start_date}>{formatDate(job.start_date, language)}</time>
-                    {" – "}
-                    {job.end_date ? <time dateTime={job.end_date}>{formatDate(job.end_date, language)}</time> : language === "es" ? "Presente" : "Present"}
-                  </p>
-                  <p className="mt-2 text-sm text-foreground leading-relaxed">{job.description}</p>
-                </motion.article>
-              </motion.a>
+                    <svg
+                      className={`
+                      absolute -top-[1px]
+                      ${left
+                          ? "-left-[27px] -rotate-90 md:-right-[27px] md:left-auto md:scale-x-[-1] md:rotate-90"
+                          : "-left-[27px] -rotate-90"
+                        }
+                    `}
+                      width="50"
+                      height="20"
+                      viewBox="0 0 50 20"
+                    >
+                      <path
+                        d="M0 12 L9 0 L18 12"
+                        fill="var(--color-card)"
+                        stroke="var(--color-outline)"
+                        strokeWidth="1"
+                        className="transition-colors ease-in group-hover:stroke-primary"
+                      />
+                    </svg>
+                    <h3 className="text-primary text-lg font-semibold inline-block">{job.position}</h3>
+                    <p className="text-sm text-gray-400">
+                      <span className="font-medium">{job.company}</span>
+                      <span className="mx-2">•</span>
+                      <time dateTime={job.start_date}>{formatDate(job.start_date, language)}</time>
+                      {" – "}
+                      {job.end_date ? <time dateTime={job.end_date}>{formatDate(job.end_date, language)}</time> : language === "es" ? "Presente" : "Present"}
+                    </p>
+                    <p className="mt-2 text-sm text-foreground leading-relaxed">{job.description}</p>
+                  </motion.article>
+                </motion.a>
+              </div>
             );
           })}
 

@@ -27,6 +27,12 @@ export interface Meta {
       message: string;
     };
 
+    placeholders: {
+      name: string;
+      email: string;
+      message: string;
+    };
+
     actions: {
       send: string;
       sending: string;
