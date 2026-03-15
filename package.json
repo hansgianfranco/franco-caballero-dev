@@ -2,11 +2,18 @@
   "name": "franco-caballero-dev",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://francocaballero.dev",
   "author": {
     "name": "Franco Caballero",
     "email": "hansgianfranco@gmail.com",
     "url": "https://francocaballero.dev"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hansgianfranco/franco-caballero-dev",
+    "keywords": ["portfolio", "nextjs", "resume"]
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

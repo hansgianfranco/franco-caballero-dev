@@ -1,13 +1,15 @@
+import { SITE, SOCIALS } from "@/constants/site";
 import type { Personal } from "@/types/personal";
 
 export const personalData: Record<string, Personal> = {
   es: {
-    name: "Franco Caballero",
+    name: SITE.name,
     title: "Desarrollador Fullstack Senior",
+    description: "Desarrollador Fullstack Senior con +10 años de experiencia, especializado en React, Next.js y Node.js, creando plataformas web, APIs y soluciones e-commerce escalables.",
     contact: {
       email: "aGFuc2dpYW5mcmFuY29AZ21haWwuY29t",
-      phone: "+51 945122683",
-      location: "Lima, Perú",
+      address: "Lima",
+      country: "Peru",
       remote: true,
       remote_label: "Trabajo Remoto"
     },
@@ -15,7 +17,7 @@ export const personalData: Record<string, Personal> = {
       title: "Descargar CV",
       file: "/resources/Franco_Caballero_CV.pdf"
     },
-    website: 'https://francocaballero.dev',
+    website: SITE.url,
     summary: [
       "Desarrollador <strong class='font-semibold'>Fullstack Senior</strong> con más de <strong class='font-semibold'>10 años</strong> construyendo <strong class='font-semibold'>aplicaciones web escalables</strong> y <strong class='font-semibold'>orientadas a resultados</strong>.",
       "Especializado en <strong class='font-semibold'>React</strong>, <strong class='font-semibold'>Next.js</strong>, <strong class='font-semibold'>Node.js</strong> y arquitecturas <strong class='font-semibold'>backend de alto rendimiento</strong>.",
@@ -25,23 +27,24 @@ export const personalData: Record<string, Personal> = {
       {
         id: "linkedin",
         title: "LinkedIn",
-        url: "https://linkedin.com/in/francocaballero"
+        url: SOCIALS.linkedin
       },
       {
         id: "github",
         title: "Github",
-        url: "https://github.com/hansgianfranco"
+        url: SOCIALS.github
       }
     ]
   },
 
   en: {
-    name: "Franco Caballero",
+    name: SITE.name,
     title: "Senior Fullstack Developer",
+    description: "Senior Fullstack Developer with 10+ years building scalable, business-driven web applications using React, Next.js, and Node.js, delivering educational platforms, APIs, internal systems, and e-commerce solutions.",
     contact: {
       email: "aGFuc2dpYW5mcmFuY29AZ21haWwuY29t",
-      phone: "+51 945122683",
-      location: "Lima, Peru",
+      address: "Lima",
+      country: "Peru",
       remote: true,
       remote_label: "Remote OK"
     },
@@ -49,7 +52,7 @@ export const personalData: Record<string, Personal> = {
       title: "Download Resume",
       file: "/resources/Franco_Caballero_Resume.pdf"
     },
-    website: 'https://francocaballero.dev',
+    website: SITE.url,
     summary: [
       "Senior <strong class='font-semibold'>Fullstack Developer</strong> with <strong class='font-semibold'>10+ years</strong> building <strong class='font-semibold'>scalable</strong>, <strong class='font-semibold'>business-driven</strong> web applications.",
       "Specialized in <strong class='font-semibold'>React</strong>, <strong class='font-semibold'>Next.js</strong>, <strong class='font-semibold'>Node.js</strong>, and <strong class='font-semibold'>high-performance backend architectures</strong>.",
@@ -59,12 +62,12 @@ export const personalData: Record<string, Personal> = {
       {
         id: "linkedin",
         title: "LinkedIn",
-        url: "https://linkedin.com/in/francocaballero"
+        url: SOCIALS.linkedin
       },
       {
         id: "github",
         title: "Github",
-        url: "https://github.com/hansgianfranco"
+        url: SOCIALS.github
       }
     ]
   }

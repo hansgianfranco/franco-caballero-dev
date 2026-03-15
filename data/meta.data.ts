@@ -1,10 +1,11 @@
+import { SITE } from "@/constants/site";
 import type { Meta } from "@/types/ui";
 
 const year = new Date().getFullYear();
 
 export const metaData: Record<string, Meta> = {
   es: {
-    footer: `© ${year} Franco Caballero - Desarrollador Fullstack Senior`,
+    footer: `© ${year} ${SITE.name} - Desarrollador Fullstack Senior`,
     scroll_top_label: "Volver arriba",
     
     contact: {
@@ -30,7 +31,7 @@ export const metaData: Record<string, Meta> = {
   },
 
   en: {
-    footer: `© ${year} Franco Caballero - Senior Fullstack Developer`,
+    footer: `© ${year} ${SITE.name} - Senior Fullstack Developer`,
     scroll_top_label: "Go to top",
 
     contact: {

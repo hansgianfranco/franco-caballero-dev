@@ -1,15 +1,15 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import dynamic from "next/dynamic";
 
 import { ResumeData } from "@/types/resume";
 import { getResumeData } from "@/services/resume.service";
 
-const Hero = dynamic(() => import("@/components/Hero"));
-const Projects = dynamic(() => import("@/components/Projects"));
-const Experience = dynamic(() => import("@/components/Experience"));
-const Skills = dynamic(() => import("@/components/Skills"));
-const Contact = dynamic(() => import("@/components/Contact"));
+const Hero = dynamic(() => import("@/components/sections/Hero"));
+const Projects = dynamic(() => import("@/components/sections/Projects"));
+const Experience = dynamic(() => import("@/components/sections/Experience"));
+const Skills = dynamic(() => import("@/components/sections/Skills"));
+const Contact = dynamic(() => import("@/components/sections/Contact"));
 
 export default async function Home({
   params,

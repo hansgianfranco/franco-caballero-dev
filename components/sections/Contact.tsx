@@ -1,8 +1,8 @@
 'use client'
 
 import { motion } from "framer-motion";
-import ContactForm from "./ContactForm";
 import type { Meta } from "@/types/ui";
+import ContactForm from "../forms/ContactForm";
 
 export default function Contact({ meta, title }: { meta: Meta; title: string; }) {
   return (

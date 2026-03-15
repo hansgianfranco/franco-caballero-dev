@@ -7,12 +7,8 @@ export const experienceData: Record<string, Experience[]> = {
       location: "Lima, Perú",
       position: "Desarrollador Fullstack Senior",
       start_date: "2021-01",
-      end_date: null,
-      responsibilities: [
-        "Lideré aplicaciones escalables con React y Node.js.",
-        "Diseñé APIs RESTful para miles de usuarios.",
-        "Optimicé despliegues y rendimiento del sistema."
-      ]
+      website: "https://10pearls.com",
+      description: "Lideré aplicaciones escalables y optimicé APIs y despliegues."
     },
     {
       company: "Innova Schools",
@@ -20,10 +16,8 @@ export const experienceData: Record<string, Experience[]> = {
       position: "Desarrollador Fullstack",
       start_date: "2018-11",
       end_date: "2020-12",
-      responsibilities: [
-        "Construí plataformas educativas para 10,000+ usuarios.",
-        "Mejoré eficiencia de bases de datos y rendimiento del sistema."
-      ]
+      website: "https://www.innovaschools.edu.pe",
+      description: "Construí plataformas educativas y mejoré la eficiencia del sistema."
     },
     {
       company: "Whiz Digital Agency",
@@ -31,10 +25,8 @@ export const experienceData: Record<string, Experience[]> = {
       position: "Frontend Developer",
       start_date: "2018-07",
       end_date: "2018-11",
-      responsibilities: [
-        "Construí aplicaciones web responsivas y optimicé frontend.",
-        "Manteniendo servidores de producción con alta disponibilidad."
-      ]
+      website: "https://whiz.one",
+      description: "Desarrollé aplicaciones web responsivas y mantuve servidores activos."
     },
     {
       company: "Circus Grey",
@@ -42,10 +34,8 @@ export const experienceData: Record<string, Experience[]> = {
       position: "Fullstack Developer",
       start_date: "2016-09",
       end_date: "2018-05",
-      responsibilities: [
-        "Desarrollé plataformas web y sistemas de campañas digitales.",
-        "Mejoré escalabilidad y optimicé bases de datos."
-      ]
+      website: "https://grey.com/peru",
+      description: "Desarrollé plataformas web y optimicé bases de datos."
     }
   ],
 
@@ -55,12 +45,8 @@ export const experienceData: Record<string, Experience[]> = {
       location: "Lima, Peru",
       position: "Senior Fullstack Developer",
       start_date: "2021-01",
-      end_date: null,
-      responsibilities: [
-        "Led scalable React & Node.js applications.",
-        "Designed RESTful APIs serving thousands of users.",
-        "Optimized deployment workflows & system performance."
-      ]
+      website: "https://10pearls.com",
+      description: "Led scalable apps and optimized APIs and deployments."
     },
     {
       company: "Innova Schools",
@@ -68,10 +54,8 @@ export const experienceData: Record<string, Experience[]> = {
       position: "Fullstack Developer",
       start_date: "2018-11",
       end_date: "2020-12",
-      responsibilities: [
-        "Built educational platforms for 10,000+ users.",
-        "Improved database efficiency & system performance."
-      ]
+      website: "https://www.innovaschools.edu.pe",
+      description: "Built educational platforms and improved system efficiency."
     },
     {
       company: "Whiz Digital Agency",
@@ -79,10 +63,8 @@ export const experienceData: Record<string, Experience[]> = {
       position: "Frontend Developer",
       start_date: "2018-07",
       end_date: "2018-11",
-      responsibilities: [
-        "Built responsive web apps and optimized frontend.",
-        "Maintained production servers with high uptime."
-      ]
+      website: "https://whiz.one",
+      description: "Developed responsive web apps and maintained servers."
     },
     {
       company: "Circus Grey",
@@ -90,10 +72,8 @@ export const experienceData: Record<string, Experience[]> = {
       position: "Fullstack Developer",
       start_date: "2016-09",
       end_date: "2018-05",
-      responsibilities: [
-        "Developed web platforms & digital campaign systems.",
-        "Improved scalability and optimized databases."
-      ]
+      website: "https://grey.com/peru",
+      description: "Developed web platforms and optimized databases."
     }
   ]
 };

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { LanguageProvider } from "@/contexts/LanguageContext";
-import StructuredData from "@/components/StructuredData";
 import { normalizeLang } from "@/helpers/normalizeLang";
 import { getResumeData } from "@/services/resume.service";
+import StructuredData from "@/components/seo/StructuredData";
+import { SITE } from "@/constants/site";
 
 type Params = Promise<{ lang: string }>;
 
@@ -26,15 +27,16 @@ export async function generateMetadata({
   }
   const locale = normalizeLang(lang);
   const data = meta[locale];
+  const base_url = SITE.url;
   return {
     title: data.title,
     description: data.description,
 
     alternates: {
-      canonical: `https://francocaballero.dev/${locale}`,
+      canonical: `${base_url}/${locale}`,
       languages: {
-        es: "https://francocaballero.dev/es",
-        en: "https://francocaballero.dev/en",
+        es: `${base_url}/es`,
+        en: `${base_url}/en`,
       },
     },
   };

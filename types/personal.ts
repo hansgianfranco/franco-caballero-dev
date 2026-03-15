@@ -2,9 +2,8 @@ import { SocialAccount } from "./shared";
 
 export interface Contact {
   email: string;
-  phone: string;
-  location: string;
-
+  address: string;
+  country: string;
   remote: boolean;
   remote_label: string;
 }
@@ -17,6 +16,7 @@ export interface Resume {
 export interface Personal {
   name: string;
   title: string;
+  description: string;
   website: string;
   contact: Contact;
   resume: Resume;

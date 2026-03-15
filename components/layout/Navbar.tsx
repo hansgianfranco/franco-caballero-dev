@@ -1,17 +1,35 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu } from "lucide-react";
-import LanguageSwitcher from "./LanguageSwitcher";
 import { Nav } from "@/types/ui";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar({ nav }: { nav: Nav }) {
 
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  
   return (
-    <header className="sticky top-0 z-40 backdrop-blur bg-surface/70 border-b border-[#2a2a3a]">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex font-mono justify-between items-center">
+    <header 
+    className={`sticky top-0 z-40 border-b transition-all duration-300 
+      ${scrolled
+          ? "backdrop-blur bg-surface/70 border-[#2a2a3a]"
+          : "bg-transparent border-transparent"
+      }`}>
+      <div className={`max-w-6xl mx-auto px-6  flex font-mono justify-between items-center transition-all ease-in ${scrolled ? "py-4" : "py-6"}`}>
         <nav aria-label="Main navigation">
           <ul className="hidden md:flex gap-6 text-sm">
             <li>
@@ -20,13 +38,13 @@ export default function Navbar({ nav }: { nav: Nav }) {
               </a>
             </li>
             <li>
-              <a href="#experience" className="text-accent hover:text-primary">
-                {nav?.experience}
+              <a href="#projects" className="text-accent hover:text-primary">
+                {nav?.projects}
               </a>
             </li>
             <li>
-              <a href="#projects" className="text-accent hover:text-primary">
-                {nav?.projects}
+              <a href="#experience" className="text-accent hover:text-primary">
+                {nav?.experience}
               </a>
             </li>
             <li>
@@ -65,13 +83,13 @@ export default function Navbar({ nav }: { nav: Nav }) {
                 </a>
               </li>
               <li>
-                <a href="#experience" className="text-accent" onClick={() => setOpen(false)}>
-                  {nav?.experience}
+                <a href="#projects" className="text-accent" onClick={() => setOpen(false)}>
+                  {nav?.projects}
                 </a>
               </li>
               <li>
-                <a href="#projects" className="text-accent" onClick={() => setOpen(false)}>
-                  {nav?.projects}
+                <a href="#experience" className="text-accent" onClick={() => setOpen(false)}>
+                  {nav?.experience}
                 </a>
               </li>
               <li>

@@ -18,7 +18,7 @@ export default function Skills({ skills, title }: { skills: string[], title: str
             transition={{ duration: 0.25, delay: i * 0.04 }}
             viewport={{ once: true }}
             className="px-3 py-1 text-sm rounded-full border border-outline bg-surface text-secondary
-            hover:bg-primary hover:text-foreground transition-colors duration-300"
+            hover:bg-primary hover:text-foreground transition-all ease-in duration-300 cursor-pointer"
           >
             <span>{skill}</span>
           </motion.li>

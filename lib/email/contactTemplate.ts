@@ -1,3 +1,5 @@
+import { SITE } from "@/constants/site";
+
 export function contactEmailTemplate(
   name: string,
   email: string,
@@ -32,9 +34,9 @@ export function contactEmailTemplate(
     </div>
 
     <p style="margin-top:25px;color:#8b8fa7">
-      Sent from the contact form on 
-      <a href="https://francocaballero.dev" style="color:#4cc9f0;text-decoration:none;">
-        francocaballero.dev
+      Sent from the contact form on  
+      <a href="${SITE.url}" style="color:#4cc9f0;text-decoration:none;">
+        ${SITE.name}
       </a>
     </p>
 

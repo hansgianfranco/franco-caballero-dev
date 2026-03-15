@@ -15,16 +15,15 @@ export default function LanguageSwitcher() {
     router.replace(newPath);
   }
 
-  const buttonBase =
-    "px-3 py-1 text-xs rounded-md transition-colors border";
+  const buttonBase = "px-3 py-1 text-xs rounded-md transition-all border cursor-pointer";
 
   return (
-    <div className="flex items-center gap-2 bg-card font-mono border border-outline rounded-lg p-1">
+    <div className="flex items-center gap-2 bg-card font-mono border border-outline hover:border-primary rounded-lg p-1 transition-all ease-in">
       <button
         onClick={() => changeLang("es")}
         aria-pressed={currentLang === "es"}
         className={`${buttonBase} ${currentLang === "es"
-          ? "bg-outline text-foreground border-outline"
+          ? "bg-primary text-foreground border-outline"
           : "text-[#9aa5ce] border-transparent hover:text-foreground"
           }`}
       >
@@ -35,7 +34,7 @@ export default function LanguageSwitcher() {
         onClick={() => changeLang("en")}
         aria-pressed={currentLang === "en"}
         className={`${buttonBase} ${currentLang === "en"
-          ? "bg-outline text-foreground border-outline"
+          ? "bg-primary text-foreground border-outline"
           : "text-[#9aa5ce] border-transparent hover:text-foreground"
           }`}
       >
