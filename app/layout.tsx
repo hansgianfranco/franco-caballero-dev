@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Roboto } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { SITE } from "@/constants/site";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -19,7 +20,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://francocaballero.dev"),
+  metadataBase: new URL(SITE.url),
 };
 
 export default function RootLayout({
@@ -35,7 +36,7 @@ export default function RootLayout({
         {process.env.NODE_ENV === "production" && (
           <>
             <SpeedInsights />
-            <GoogleAnalytics gaId={process.env.GA_ID!} />
+            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
           </>
         )}
       </body>

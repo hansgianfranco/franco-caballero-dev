@@ -6,8 +6,7 @@ export function generateSchema({
   skills,
   projects,
   experience,
-  certification,
-  meta
+  certification
 }: ResumeData) {
 
   const email = personal?.contact?.email
@@ -20,21 +19,26 @@ export function generateSchema({
 
     name: personal?.name,
     jobTitle: personal?.title,
-    description: personal?.summary?.join(" "),
+    description: personal?.description,
     email,
     url: personal?.website,
 
     knowsLanguage: ["Spanish", "English"],
 
-    address: personal?.contact?.location
+    address: personal?.contact?.address
       ? {
         "@type": "PostalAddress",
-        addressLocality: personal.contact.location,
+        addressLocality: personal.contact.address,
         addressCountry: "PE"
       }
       : undefined,
 
     sameAs: personal?.accounts?.map(a => a.url),
+    
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": personal?.website
+    },
 
     knowsAbout: skills,
 
@@ -45,14 +49,20 @@ export function generateSchema({
       codeRepository: project.url,
       programmingLanguage: project.technologies,
       dateCreated: project.start_date,
-      dateModified: project.end_date || undefined
+      dateModified: project.end_date
+    })),
+
+    worksFor: experience?.map(job => ({
+      "@type": "Organization",
+      name: job.company,
+      url: job.website
     })),
 
     hasOccupation: experience?.map(job => ({
-      "@type": "Role",
+      "@type": "EmployeeRole",
       roleName: job.position,
       startDate: job.start_date,
-      endDate: job.end_date || undefined
+      endDate: job.end_date
     })),
 
     alumniOf: education?.map(ed => ({

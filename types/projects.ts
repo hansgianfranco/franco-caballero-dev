@@ -7,7 +7,7 @@ export interface Project {
   url: string;
 
   start_date: DateString;
-  end_date: DateString | null;
+  end_date?: DateString;
 
   technologies: string[];
 }

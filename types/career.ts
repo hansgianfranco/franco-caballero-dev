@@ -4,11 +4,10 @@ export interface Experience {
   company: string;
   location: string;
   position: string;
-
+  website?: string;
   start_date: DateString;
-  end_date: DateString | null;
-
-  responsibilities: string[];
+  end_date?: DateString;
+  description: string;
 }
 
 export interface Education {
@@ -19,7 +18,7 @@ export interface Education {
   thesis?: string;
 
   start_date: DateString;
-  end_date: DateString | null;
+  end_date?: DateString;
 
   url?: string;
   details: string[];
@@ -30,5 +29,5 @@ export interface Certification {
   issuer: string;
 
   date: DateString;
-  url: string | null;
+  url?: string;
 }

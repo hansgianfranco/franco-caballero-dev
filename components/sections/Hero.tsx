@@ -14,10 +14,10 @@ export default function Hero({ personal }: { personal: Personal }) {
   const developer = {
     name: personal?.name,
     role: personal?.title,
-    location: personal?.contact?.location,
+    location: `${personal?.contact?.address}, ${personal?.contact?.country}`,
     remote: personal?.contact?.remote ?? false,
     language: ["es", "en"],
-    stack: ["Next.js", "React", "Node.js", "PostgreSQL", "AWS"]
+    stack: ["Next.js", "React", "Node.js"]
   };
 
   return (
@@ -38,7 +38,7 @@ export default function Hero({ personal }: { personal: Personal }) {
         <address className="flex justify-start gap-6">
           <a
             href={`mailto:${email}`}
-            className="flex items-center gap-2 text-accent hover:text-primary"
+            className="flex items-center gap-2 text-accent hover:text-primary transition-all ease-in"
           >
             <Mail size={18} /> Email
           </a>
@@ -50,7 +50,7 @@ export default function Hero({ personal }: { personal: Personal }) {
                   href={account.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-accent hover:text-primary"
+                  className="flex items-center gap-2 text-accent hover:text-primary transition-all ease-in"
                 >
                   <Github size={18} /> Github
                 </a>
@@ -62,7 +62,7 @@ export default function Hero({ personal }: { personal: Personal }) {
                   href={account.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-accent hover:text-primary"
+                  className="flex items-center gap-2 text-accent hover:text-primary transition-all ease-in"
                 >
                   <Linkedin size={18} /> LinkedIn
                 </a>

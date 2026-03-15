@@ -6,7 +6,6 @@ export const projectsData: Record<string, Project[]> = {
       name: "Plataforma Web & API Darshana",
       url: "https://darshana.ai",
       start_date: "2025-04",
-      end_date: null,
       technologies: ["Next.js", "NestJS", "TypeScript", "Sequelize", "AWS Cognito"],
       description:
         "Automatizó la verificación de estudios y emisión de credenciales digitales en 23+ países."
@@ -45,7 +44,6 @@ export const projectsData: Record<string, Project[]> = {
       name: "Darshana Web & API Platform",
       url: "https://darshana.ai",
       start_date: "2025-04",
-      end_date: null,
       technologies: ["Next.js", "NestJS", "TypeScript", "Sequelize", "AWS Cognito"],
       description:
         "Automated career verification and digital credential issuance across 23+ countries."

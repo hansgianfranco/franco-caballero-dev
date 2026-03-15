@@ -1,6 +1,7 @@
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 import { contactEmailTemplate } from "@/lib/email/contactTemplate";
+import { SITE } from "@/constants/site";
 
 export async function POST(req: Request) {
   try {
@@ -15,9 +16,9 @@ export async function POST(req: Request) {
     });
 
     await transporter.sendMail({
-      from: `"francocaballero.dev" <${process.env.SMTP_EMAIL}>`,
+      from: `"${SITE.name}" <${process.env.SMTP_EMAIL}>`,
       to: process.env.SMTP_EMAIL,
-      subject: `New message from ${name} - francocaballero.dev`,
+      subject: `New message from ${name} - ${SITE.name}`,
       // replyTo: email,
       html: contactEmailTemplate(name, email, message)
     });

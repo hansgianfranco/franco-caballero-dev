@@ -81,15 +81,11 @@ export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
     >
-
-      {/* Header */}
       <div className="space-y-2">
         <p className="text-sm text-foreground">
           {contact.subtitle}
         </p>
       </div>
-
-      {/* Inputs */}
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 gap-6"
         variants={container}
@@ -97,16 +93,13 @@ export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
         whileInView="show"
         viewport={{ once: true }}
       >
-
-        {/* Name */}
-        <motion.div variants={field}>
+        <motion.div variants={field} className="group">
           <label
             htmlFor="name"
-            className="block text-sm font-medium text-muted mb-2"
+            className="block text-sm font-medium text-muted mb-2 group-focus-within:text-primary transition ease-in"
           >
             {contact.fields.name}
           </label>
-
           <input
             id="name"
             type="text"
@@ -114,15 +107,14 @@ export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
             required
             value={form.name}
             onChange={handleChange}
-            className="w-full bg-surface border border-outline rounded-lg px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition"
+            className="w-full bg-surface border border-outline rounded-lg px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition ease-in"
           />
         </motion.div>
 
-        {/* Email */}
-        <motion.div variants={field}>
+        <motion.div variants={field} className="group">
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-muted mb-2"
+            className="block text-sm font-medium text-muted mb-2 group-focus-within:text-primary transition ease-in"
           >
             {contact.fields.email}
           </label>
@@ -134,21 +126,18 @@ export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
             required
             value={form.email}
             onChange={handleChange}
-            className="w-full bg-surface border border-outline rounded-lg px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition"
+            className="w-full bg-surface border border-outline rounded-lg px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition ease-in"
           />
         </motion.div>
-
       </motion.div>
 
-      {/* Message */}
-      <motion.div variants={field}>
+      <motion.div variants={field} className="group">
         <label
           htmlFor="message"
-          className="block text-sm font-medium text-muted mb-2"
+          className="block text-sm font-medium text-muted mb-2 group-focus-within:text-primary transition ease-in"
         >
           {contact.fields.message}
         </label>
-
         <textarea
           id="message"
           name="message"
@@ -156,11 +145,10 @@ export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
           rows={5}
           value={form.message}
           onChange={handleChange}
-          className="w-full bg-surface border border-outline rounded-lg px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary resize-none transition"
+          className="w-full bg-surface border border-outline rounded-lg px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary resize-none transition ease-in"
         />
       </motion.div>
 
-      {/* Button */}
       <motion.button
         type="submit"
         disabled={status === "loading"}
@@ -173,9 +161,7 @@ export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
           : contact.actions.send}
       </motion.button>
 
-      {/* Status messages */}
       <AnimatePresence mode="wait">
-
         {status === "success" && (
           <motion.p
             key="success"
@@ -187,7 +173,6 @@ export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
             {contact.status.success}
           </motion.p>
         )}
-
         {status === "error" && (
           <motion.p
             key="error"
@@ -199,9 +184,7 @@ export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
             {contact.status.error}
           </motion.p>
         )}
-
       </AnimatePresence>
-
     </motion.form>
   );
 }
