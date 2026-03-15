@@ -82,8 +82,11 @@ export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
       viewport={{ once: true }}
     >
       <div className="space-y-2">
-        <p className="text-sm text-foreground">
-          {contact.subtitle}
+        <h2 className="font-bold text-xl text-primary">
+          {contact?.title}
+        </h2>
+        <p className="text-foreground">
+          {contact?.subtitle}
         </p>
       </div>
       <motion.div
@@ -105,9 +108,10 @@ export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
             type="text"
             name="name"
             required
+            placeholder={contact.placeholders.name}
             value={form.name}
             onChange={handleChange}
-            className="w-full bg-surface border border-outline rounded-lg px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition ease-in"
+            className="w-full bg-surface border border-outline rounded-lg px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary valid:border-secondary not-placeholder-shown:invalid:border-danger transition ease-in"
           />
         </motion.div>
 
@@ -123,10 +127,11 @@ export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
             id="email"
             type="email"
             name="email"
+            placeholder={contact.placeholders.email}
             required
             value={form.email}
             onChange={handleChange}
-            className="w-full bg-surface border border-outline rounded-lg px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition ease-in"
+            className="w-full bg-surface border border-outline rounded-lg px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary valid:border-secondary not-placeholder-shown:invalid:border-danger transition ease-in"
           />
         </motion.div>
       </motion.div>
@@ -141,11 +146,12 @@ export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
         <textarea
           id="message"
           name="message"
+          placeholder={contact.placeholders.message}
           required
           rows={5}
           value={form.message}
           onChange={handleChange}
-          className="w-full bg-surface border border-outline rounded-lg px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary resize-none transition ease-in"
+          className="w-full bg-surface border border-outline rounded-lg px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary valid:border-secondary not-placeholder-shown:invalid:border-danger resize-none transition ease-in"
         />
       </motion.div>
 
