@@ -52,10 +52,10 @@ export default function Experience({ experience, title }: { experience: Experien
                       bg-card relative border border-outline rounded-lg p-6 
                       group-hover:border-primary transition-colors ease-in
                       after:w-px after:absolute after:h-[16px] after:bg-card mt-2 ml-10  
-                      after:top-[17px] after:z-10 after:-left-px
+                      after:top-[17px] after:z-10 
                       ${left
                         ? "md:text-right md:after:-right-px md:mr-10"
-                        : "md:text-left"
+                        : "md:text-left after:-left-px"
                       }
                     `}
                     whileHover={{ y: -6 }}
