@@ -96,7 +96,7 @@ export default function Hero({ personal }: { personal: Personal }) {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7 }}
       >
-        <div className="bg-card border border-outline rounded-lg p-6">
+        <div className="bg-card border border-outline rounded-lg p-6 hover:border-primary transition-colors ease-in">
           <pre className="whitespace-pre-wrap wrap-break-words text-sm sm:text-base">
             <code>
               <span className="text-accent">export const</span> developer = &#123;{"\n"}
