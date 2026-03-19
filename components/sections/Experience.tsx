@@ -44,8 +44,8 @@ export default function Experience({ experience, title }: { experience: Experien
                 >
                   <span className={`absolute top-4 w-4 h-4 bg-secondary rounded-full 
                     border-4 border-outline transition-all ease-in 
-                  group-hover:border-primary group-hover:scale-150 md:top-6 -left-2
-                    ${left ? "md:-right-2 md:left-auto" : ""}`}
+                  group-hover:border-primary group-hover:scale-150 md:top-6
+                    ${left ? "md:-right-2" : "md:-left-2"}`}
                   />
                   <motion.article
                     className={`
@@ -54,7 +54,7 @@ export default function Experience({ experience, title }: { experience: Experien
                       after:w-px after:absolute after:h-[16px] after:bg-card mt-2 ml-10  
                       after:top-[17px] after:z-10 
                       ${left
-                        ? "md:text-right md:after:-right-px md:mr-10"
+                        ? "md:text-right md:after:-right-px md:mr-10 md:ml-0"
                         : "md:text-left after:-left-px"
                       }
                     `}
