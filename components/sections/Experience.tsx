@@ -15,7 +15,7 @@ export default function Experience({ experience, title }: { experience: Experien
       </h2>
 
       <div className="relative">
-        <div className="absolute left-0 md:left-1/2 top-0 h-full w-px bg-outline md:-translate-x-1/2"></div>
+        <div className="absolute left-0 md:left-1/2 top-0 h-full w-[2px] bg-card md:-translate-x-1/2"></div>
 
         <div className="space-y-12">
 

@@ -3,9 +3,9 @@
 import type { Personal } from "@/types/personal";
 import type { SocialAccount } from "@/types/shared";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Download, Github, Linkedin, Mail } from "lucide-react";
 
-export default function Hero({ personal }: { personal: Personal }) {
+export default function Hero({ personal, title }: { personal: Personal, title: string }) {
 
   const email = personal?.contact?.email
     ? atob(personal.contact.email)
@@ -22,7 +22,7 @@ export default function Hero({ personal }: { personal: Personal }) {
 
   return (
     <section id="about" className="flex flex-col md:flex-row items-start gap-10" aria-labelledby="about-title">
-      <h2 id="about-title" className="sr-only">About</h2>
+      <h2 id="about-title" className="sr-only">{title}</h2>
       <motion.div
         className="flex-1 space-y-6"
         initial={{ opacity: 0, y: 30 }}
@@ -77,15 +77,25 @@ export default function Hero({ personal }: { personal: Personal }) {
         </div>
         <div className="flex gap-4 pt-4">
           {personal?.resume?.file && (
-            <a
+           <a
               href={personal.resume.file}
               download
-              className="relative px-6 py-3 rounded-lg bg-primary text-white font-medium
-                            hover:scale-[1.03] transition
-                            shadow-[0_0_0px_rgba(0,0,0,0)]
-                            hover:shadow-[0_0_20px_rgba(158,104,255,0.6)]"
+              aria-label={`${personal.resume.title} (descarga PDF)`}
+              className="
+                relative px-6 py-3 rounded-lg
+                bg-linear-to-r from-secondary to-primary text-background 
+              hover:from-primary hover:to-secondary
+                transition ease-in
+                focus:outline-none 
+                focus-visible:ring-2 
+                focus-visible:ring-primary 
+                focus-visible:ring-offset-2
+                flex items-center gap-2
+              "
             >
-              {personal.resume?.title}
+              <Download size={18} />
+              {personal.resume.title}
+              <span className="sr-only">(descarga archivo)</span>
             </a>
           )}
         </div>

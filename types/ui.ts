@@ -1,4 +1,5 @@
 export interface Sections {
+  about: string;
   experience: string;
   projects: string;
   skills: string;

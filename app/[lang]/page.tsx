@@ -21,8 +21,8 @@ export default async function Home({
   return (
     <>
       <Navbar nav={resume.nav} />
-      <main id="main" className="min-h-screen relative text-foreground font-mono max-w-6xl mx-auto px-6 py-20 space-y-20" role="main">
-        <Hero personal={resume.personal} />
+      <main id="main" className="min-h-screen relative text-foreground font-mono max-w-6xl mx-auto px-6 py-20 space-y-20">
+        <Hero personal={resume.personal} title={resume.sections.about}/>
         <Projects projects={resume.projects} title={resume.sections.projects} />
         <Experience experience={resume.experience} title={resume.sections.experience} />
         <Skills skills={resume.skills} title={resume.sections.skills} />

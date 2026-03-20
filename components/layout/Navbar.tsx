@@ -75,7 +75,7 @@ export default function Navbar({ nav }: { nav: Nav }) {
 
       {open && (
         <div className="md:hidden border-t border-[#2a2a3a] bg-surface">
-          <nav aria-label="Mobile navigation">
+          <nav id="mobile-menu" aria-label="Mobile navigation">
             <ul className="flex flex-col gap-4 px-6 py-4 text-sm">
               <li>
                 <a href="#about" className="text-accent" onClick={() => setOpen(false)}>
