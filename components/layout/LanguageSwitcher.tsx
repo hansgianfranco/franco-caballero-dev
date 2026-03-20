@@ -22,8 +22,9 @@ export default function LanguageSwitcher() {
       <button
         onClick={() => changeLang("es")}
         aria-pressed={currentLang === "es"}
+        aria-label="Cambiar idioma a español"
         className={`${buttonBase} ${currentLang === "es"
-          ? "bg-primary text-foreground border-outline"
+          ? "bg-linear-to-r from-secondary to-primary text-background hover:from-primary hover:to-secondary transition-colors ease-in"
           : "text-[#9aa5ce] border-transparent hover:text-foreground"
           }`}
       >
@@ -33,8 +34,9 @@ export default function LanguageSwitcher() {
       <button
         onClick={() => changeLang("en")}
         aria-pressed={currentLang === "en"}
+        aria-label="Change language to English"
         className={`${buttonBase} ${currentLang === "en"
-          ? "bg-primary text-foreground border-outline"
+          ? "bg-linear-to-r from-secondary to-primary text-background hover:from-primary hover:to-secondary transition-colors ease-in"
           : "text-[#9aa5ce] border-transparent hover:text-foreground"
           }`}
       >

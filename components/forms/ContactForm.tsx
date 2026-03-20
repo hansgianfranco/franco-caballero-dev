@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import type { Meta } from "@/types/ui";
+import { Send } from "lucide-react";
 
 export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
 
@@ -158,13 +159,18 @@ export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
       <motion.button
         type="submit"
         disabled={status === "loading"}
-        whileHover={{ scale: 1.04 }}
-        whileTap={{ scale: 0.96 }}
-        className="w-full sm:w-auto px-7 py-3 rounded-lg font-medium bg-primary text-white flex items-center justify-center gap-2 transition hover:shadow-[0_0_20px_rgba(158,104,255,0.5)] disabled:opacity-60 disabled:cursor-not-allowed"
-      >
-        {status === "loading"
-          ? contact.actions.sending
-          : contact.actions.send}
+        className={`relative px-6 py-3 rounded-lg font-semibold flex items-center gap-2
+          ${status === "loading"
+            ? "bg-gray-400 text-gray-200 cursor-not-allowed"
+            : `bg-linear-to-r from-secondary to-primary text-background 
+              hover:from-primary hover:to-secondary
+              transition ease-in`
+          }
+          focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2
+        `}
+        >
+        <Send size={18} />
+        {status === "loading" ? contact.actions.sending : contact.actions.send}
       </motion.button>
 
       <AnimatePresence mode="wait">
