@@ -7,6 +7,7 @@ import { Send } from "lucide-react";
 
 export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
 
+
   const container = {
     hidden: {},
     show: {
@@ -30,6 +31,12 @@ export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
     email: "",
     message: ""
   });
+
+  const isValid =
+    form.name.trim() !== "" &&
+    form.message.trim() !== "" &&
+    form.email.trim() !== "" &&
+    /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email);
 
   const [status, setStatus] = useState<
     "" | "loading" | "success" | "error"
@@ -76,7 +83,7 @@ export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
   return (
     <motion.form
       onSubmit={handleSubmit}
-      className="mt-10 space-y-8 bg-card border border-outline rounded-xl p-8 shadow-sm hover:border-primary transition-colors ease-in"
+      className="mt-10 space-y-8 bg-linear-to-br from-card via-card to-secondary/5 border border-outline rounded-xl p-8 shadow-sm hover:border-primary transition-colors ease-in"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -112,7 +119,9 @@ export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
             placeholder={contact.placeholders.name}
             value={form.name}
             onChange={handleChange}
-            className="w-full bg-surface border border-outline rounded-lg px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary valid:border-secondary not-placeholder-shown:invalid:border-danger transition ease-in"
+            className="w-full bg-surface border border-outline rounded-lg px-4 py-3 text-foreground 
+            placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary 
+            valid:border-secondary not-placeholder-shown:invalid:border-danger transition ease-in"
           />
         </motion.div>
 
@@ -132,7 +141,9 @@ export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
             required
             value={form.email}
             onChange={handleChange}
-            className="w-full bg-surface border border-outline rounded-lg px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary valid:border-secondary not-placeholder-shown:invalid:border-danger transition ease-in"
+            className="w-full bg-surface border border-outline rounded-lg px-4 py-3 text-foreground 
+            placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary 
+            valid:border-secondary not-placeholder-shown:invalid:border-danger transition ease-in"
           />
         </motion.div>
       </motion.div>
@@ -152,23 +163,27 @@ export default function ContactForm({ contact }: { contact: Meta["contact"] }) {
           rows={5}
           value={form.message}
           onChange={handleChange}
-          className="w-full bg-surface border border-outline rounded-lg px-4 py-3 text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary valid:border-secondary not-placeholder-shown:invalid:border-danger resize-none transition ease-in"
+          className="w-full bg-surface border border-outline rounded-lg px-4 py-3 text-foreground 
+          placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary 
+          valid:border-secondary not-placeholder-shown:invalid:border-danger resize-none transition ease-in"
         />
       </motion.div>
 
       <motion.button
         type="submit"
-        disabled={status === "loading"}
+        disabled={!isValid || status === "loading"}
         className={`relative px-6 py-3 rounded-lg font-semibold flex items-center gap-2
           ${status === "loading"
-            ? "bg-gray-400 text-gray-200 cursor-not-allowed"
-            : `bg-linear-to-r from-secondary to-primary text-background 
-              hover:from-primary hover:to-secondary
-              transition ease-in`
-          }
+                  ? "bg-gray-400 text-gray-200 cursor-not-allowed"
+                  : !isValid
+                    ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                    : `bg-secondary text-background cursor-pointer
+                hover:bg-primary
+                transition ease-in`
+                }
           focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2
         `}
-        >
+      >
         <Send size={18} />
         {status === "loading" ? contact.actions.sending : contact.actions.send}
       </motion.button>

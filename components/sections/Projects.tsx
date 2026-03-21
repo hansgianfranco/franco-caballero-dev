@@ -43,7 +43,7 @@ export default function Projects({ projects, title }: { projects: Project[], tit
             variants={card}
             whileHover={{ y: -6 }}
             transition={{ duration: 0.3 }}
-            className="block bg-card border border-outline p-6 rounded-lg hover:border-primary transition-colors ease-in"
+            className="block bg-card border border-outline p-6 rounded-lg hover:border-primary hover:bg-linear-to-r hover:from-secondary/10 hover:to-primary/10 transition-colors ease-in"
           >
             <article>
               <h3 className="text-primary text-lg font-semibold">

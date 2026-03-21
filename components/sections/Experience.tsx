@@ -15,7 +15,7 @@ export default function Experience({ experience, title }: { experience: Experien
       </h2>
 
       <div className="relative">
-        <div className="absolute left-0 md:left-1/2 top-0 h-full w-[2px] bg-card md:-translate-x-1/2"></div>
+        <div className="absolute left-0 md:left-1/2 top-0 h-full w-[2px] bg-outline md:-translate-x-1/2"></div>
 
         <div className="space-y-12">
 
@@ -43,32 +43,33 @@ export default function Experience({ experience, title }: { experience: Experien
                 `}
                 >
                   <span className={`absolute top-4 w-4 h-4 bg-secondary rounded-full 
-                    border-4 border-outline transition-all ease-in 
+                    border-4 border-outline transition-all ease-in -left-[6px] 
                   group-hover:border-primary group-hover:scale-150 md:top-6
-                    ${left ? "md:-right-2" : "md:-left-2"}`}
+                    ${left ? "md:left-auto md:-right-2" : "md:-left-2"}`}
                   />
                   <motion.article
                     className={`
                       bg-card relative border border-outline rounded-lg p-6 
-                      group-hover:border-primary transition-colors ease-in
+                      group-hover:border-primary 
+                      group-hover:bg-linear-to-r group-hover:from-secondary/10 group-hover:to-primary/10
+                      transition-colors ease-in
                       after:w-px after:absolute after:h-[16px] after:bg-card mt-2 ml-10  
-                      after:top-[17px] after:z-10 
+                      after:top-[17px] after:z-10 after:transition-colors after:ease-in
                       ${left
-                        ? "md:text-right md:after:-right-px md:mr-10 md:ml-0"
-                        : "md:text-left after:-left-px"
+                        ? "md:text-right after:-left-px md:after:left-auto md:after:-right-px md:mr-10 md:ml-0 group-hover:after:bg-[#231f3b]"
+                        : "md:text-left after:-left-px group-hover:after:bg-[#162d32]"
                       }
                     `}
                     whileHover={{ y: -6 }}
                     transition={{ duration: 0.3 }}
                   >
                     <svg
-                      className={`
-                      absolute -top-[1px]
+                      className={`absolute -top-[1px]
                       ${left
                           ? "-left-[27px] -rotate-90 md:-right-[27px] md:left-auto md:scale-x-[-1] md:rotate-90"
                           : "-left-[27px] -rotate-90"
                         }
-                    `}
+                      `}
                       width="50"
                       height="20"
                       viewBox="0 0 50 20"
@@ -78,7 +79,12 @@ export default function Experience({ experience, title }: { experience: Experien
                         fill="var(--color-card)"
                         stroke="var(--color-outline)"
                         strokeWidth="1"
-                        className="transition-colors ease-in group-hover:stroke-primary"
+                        className={`transition-colors ease-in group-hover:stroke-primary 
+                          ${left
+                            ? "group-hover:fill-[#162d32] md:group-hover:fill-[#231f3b]"
+                            : "group-hover:fill-[#162d32]"
+                          }
+                        `}
                       />
                     </svg>
                     <h3 className="text-primary text-lg font-semibold inline-block">{job.position}</h3>

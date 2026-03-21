@@ -24,8 +24,8 @@ export default function LanguageSwitcher() {
         aria-pressed={currentLang === "es"}
         aria-label="Cambiar idioma a español"
         className={`${buttonBase} ${currentLang === "es"
-          ? "bg-linear-to-r from-secondary to-primary text-background hover:from-primary hover:to-secondary transition-colors ease-in"
-          : "text-[#9aa5ce] border-transparent hover:text-foreground"
+            ? "bg-accent border-0 text-black hover:bg-primary transition-colors ease-in"
+            : "text-[#9aa5ce] border-transparent hover:text-foreground"
           }`}
       >
         ES
@@ -36,7 +36,7 @@ export default function LanguageSwitcher() {
         aria-pressed={currentLang === "en"}
         aria-label="Change language to English"
         className={`${buttonBase} ${currentLang === "en"
-          ? "bg-linear-to-r from-secondary to-primary text-background hover:from-primary hover:to-secondary transition-colors ease-in"
+          ? "bg-accent border-0 text-black hover:bg-primary transition-colors ease-in"
           : "text-[#9aa5ce] border-transparent hover:text-foreground"
           }`}
       >

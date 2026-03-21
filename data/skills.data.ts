@@ -1,37 +1,46 @@
-export const skillsData = [
-  "TypeScript",
-  "JavaScript",
-  "PHP",
-  "Java",
-  "React",
-  "Next.js",
-  "Gatsby",
-  "Redux",
-  "Tailwind",
-  "Sass",
-  "Node.js",
-  "Express",
-  "NestJS",
-  "Spring Boot",
-  "Laravel",
-  "Django",
-  "GraphQL",
-  "MySQL",
-  "PostgreSQL",
-  "MongoDB",
-  "Sequelize",
-  "AWS",
-  "Google Cloud",
-  "Firebase",
-  "Nginx",
-  "Apache",
-  "Serverless",
-  "CI/CD",
-  "WordPress",
-  "Shopify",
-  "VTEX",
-  "Drupal",
-  "Magento",
-  "Git",
-  "Agile/Scrum"
-];
+import { Skill } from "@/types/career";
+
+export const skillsData: Skill = {
+  frontend: [
+    "React",
+    "Next.js",
+    "Redux",
+    "TypeScript",
+    "Tailwind",
+  ],
+
+  backend: [
+    "Node.js",
+    "Express",
+    "NestJS",
+    "Laravel",
+    "Django",
+    "Spring Boot",
+  ],
+
+  dataAndApi: [
+    "MySQL",
+    "PostgreSQL",
+    "MongoDB",
+    "REST",
+    "GraphQL",
+    "Swagger",
+  ],
+
+  infrastructure: [
+    "AWS",
+    "GCP",
+    "Docker",
+    "CI/CD",
+    "Nginx",
+    "Serverless",
+  ],
+
+  cmsEcommerce: [
+    "WordPress",
+    "Shopify",
+    "VTEX",
+    "Drupal",
+    "Magento",
+  ],
+};

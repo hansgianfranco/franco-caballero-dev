@@ -11,8 +11,8 @@ export const sectionsData: Record<string, Sections> = {
   es: {
     about: "Sobre mí",
     projects: "Proyectos Destacados",
-    experience: "Experiencia",
-    skills: "Habilidades",
+    experience: "Mi Trayectoria Profesional",
+    skills: "Habilidades y Tecnologías",
     contact: "Contacto"
   }
 };
