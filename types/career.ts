@@ -31,3 +31,11 @@ export interface Certification {
   date: DateString;
   url?: string;
 }
+
+export interface Skill {
+  frontend: string[];
+  backend: string[];
+  dataAndApi: string[];
+  infrastructure: string[];
+  cmsEcommerce: string[];
+}

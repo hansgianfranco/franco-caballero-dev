@@ -15,11 +15,10 @@ export default function Navbar({ nav }: { nav: Nav }) {
       setScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   
   return (
@@ -67,7 +66,7 @@ export default function Navbar({ nav }: { nav: Nav }) {
             aria-expanded="false"
             aria-controls="mobile-menu"
           >
-            <Menu />
+            <Menu className="text-accent" />
           </button>
           <LanguageSwitcher />
         </div>

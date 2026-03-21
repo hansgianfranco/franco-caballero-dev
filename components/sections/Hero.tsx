@@ -29,10 +29,10 @@ export default function Hero({ personal, title }: { personal: Personal, title: s
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="text-5xl font-bold text-primary">
+        <h1 className="text-5xl leading-8 font-bold text-primary">
           {personal?.name}
         </h1>
-        <h2 className="text-2xl text-secondary">
+        <h2 className="text-3xl leading-4 text-secondary">
           {personal?.title}
         </h2>
         <address className="flex justify-start gap-6">
@@ -82,9 +82,8 @@ export default function Hero({ personal, title }: { personal: Personal, title: s
               download
               aria-label={`${personal.resume.title} (descarga PDF)`}
               className="
-                relative px-6 py-3 rounded-lg
-                bg-linear-to-r from-secondary to-primary text-background 
-              hover:from-primary hover:to-secondary
+                relative px-4 py-3 rounded-lg
+                bg-accent text-background hover:bg-primary 
                 transition ease-in
                 focus:outline-none 
                 focus-visible:ring-2 
@@ -95,7 +94,6 @@ export default function Hero({ personal, title }: { personal: Personal, title: s
             >
               <Download size={18} />
               {personal.resume.title}
-              <span className="sr-only">(descarga archivo)</span>
             </a>
           )}
         </div>
@@ -106,7 +104,7 @@ export default function Hero({ personal, title }: { personal: Personal, title: s
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7 }}
       >
-        <div className="bg-card border border-outline rounded-lg p-6 hover:border-primary transition-colors ease-in">
+        <div className="bg-card border border-outline rounded-lg p-6 hover:border-primary bg-linear-to-br from-card via-card to-secondary/5 transition-colors ease-in">
           <pre className="whitespace-pre-wrap wrap-break-words text-sm sm:text-base">
             <code>
               <span className="text-accent">export const</span> developer = &#123;{"\n"}

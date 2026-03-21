@@ -1,5 +1,5 @@
 import { Personal } from "./personal";
-import { Experience, Education, Certification } from "./career";
+import { Experience, Education, Certification, Skill } from "./career";
 import { Project } from "./projects";
 import { Nav, Sections, Meta } from "./ui";
 
@@ -11,7 +11,7 @@ export interface ResumeData {
   certification: Certification[];
 
   projects: Project[];
-  skills: string[];
+  skills: Skill[];
 
   nav: Nav;
   sections: Sections;
